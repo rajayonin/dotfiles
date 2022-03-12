@@ -1,3 +1,10 @@
+" ----------------
+" Vim config file
+" @author: rajayonin
+" @date: 12/03/22
+" ----------------
+
+
 " GENERAL STUFF
 " ---
 set tabstop=4
@@ -16,6 +23,7 @@ set mouse=a
 set showcmd
 set noerrorbells
 
+
 " REMAPPINGS
 " ---
 
@@ -30,3 +38,9 @@ execute "set <A-k>=\ek"
 ":imap <A-k> <Esc>:m .-2<CR>==gi
 ":vmap <A-j> :m '>+1<CR>gv=gv
 ":vmap <A-k> :m '>-2<CR>gv=gv
+
+" unmap arrow keys bc i'm no pussy
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>

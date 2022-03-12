@@ -1,6 +1,12 @@
 # rajayonin's Vim cheatseet
+My personal cheatsheet for Vim, with the actions/commands I currently (and, want to) use.  
+For a more exhaustive cheatsheet please check [Vim Cheat Sheet](vim.rtorr.com/).  
+For a quite usefull Vim tutorial and interactive console please check [Interactive Vim tutorial](https://openvim.com/tutorial.html).
 
-## Modes
+Vim is quite useful and powerfull, specially for shell-only enviroments, and I think every computer engineer/technician should learn it.  
+Don't suffer too much!
+
+# Modes
 There are 3 modes on Vim, each mode having its own specific commands:
 1. **NORMAL mode:** Keypresses represent actions. Enter it by pressing `Esc`.
 2. **INSERT mode:** Keypresses represent characters. There are many ways of entering it (see [Insertion](#insertion)).
@@ -12,7 +18,7 @@ The following actions can only be done in NORMAL mode.
 To cancel any action, press `Esc`.
 
 ## Movement
-- `h, j, k, l` - **move**  
+- `h`, `j`, `k`, `l` - **move**  
 Move cursor left, down, up, or right.
 - `w` - **word**  
 Move cursor to the beggining of the next word.
@@ -44,7 +50,7 @@ Replace character under cursor with _char_, enter insert mode at cursor.
 - `a`, `A` - **append**  
 Enter insert mode after the cursor/after the end of the line.   
 Usefull in combination with end: `ea` - insert to the end of the word.
-- `o`, O - **newline**  
+- `o`, `O` - **newline**  
 Add a new line after/before the current one, enter insert mode on new line.
 - `S` - **clear line**  
 Clear current line, enter insert mode.

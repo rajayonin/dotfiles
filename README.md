@@ -1,2 +1,3 @@
-# rc
-My personal config files for linux apps
+# rajayonin's resource files 
+
+Public repository to save my config files, cheatsheets, etc., so they can be easily accesible.

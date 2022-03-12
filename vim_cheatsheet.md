@@ -1,5 +1,5 @@
 # rajayonin's Vim cheatseet
-My personal cheatsheet for Vim, with the actions/commands I currently (and, want to) use.  
+My personal cheatsheet for Vim, with the actions/commands I currently (and, in the near future, want to) use.  
 For a more exhaustive cheatsheet please check [Vim Cheat Sheet](vim.rtorr.com/).  
 For a quite usefull Vim tutorial and interactive console please check [Interactive Vim tutorial](https://openvim.com/tutorial.html).
 
@@ -7,9 +7,9 @@ Vim is quite useful and powerfull, specially for shell-only enviroments, and I t
 Don't suffer too much!
 
 # Modes
-There are 3 modes on Vim, each mode having its own specific commands:
+There are 3 modes on Vim, each mode having its own specific actions:
 1. **NORMAL mode:** Keypresses represent actions. Enter it by pressing `Esc`.
-2. **INSERT mode:** Keypresses represent characters. There are many ways of entering it (see [Insertion](#insertion)).
+2. **INSERT mode:** Keypresses represent regular characters. There are many ways of entering it (see [Insertion](#insertion)).
 3. **VISUAL mode:** Here you can select characters like you would in a regular text editor. Enter it by pressing `v`.
 
 
@@ -42,18 +42,18 @@ Move cursor to the beggining/end of the file.
 ## Insertion
 
 - `i`, `I` - **insert**  
-Enter insert mode at cursor/at beggining of line
+Enter INSERT mode at cursor/at beggining of line
 - `r[char]` - **replace**  
-Replace character under cursor with _char_, enter insert mode at cursor.
+Replace character under cursor with _char_, enter INSERT mode at cursor.
     - `R`  
     Replace more than one character, until `ESC` is pressed.
 - `a`, `A` - **append**  
-Enter insert mode after the cursor/after the end of the line.   
+Enter INSERT mode after the cursor/after the end of the line.   
 Usefull in combination with end: `ea` - insert to the end of the word.
 - `o`, `O` - **newline**  
-Add a new line after/before the current one, enter insert mode on new line.
+Add a new line after/before the current one, enter INSERT mode on new line.
 - `S` - **clear line**  
-Clear current line, enter insert mode.
+Clear current line, enter INSERT mode.
 
 ## Edition
 
@@ -102,7 +102,7 @@ Repeat last action.
 Move to next/previous _char_ in line.
     - `;`, `,` - **repeat find ** 
     Repeat last next/previous find.
-- /[text] - **search**  
+- `/[text]` - **search**  
 Search _text_.
     - n, N - **match**  
     Go to next/previous match.
@@ -113,18 +113,20 @@ Repeats _action_ _n_ times.
 
 ## Other
 - `Ctrl`+`y`, `Ctrl`+`e` - **scroll**  
-Move screen up/down one line (without moving cursor)
+Move screen up/down one line (without moving cursor).
 
 
 # Commands
 
 Commands can only be executed in NORMAL mode, and are preceded by `:`.
+To cancel any command, press `Esc`.
+
 - `:w` - **write**  
-Saves the current file.
+Save current file.
 - `:q` - **quit**  
 Quit Vim.
 - `:x` - **save & quit**
-Saves current file and quits Vim.
+Save current file and quit Vim.
 
 Commands can be "forced" by adding `!` at the end.  
 Eg.: `:q!` - **force quit**.
@@ -140,10 +142,12 @@ Starts recording a new _macro_.
 - `@[macro]` - **run macro**  
 Runs _macro_.
     - `@@` - **rerun macro**  
-    Reruns last macro.
+    Rerun last macro.
+
 
 # rajayonin-specific
-These are some extra actions/commands I use, and must be included in the .vimrc config file. To check my file, click [here](https://github.com/rajayonin/rc/blob/main/.vimrc).
+These are some extra actions/commands I use, and must be included in the .vimrc config file.  
+To check my file, click [here](github.com/rajayonin/rc/blob/main/.vimrc).
 
 - `Alt`+`j`, `Alt`+`k` - **move line up/down**  
 Moves current line up/down.

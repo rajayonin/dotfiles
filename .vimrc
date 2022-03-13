@@ -20,10 +20,9 @@
 
 " Use syntax highlighting
 syntax enable
-set t_Co=256
 
 " set color scheme
-colorscheme github-dimmed
+colorscheme rajayonin-Vim16
 
 
 " GENERAL STUFF

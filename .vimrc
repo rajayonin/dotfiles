@@ -29,12 +29,6 @@ set number
 set title
 set titlestring="%t - Vim"
 
-" Backup files.
-set backup
-
-" Backup directory.
-set backupdir=~/.vim/backup/
-
 " Hide mouse when typing.
 set mousehide
 

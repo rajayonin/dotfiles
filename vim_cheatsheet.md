@@ -61,21 +61,19 @@ Clear current line, enter INSERT mode.
 Remove character at/before cursor.
 - `d[movement]` - **delete** (cut)  
 Delete characters in the range of _movement_, and copy to clipboard.  
-Eg.: `de` deletes until til the end of the word.
+Eg.: `de` deletes until the end of the word.
     - `dd` - **delete line**  
     Delete the current line, copy to clipboard.   
     Moves cursor to the beggining of next line.
     - `D`  
     Deletes until the end of the current line.
 - `J`, `gJ` - **join**  
-Join line below the current one, with one space in between.
-    - gJ  
-    Join line below to the current one, without space in between
-- `>>`, `<<` - **indent/de-indent**
+Join line below the current one, with/without one space in between.
+- `>>`, `<<` - **indent/de-indent**  
 Indent/de-indent current line one shiftwidth.
     - `>%`, `<%` - **indent/de-indent block**  
     Indent/de-indent current paragraph one shiftwidth.
-- `==` - **re-indent**
+- `==` - **re-indent**  
 Removes indentation of the current line.
     - `=%` - **re-indent block**  
     Re-indents current block.
@@ -100,7 +98,7 @@ Repeat last action.
 ## Search
 - `f[char]`, `F[char]` - **find**  
 Move to next/previous _char_ in line.
-    - `;`, `,` - **repeat find** 
+    - `;`, `,` - **repeat find**  
     Repeat last next/previous find.
 - `/[text]` - **search**  
 Search _text_.

@@ -17,10 +17,14 @@
 
 " COLORS
 " ---
-colorscheme github-dimmed
 
 " Use syntax highlighting
-syntax on
+syntax enable
+set t_Co=256
+
+" set color scheme
+colorscheme github-dimmed
+
 
 " GENERAL STUFF
 " ---

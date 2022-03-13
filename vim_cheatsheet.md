@@ -126,6 +126,8 @@ To cancel any command, press `Esc`.
 
 - `:w` - **write**  
 Save current file.
+    - `:w [filename]` - **write as**  
+    Save current file as _filename_.
 - `:q` - **quit**  
 Quit Vim.
 - `:x` - **save & quit**  

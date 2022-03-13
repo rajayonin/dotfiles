@@ -1,16 +1,21 @@
 # rajayonin's Vim cheatseet
 My personal cheatsheet for Vim, with the actions/commands I currently (and, in the near future, want to) use.  
-For a more exhaustive cheatsheet please check [Vim Cheat Sheet](vim.rtorr.com/).  
-For a quite usefull Vim tutorial and interactive console please check [Interactive Vim tutorial](https://openvim.com/tutorial.html).
+For a more exhaustive cheatsheet please check [Vim Cheat Sheet](https://vim.rtorr.com/).  
+For a quite useful interactive Vim tutorial and console please check [Interactive Vim tutorial](https://openvim.com/tutorial.html).
 
 Vim is quite useful and powerfull, specially for shell-only enviroments, and I think every computer engineer/technician should learn it.  
+
 Don't suffer too much!
 
 # Modes
 There are 3 modes on Vim, each mode having its own specific actions:
-1. **NORMAL mode:** Keypresses represent actions. Enter it by pressing `Esc`.
-2. **INSERT mode:** Keypresses represent regular characters. There are many ways of entering it (see [Insertion](#insertion)).
-3. **VISUAL mode:** Here you can select characters like you would in a regular text editor. Enter it by pressing `v`.
+1. **NORMAL mode:** Keypresses represent actions.  
+It's the default mode, but you can enter it by pressing `Esc`.
+2. **INSERT mode:** Keypresses represent regular characters.  
+There are many ways of entering it (see [Insertion](#insertion)).
+3. **VISUAL mode:** Here you can select characters like you would in a regular text editor.  
+As I personally don't use it, it's not detailed in this cheatsheet.  
+Enter it by pressing `v`.
 
 
 # Actions
@@ -115,8 +120,8 @@ Move screen up/down one line (without moving cursor).
 
 # Commands
 
-Commands can only be executed in NORMAL mode, and are preceded by `:`.
-To execute a command, press `Enter`.
+Commands can only be executed in NORMAL mode, and are preceded by `:`.  
+To execute a command, press `Enter`.  
 To cancel any command, press `Esc`.
 
 - `:w` - **write**  
@@ -134,18 +139,19 @@ Eg.: `:q!` - **force quit**.
 
 Macros are series of inputs that can be recorded and redone.
 - `q[macro]` - **start macro**  
-Starts recording a new _macro_.
+Start recording a new macro named _macro_.
     - `q` - **stop macro**  
-    Stops recording the current macro.
+    Stop recording the current macro.
 - `@[macro]` - **run macro**  
-Runs _macro_.
+Run _macro_.
     - `@@` - **rerun macro**  
     Rerun last macro.
 
 
 # rajayonin-specific
-These are some extra actions/commands I use, and must be included in the .vimrc config file.  
-To check my file, click [here](github.com/rajayonin/rc/blob/main/.vimrc).
+These are some extra actions/commands I use.  
+To use them, they must be included in the .vimrc config file.  
+To check my config file, click [here](.vimrc).
 
 - `Alt`+`j`, `Alt`+`k` - **move line up/down**  
 Moves current line up/down.

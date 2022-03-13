@@ -45,8 +45,6 @@ Move cursor to the beggining/end of the file.
 Enter INSERT mode at cursor/at beggining of line
 - `r[char]` - **replace**  
 Replace character under cursor with _char_, enter INSERT mode at cursor.
-    - `R`  
-    Replace more than one character, until `ESC` is pressed.
 - `a`, `A` - **append**  
 Enter INSERT mode after the cursor/end of the line.   
 Useful in combination with end: `ea` - insert to the end of the word.
@@ -74,9 +72,9 @@ Indent/de-indent current line one shiftwidth.
     - `>%`, `<%` - **indent/de-indent block**  
     Indent/de-indent current paragraph one shiftwidth.
 - `==` - **re-indent**  
-Removes indentation of the current line.
+Remove indentation of the current line.
     - `=%` - **re-indent block**  
-    Re-indents current block.
+    Re-indent current block.
 - `gu[movement]`, `gU[movement]` - **upper/lower case**  
 Change to upper/lower case in the range of _movement_.
 - `y[movement]` - **yank** (copy)  
@@ -89,7 +87,7 @@ Paste the clipboard after/before cursor.
 Undo last change.  
 This includes actions and everything done in INSERT mode.
     - `U` - **restore line**  
-    Restore last modified line.
+    Restore changes to the last modified line.
 - `Ctrl`+`r` - **redo**  
 Redo last undo.
 - `.` - **repeat action**  

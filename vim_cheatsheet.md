@@ -48,8 +48,8 @@ Replace character under cursor with _char_, enter INSERT mode at cursor.
     - `R`  
     Replace more than one character, until `ESC` is pressed.
 - `a`, `A` - **append**  
-Enter INSERT mode after the cursor/after the end of the line.   
-Usefull in combination with end: `ea` - insert to the end of the word.
+Enter INSERT mode after the cursor/end of the line.   
+Useful in combination with end: `ea` - insert to the end of the word.
 - `o`, `O` - **newline**  
 Add a new line after/before the current one, enter INSERT mode on new line.
 - `S` - **clear line**  
@@ -67,8 +67,8 @@ Eg.: `de` deletes until til the end of the word.
     Moves cursor to the beggining of next line.
     - `D`  
     Deletes until the end of the current line.
-- `J` - **join**  
-Join line below to the current one, with one space in between.
+- `J`, `gJ` - **join**  
+Join line below the current one, with one space in between.
     - gJ  
     Join line below to the current one, without space in between
 - `>>`, `<<` - **indent/de-indent**
@@ -100,10 +100,11 @@ Repeat last action.
 ## Search
 - `f[char]`, `F[char]` - **find**  
 Move to next/previous _char_ in line.
-    - `;`, `,` - **repeat find ** 
+    - `;`, `,` - **repeat find** 
     Repeat last next/previous find.
 - `/[text]` - **search**  
 Search _text_.
+Remember to press `Enter` afterwards.
     - n, N - **match**  
     Go to next/previous match.
 
@@ -119,13 +120,14 @@ Move screen up/down one line (without moving cursor).
 # Commands
 
 Commands can only be executed in NORMAL mode, and are preceded by `:`.
+To execute a command, press `Enter`.
 To cancel any command, press `Esc`.
 
 - `:w` - **write**  
 Save current file.
 - `:q` - **quit**  
 Quit Vim.
-- `:x` - **save & quit**
+- `:x` - **save & quit**  
 Save current file and quit Vim.
 
 Commands can be "forced" by adding `!` at the end.  
@@ -135,9 +137,9 @@ Eg.: `:q!` - **force quit**.
 # Macros
 
 Macros are series of inputs that can be recorded and redone.
-- `q[macro]` - **start macro**
+- `q[macro]` - **start macro**  
 Starts recording a new _macro_.
-    - `q` - **stop macro**
+    - `q` - **stop macro**  
     Stops recording the current macro.
 - `@[macro]` - **run macro**  
 Runs _macro_.

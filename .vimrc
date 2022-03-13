@@ -15,12 +15,15 @@
 
 " Special thanks to Brandon Wallace (https://github.com/brandon-wallace/vimrc)
 
-
-" GENERAL STUFF
+" COLORS
 " ---
+colorscheme github-dimmed
 
 " Use syntax highlighting
 syntax on
+
+" GENERAL STUFF
+" ---
 
 " Add numbers to the lines.
 set number
@@ -77,7 +80,7 @@ set encoding=utf-8
 set wildignore=*.odt,*.doc*,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.JPG,*.exe,*.bmp,*.flv,*.gz,*.tgz,*.zip,*.iso,*.gzip,*.mov,*.xz,*.tar,*.img,*.docx,*.xlsx,*.xls
 
 " Enable Python syntax highlighting features (thank god).
-let python_highlight_all = 1
+autocmd BufRead,BufNewFile *.py let python_highlight_all=1
 
 
 " REMAPPINGS

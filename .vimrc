@@ -92,6 +92,9 @@ autocmd BufRead,BufNewFile *.py let python_highlight_all=1
 " set values
 execute "set <A-j>=\ej"
 execute "set <A-k>=\ek"
+" need to prevent Esc+j does the same (\e == Esc == Alt)
+nnoremap <A-j> j
+nnoremap <A-k> k
 
 " alt+j|k: move lines (takes indentation into account)
 nmap <A-j> :m .+1<CR>==

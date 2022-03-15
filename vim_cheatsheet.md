@@ -55,8 +55,8 @@ Enter INSERT mode after the cursor/end of the line.
 Useful in combination with end: `ea` - insert to the end of the word.
 - `o`, `O` - **newline**  
 Add a new line after/before the current one, enter INSERT mode on new line.
-- `S` - **clear line**  
-Clear current line, enter INSERT mode.
+- `s`, `S` - **supress**  
+Delete character under the cursor/current line, enter INSERT mode.
 
 ## Edition
 

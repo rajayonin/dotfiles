@@ -19,6 +19,7 @@ Enter it by pressing `v`.
 
 
 # Actions
+Actions are the main part of Vim, and allow you to do all sorts of stuff to the text.  
 The following actions can only be done in NORMAL mode.  
 To cancel any action, press `Esc`.
 
@@ -48,8 +49,6 @@ Move cursor to the beggining/end of the file.
 
 - `i`, `I` - **insert**  
 Enter INSERT mode at cursor/at beggining of line
-- `r[char]` - **replace**  
-Replace character under cursor with _char_, enter INSERT mode at cursor.
 - `a`, `A` - **append**  
 Enter INSERT mode after the cursor/end of the line.   
 Useful in combination with end: `ea` - insert to the end of the word.
@@ -60,6 +59,8 @@ Delete character under the cursor/current line, enter INSERT mode.
 
 ## Edition
 
+- `r[char]` - **replace**  
+Replace character under cursor with _char_.  
 - `x`, `X` - **remove**  
 Remove character at/before cursor.
 - `d[movement]` - **delete** (cut)  

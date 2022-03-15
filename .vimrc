@@ -48,8 +48,7 @@ set ruler
 set autoindent
 
 " tabsize
-set tabstop=4
-set shiftwidth=4
+set tabstop=4 shiftwidth=4 expandtab
 
 " Show line number.
 set number
@@ -93,18 +92,20 @@ autocmd BufRead,BufNewFile *.py let python_highlight_all=1
 execute "set <A-j>=\ej"
 execute "set <A-k>=\ek"
 " need to prevent Esc+j does the same (\e == Esc == Alt)
-nnoremap <A-j> j
-nnoremap <A-k> k
+nnoremap <A-j> <Esc>
+inoremap <A-j> <Esc>
+nnoremap <A-k> <Esc>
+inoremap <A-k> <Esc>
 
 " alt+j|k: move lines (takes indentation into account)
 nmap <A-j> :m .+1<CR>==
 nmap <A-k> :m .-2<CR>==
 
 " unmap arrow keys bc i'm no pussy
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+"noremap <Up> <Nop>
+"noremap <Down> <Nop>
+"noremap <Left> <Nop>
+"noremap <Right> <Nop>
 
 " autoinsert matching brackets 
 inoremap { {}<Esc>ha

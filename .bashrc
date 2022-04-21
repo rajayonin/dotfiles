@@ -2,8 +2,10 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# people WILL kill me for this, but.. Vim mode baby! fuck emacs!
-set -o vi
+# people WILL kill me for this, but.. Vim mode baby! fuck emacs! -- i don't like it, for the moment
+# set -o vi
+
+# the following is basically the standard generated:
 
 # If not running interactively, don't do anything
 case $- in

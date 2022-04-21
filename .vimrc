@@ -21,7 +21,7 @@
 " Use syntax highlighting
 syntax enable
 
-" set color scheme
+" set color scheme (doesn't work on TTY, for some reason)
 colorscheme rajayonin-Vim16
 
 

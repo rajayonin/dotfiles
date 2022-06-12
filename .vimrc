@@ -22,7 +22,7 @@
 syntax enable
 
 " set color scheme (doesn't work on TTY, for some reason)
-colorscheme rajayonin-Vim16
+" colorscheme rajayonin-Vim16
 
 
 " GENERAL STUFF

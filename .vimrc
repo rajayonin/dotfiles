@@ -21,9 +21,6 @@
 " Use syntax highlighting
 syntax enable
 
-" set color scheme (doesn't work on TTY, for some reason)
-" colorscheme rajayonin-Vim16
-
 
 " GENERAL STUFF
 " ---
@@ -84,22 +81,6 @@ set wildignore=*.odt,*.doc*,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.JPG,*.exe,*.bmp,*.fl
 " Enable Python syntax highlighting features (thank god).
 autocmd BufRead,BufNewFile *.py let python_highlight_all=1
 
-
-" REMAPPINGS
-" ---
-
-" set values
-execute "set <A-j>=\ej"
-execute "set <A-k>=\ek"
-" need to prevent Esc+j does the same (\e == Esc == Alt)
-nnoremap <A-j> <Esc>
-inoremap <A-j> <Esc>
-nnoremap <A-k> <Esc>
-inoremap <A-k> <Esc>
-
-" alt+j|k: move lines (takes indentation into account)
-nmap <A-j> :m .+1<CR>==
-nmap <A-k> :m .-2<CR>==
 
 " unmap arrow keys bc i'm no pussy
 "noremap <Up> <Nop>

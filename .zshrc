@@ -111,6 +111,8 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll="ls -lah"
+alias ping='ping -c 5'
+
 PROMPT='%B%F{cyan}%n%f%F{red}@%f%F{green}%m%f:%F{blue}%~%f%F{red}$%f%b '
 
 

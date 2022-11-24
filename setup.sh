@@ -46,7 +46,7 @@ case "$option" in
         esac
 
         # setup
-        cp .nvim $HOME
+        cp nvim/* $HOME/.config/nvim
 
         # TODO: finish
 
@@ -54,6 +54,7 @@ case "$option" in
 
     2)  # update all
         cp .* $HOME
+        cp nvim/* $HOME/.config/nvim
     ;;
 
 esac

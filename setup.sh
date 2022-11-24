@@ -1,19 +1,59 @@
-# install z-shell, vim
-sudo apt install zsh vim
-chsh -s $(which zsh)
+#!/usr/bin/env bash
 
-# install oh my zsh
-wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-sh install.sh
-rm install.sh
+# Select package manager
+echo "Which package manager are you using?\n0) APT\n1 pacman\n2) DNF"
+read packman
 
-# install zsh syntax highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# MENU
+echo "Choose setup option:\n0) Install z-shell\n1) Install nvim\n2) Update all"
+read option
 
-# install PowerLevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+case "$option" in
+    0)  # install zsh
+        # TODO: test this shit
 
-# setup
-cp .* ~
-source ~/.zshrc
+        case "$packman" in
+            0) apt install zsh;;
+            1) pacman -S zsh;;
+            2) dnf install zsh;;
+        esac
+
+        # setup
+        cp .zshrc $HOME
+
+        # install zsh syntax highlighting
+        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+        # install PowerLevel10k
+        git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+        cp .p1pk.zsh $HOME
+
+        # install oh my zsh
+        wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+        sh install.sh
+        rm install.sh
+
+        chsh -s $(which zsh)
+        source ~/.zshrc
+        source ~/powerlevel10k/powerlevel10k.zsh-theme
+    ;;
+
+    1)  # install neovim
+        case "$packman" in
+            0) apt install nvim lua5.3;;
+            1) pacman -S nvim lua;;
+            2) dnf install nvim lua;;
+        esac
+
+        # setup
+        cp .nvim $HOME
+
+        # TODO: finish
+
+    ;;
+
+    2)  # update all
+        cp .* $HOME
+    ;;
+
+esac

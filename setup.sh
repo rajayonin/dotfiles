@@ -1,18 +1,9 @@
 #!/usr/bin/env bash
 
-# Select package manager
-echo "Which package manager are you using?\n0) APT\n1 pacman\n2) DNF"
-read packman
+install_zsh() {
+    echo -e "Installing z-shell..."
 
-# MENU
-echo "Choose setup option:\n0) Install z-shell\n1) Install nvim\n2) Update all"
-read option
-
-case "$option" in
-    0)  # install zsh
-        # TODO: test this shit
-
-        case "$packman" in
+    case "$packman" in
             0) apt install zsh;;
             1) pacman -S zsh;;
             2) dnf install zsh;;
@@ -36,34 +27,97 @@ case "$option" in
         chsh -s $(which zsh)
         source ~/.zshrc
         source ~/powerlevel10k/powerlevel10k.zsh-theme
-    ;;
 
-    1)  # install neovim
-        case "$packman" in
+
+    echo -e "Done."
+}
+
+
+install_nvim() {
+    echo -e "Installing neovim..."
+
+    case "$packman" in
             0) apt install nvim lua5.3;;
             1) pacman -S nvim lua;;
             2) dnf install nvim lua;;
-        esac
+    esac
 
-        # setup
-        cp nvim/* $HOME/.config/nvim
+    # setup
+    cp nvim/* $HOME/.config/nvim
 
-        # TODO: finish
+    # TODO: finish
 
-    ;;
 
-    2)  # update all
-        cp .* $HOME
-        cp nvim/* $HOME/.config/nvim
-    ;;
+    echo -e "Done."
+}
 
+
+install_nala() {
+    echo -e "Installing nala..."
+
+    echo "deb [arch=amd64,arm64,armhf] http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+    wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
+
+    apt update && apt install nala
+
+    echo -e "Done."
+}
+
+
+update_all() {
+    echo -e "Copying rc files..."
+
+    cp .* $HOME
+    cp -p nvim/* $HOME/.config/nvim
+    cp -p terminator/* $HOME/.config/terminator
+
+    echo -e "Done."
+}
+
+
+install_all() {
+
+    install_zsh()
+    install_nvim()
+
+    case "$packman" in
+        0) 
+            install_nala()
+
+            echo -e "Installing tools..."
+
+            apt install bat exa tldr terminator htop neofetch
+        ;;
+        1) 
+            echo -e "Installing tools..."
+            pacman -S bat exa tldr terminator htop neofetch
+        ;;
+        2) 
+            echo -e "Installing tools..."
+            dnf install bat exa tldr terminator htop neofetch
+        ;;
+
+        # TODO: work with bat, exa (change aliases in zshrc and bashrc)
+
+    esac
+
+    echo -e "Done."
+}
+
+
+# Select package manager
+echo "Which package manager are you using?\n0) APT\n1 pacman\n2) DNF"
+read packman
+
+# MENU
+echo "Choose setup option:\n0) Install everything\n1) Update rc\n2) Install z-shell\n3) Install nvim"
+read option
+
+# TODO: test this shit
+
+case "$option" in
+    0) install_all();;
+    1) update_all();;
+    2) install_zsh();;
+    3) install_nvim();;
 esac
-
-# FIXME: only for apt, more options
-# install nala
-echo "deb [arch=amd64,arm64,armhf] http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
-wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
-
-# install bat, exa
-sudo apt install bat exa tldr
-

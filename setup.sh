@@ -58,3 +58,12 @@ case "$option" in
     ;;
 
 esac
+
+# FIXME: only for apt, more options
+# install nala
+echo "deb [arch=amd64,arm64,armhf] http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
+
+# install bat, exa
+sudo apt install bat exa tldr
+

@@ -1,0 +1,6 @@
+alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
+alias cat="bat"
+alias ls="exa --group-directories-first"
+alias ll="exa -lahHg --git --group-directories-first"
+alias tree="exa -T -L 4"
+alias vim="nvim"

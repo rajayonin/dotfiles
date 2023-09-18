@@ -17,7 +17,7 @@
 
 " COLORS
 " ---
-set colorscheme pablo
+colorscheme pablo
 
 " Use syntax highlighting
 syntax enable

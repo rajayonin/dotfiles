@@ -82,6 +82,8 @@ set wildignore=*.odt,*.doc*,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.JPG,*.exe,*.bmp,*.fl
 " Enable Python syntax highlighting features (thank god).
 autocmd BufRead,BufNewFile *.py let python_highlight_all=1
 
+" jk to Esc in normal mode (watch out Dijkstra)
+inoremap jh <Esc>
 
 " unmap arrow keys bc i'm no pussy
 "noremap <Up> <Nop>

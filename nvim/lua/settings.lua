@@ -1,6 +1,9 @@
 -- enable syntax highlighting
 vim.opt.syntax = "enable"
 
+-- set system clipboard by default
+vim.opt.clipboard = 'unnamedplus'
+
 -- file encoding
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
@@ -33,6 +36,6 @@ HOME = os.getenv("HOME")
 vim.opt.backupdir = HOME .. "/.local/share/nvim/backup"
 vim.opt.directory = HOME .. "/.local/share/nvim/swap"
 
--- Ignore files with these extentions.
+-- Ignore files with these extensions:
 vim.opt.wildignore = "*.odt,*.doc*,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.JPG,*.exe,*.bmp,*.flv,*.gz,*.tgz,*.zip,*.iso,*.gzip,*.mov,*.xz,*.tar,*.img,*.docx,*.xlsx,*.xls"
 

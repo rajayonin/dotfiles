@@ -1,1 +1,1 @@
-vim.cmd([[colorscheme pablo]])
+vim.cmd([[colorscheme default]])

@@ -82,14 +82,14 @@ install_all() {
     echo -e "Installing tools..."
     case "$packman" in
         0) 
-            sudo apt install bat exa tldr terminator btop neofetch cmatrix fzf autojump
+            sudo apt install bat exa tldr terminator btop neofetch cmatrix fzf autojump xclip
             install_nala()
         ;;
         1) 
-            sudo pacman -S bat exa tldr terminator btop neofetch cmatrix fzf autojump
+            sudo pacman -S bat exa tldr terminator btop neofetch cmatrix fzf autojump xclip
         ;;
         2) 
-            sudo dnf install bat exa tldr terminator btop neofetch cmatrix fzf autojump-zsh
+            sudo dnf install bat exa tldr terminator btop neofetch cmatrix fzf autojump-zsh xclip
         ;;
     esac
 

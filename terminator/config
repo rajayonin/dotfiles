@@ -10,7 +10,7 @@
   [[default]]
     background_color = "#1f2428"
     cursor_color = "#aaaaaa"
-    font = RobotoMono Nerd Font Mono 14
+    font = CaskaydiaMono Nerd Font 14
     foreground_color = "#eeeeee"
     show_titlebar = False
     scrollback_infinite = True

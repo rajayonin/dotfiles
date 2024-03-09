@@ -17,7 +17,7 @@
 
 " COLORS
 " ---
-colorscheme pablo
+colo default
 
 " Use syntax highlighting
 syntax enable

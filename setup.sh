@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 install_zsh() {
     echo -e "Installing z-shell..."
@@ -9,16 +9,16 @@ install_zsh() {
         2) sudo dnf install zsh;;
     esac
 
+    # install oh my zsh
+    wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+    sh install.sh
+    rm install.sh
+
     # setup
     cp .zshrc $HOME
 
     # install zsh syntax highlighting
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-    # install oh my zsh
-    wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-    sh install.sh
-    rm install.sh
 
     # install PowerLevel10k
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -81,14 +81,14 @@ install_all() {
 
     echo -e "Installing tools..."
     case "$packman" in
-        0) 
+        0)
             sudo apt install bat exa tldr terminator btop neofetch cmatrix fzf autojump xclip
             install_nala()
         ;;
-        1) 
+        1)
             sudo pacman -S bat exa tldr terminator btop neofetch cmatrix fzf autojump xclip
         ;;
-        2) 
+        2)
             sudo dnf install bat exa tldr terminator btop neofetch cmatrix fzf autojump-zsh xclip
         ;;
     esac

@@ -50,7 +50,11 @@ vim.opt.wrap = true
 vim.opt.breakindent = true
 
 -- save backups and other trash to another place so you don't see them
-HOME = os.getenv("HOME")
+if jit.os == "Windows" then
+    HOME = os.getenv("HOMEPATH")
+else
+    HOME = os.getenv("HOME")
+end
 vim.opt.backupdir = HOME .. "/.local/share/nvim/backup"
 vim.opt.directory = HOME .. "/.local/share/nvim/swap"
 

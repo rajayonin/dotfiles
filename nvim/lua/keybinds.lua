@@ -1,3 +1,6 @@
+-- timeout for keybindings
+vim.opt.timeoutlen = 100
+
 -- leader key
 vim.g.mapleader = ' '
 
@@ -7,9 +10,11 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- kj to Esc
 vim.keymap.set("i", "kj", "<Esc>", {noremap = true})
 
--- prevent x from copying
+-- prevent x/d from copying
 vim.keymap.set("n", "x", '"_x', {noremap = true})
 vim.keymap.set("n", "X", '"_X', {noremap = true})
+vim.keymap.set({'n', 'v'}, 'd', '"_d', { noremap = true })
+vim.keymap.set({'n', 'v'}, 'D', '"_D', { noremap = true })
 
 -- prevent errors when exiting
 vim.api.nvim_create_user_command("X", "x", {})

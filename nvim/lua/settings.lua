@@ -13,7 +13,7 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 -- show numbers
-vim.opt.number = true
+-- vim.opt.number = true
 
 -- better matching (match lowercase w/ everything, unless uppercase)
 vim.opt.ignorecase = true

@@ -26,9 +26,6 @@ syntax enable
 " GENERAL STUFF
 " ---
 
-" Add numbers to the lines.
-set number
-
 " Set title of window to the name of the file.
 set title
 set titlestring="%t - Vim"
@@ -42,14 +39,15 @@ set showmatch
 " Show the line and column position of cursor.
 set ruler
 
+" better matching (match lowercase w/ everything, unless uppercase)
+set ignorecase
+set smartcase
+
 " Copy indent from current line when starting a new line.
 set autoindent
 
 " tabsize
-set tabstop=4 shiftwidth=4 expandtab
-
-" Show line number.
-set number
+set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
 " Change the command history lenght.
 set history=1000
@@ -59,10 +57,13 @@ set hlsearch
 set incsearch
 
 " Wrap like a normal person.
-set linebreak
+set linebreak wrap breakindent
 
 " Show the current comand.
 set showcmd
+
+" Minimal number of screen lines to keep above and below the cursor.
+set scrolloff=10
 
 " Fuck errors, I don't wanaa see 'em.
 set noerrorbells
@@ -82,18 +83,44 @@ set wildignore=*.odt,*.doc*,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.JPG,*.exe,*.bmp,*.fl
 " Enable Python syntax highlighting features (thank god).
 autocmd BufRead,BufNewFile *.py let python_highlight_all=1
 
+" Save undo history.
+set undofile
+
+" Show whitespace
+set list listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
+
+" Copy to system clipboard.
+set clipboard+=unnamed
+set clipboard+=unnamedplus
+
+
+
+" KEYBINDINGS
+" ---
+
+" lower timeout for keybindings
+set timeoutlen=100
+
 " kj to Esc in normal mode
 inoremap kj <Esc>
 
 " unmap arrow keys bc i'm no pussy
-"noremap <Up> <Nop>
-"noremap <Down> <Nop>
-"noremap <Left> <Nop>
-"noremap <Right> <Nop>
+" noremap <Up> <Nop>
+" noremap <Down> <Nop>
+" noremap <Left> <Nop>
+" noremap <Right> <Nop>
 
 " autoinsert matching brackets 
 inoremap { {}<Esc>ha
 inoremap ( ()<Esc>ha
 inoremap [ []<Esc>ha
-inoremap " ""<Esc>ha
-inoremap ' ''<Esc>ha
+" inoremap " ""<Esc>ha
+" inoremap ' ''<Esc>ha
+
+" prevent x/d from copying
+nnoremap x "_x
+nnoremap X "_X
+nnoremap d "_d
+vnoremap d "_d
+nnoremap D "_D
+vnoremap D "_D

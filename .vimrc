@@ -93,6 +93,8 @@ set list listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set clipboard+=unnamed
 set clipboard+=unnamedplus
 
+" Better backspace.
+set backspace=indent,eol,start
 
 
 " KEYBINDINGS

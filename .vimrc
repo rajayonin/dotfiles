@@ -106,6 +106,12 @@ set timeoutlen=100
 " kj to Esc in normal mode
 inoremap kj <Esc>
 
+" remap L/H to end/begin line
+nnoremap L $
+vnoremap L $
+nnoremap H 0
+vnoremap H 0
+
 " unmap arrow keys bc i'm no pussy
 " noremap <Up> <Nop>
 " noremap <Down> <Nop>

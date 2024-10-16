@@ -3,14 +3,11 @@
   borderless = True
   hide_from_taskbar = True
   suppress_multiple_term_dialog = True
-  title_use_system_font = False
-  title_font = Monospace 11
 [keybindings]
 [profiles]
   [[default]]
     background_color = "#1f2428"
-    cursor_color = "#aaaaaa"
-    font = CaskaydiaCove Nerd Font 14
+    font = CaskaydiaCove Nerd Font 13
     foreground_color = "#eeeeee"
     show_titlebar = False
     scrollback_infinite = True

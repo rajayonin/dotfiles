@@ -1,5 +1,5 @@
 -- timeout for keybindings
-vim.opt.timeoutlen = 100
+vim.opt.timeoutlen = 400
 
 -- leader key
 vim.g.mapleader = ' '

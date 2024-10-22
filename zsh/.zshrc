@@ -1,15 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-if [[ -f "/opt/homebrew/bin/brew" ]] then
-  # If you're using macOS, you'll want this enabled
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
+# rajayonin's zsh config file
 
 
 # #######
@@ -27,8 +16,9 @@ fi
 # load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Powerlevel10k
-zinit ice depth=1; zinit light romkatv/powerlevel10k
+# powerlevel10k
+# zinit ice depth=1; zinit light romkatv/powerlevel10k
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -45,20 +35,19 @@ zinit snippet OMZP::command-not-found
 autoload -Uz compinit && compinit
 zinit cdreplay -q
 
-# load p10k config
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 
 
 # ######
 # CONFIG
 # ######
 
+# PATH
+export PATH="$HOME/.local/bin:$PATH"
+
 # keybindings
 bindkey '^f' autosuggest-accept
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
-
+bindkey '^k' history-search-backward
+bindkey '^j' history-search-forward
 # fix weird bugs...
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
@@ -68,7 +57,7 @@ bindkey '^[[3~' delete-char
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # smartcase
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"  # colors on file completion
 zstyle ':completion:*' menu no  # no default menu (we'll use fzf)
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'  # fzf for cd w/ eza
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --icons=auto --color=always $realpath'  # fzf for cd w/ eza
 # zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'  # fzf for cd
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'  # fzf for zoxide
 zstyle ':fzf-tab:*' fzf-bindings 'ctrl-f:accept'
@@ -115,5 +104,6 @@ fi
 # SHELL INTEGRATIONS
 # ##################
 
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"  # prompt
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"

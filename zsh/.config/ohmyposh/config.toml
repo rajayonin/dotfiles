@@ -4,10 +4,12 @@ version = 2
 final_space = true
 console_title_template = '{{ .Shell }} in {{ .Folder }}'
 
+
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
   newline = true
+
 
   [[blocks.segments]]
     type = 'session'
@@ -16,19 +18,29 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     background = 'transparent'
     foreground = 'darkGray'
 
-  [[blocks.segments]]
-    type = 'session'
-    style = 'plain'
-    template = '{{ if .SSHSession }} {{ end }}{{ .UserName }}@{{ .HostName }} '
-    background = 'transparent'
-    foreground = 'cyan'
+
+  # [[blocks.segments]]
+  #   type = "os"
+  #   style = "plain"
+  #   background = 'transparent'
+  #   foreground = 'cyan'
+  #   template = " {{.Icon}}{{ if .WSL }} (WSL) {{ end }} "
+
+
+  # [[blocks.segments]]
+  #   type = 'session'
+  #   style = 'plain'
+  #   template = '{{ if .SSHSession }} {{ end }}{{ .UserName }}@{{ .HostName }}: '
+  #   background = 'transparent'
+  #   foreground = 'cyan'
+
 
   [[blocks.segments]]
     type = 'path'
     style = 'plain'
     background = 'transparent'
     foreground = 'blue'
-    template = '<b>{{ .Path }}</b>'
+    template = '<b>{{ .Path }}</b> '
 
     [blocks.segments.properties]
       style = 'full'
@@ -38,25 +50,29 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 [[blocks]]
   type = 'prompt'
   alignment = 'right'
-  overflow = 'hidden'
+  filler = '<darkGray>·</>'
+  overflow = 'hide'
+
 
   [[blocks.segments]]
     type = 'git'
     style = 'plain'
-    template = '{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}<lightYellow>{{if or (gt .Behind 0) (gt .Ahead 0)}} {{end}}{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>{{ if .Staging.Changed }} {{ .Staging.String }}{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }} {{.UpstreamIcon}}{{.User.Name}}'
+    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}<lightYellow>{{if or (gt .Behind 0) (gt .Ahead 0)}} {{end}}{{ if gt .Behind 0 }}{{.Behind}}⇣{{ end }}{{ if gt .Ahead 0 }}{{.Ahead}}⇡{{ end }}</>{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}{{if not .UpstreamGone}} {{.UpstreamIcon}}{{.User.Name}}{{end}} <darkGray>|</>'
     background = 'transparent'
     foreground = 'cyan'
 
     [blocks.segments.properties]
-      branch_max_length = 25
+      branch_max_length = 20
       fetch_status = true
       fetch_user = true
       fetch_upstream_icon = true
+      branch_icon = ' '
       status_formats.Unmerged = '<lightRed>x%d</> '
       status_formats.Deleted = '<red>-%d</> '
       status_formats.Added = '<green>+%d</> '
       status_formats.Modified = '<lightBlue>~%d</> '
       status_formats.Untracked = '<lightGreen>?%d</> '
+
 
   [[blocks.segments]]
     type = 'executiontime'
@@ -69,7 +85,8 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     template = '{{ if gt .Code 0 }} {{ end }} {{ .FormattedMs }}'
 
     [blocks.segments.properties]
-      threshold = 100
+      threshold = 0
+
 
 
 [[blocks]]
@@ -77,12 +94,14 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   alignment = 'left'
   newline = true
 
+
   [[blocks.segments]]
     type = 'session'
     style = 'plain'
     template = '╰─'
     background = 'transparent'
     foreground = 'darkGray'
+
 
   [[blocks.segments]]
     type = 'text'
@@ -92,10 +111,9 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     template = '❯'
 
 
+
 [transient_prompt]
-  foreground_templates = [
-    "{{if gt .Code 0}}red{{end}}",
-    "{{if eq .Code 0}}magenta{{end}}",
-  ]
   background = 'transparent'
+  foreground = 'yellow'
   template = '❯ '
+

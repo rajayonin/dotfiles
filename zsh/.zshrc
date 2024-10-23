@@ -44,14 +44,14 @@ zinit cdreplay -q
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
 
-# keybindings
+# keybindings (more info in https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Zle-Widgets)
 bindkey '^f' autosuggest-accept
+bindkey '^f' forward-char
 bindkey '^k' history-search-backward
 bindkey '^j' history-search-forward
-# fix weird bugs...
-bindkey '^[[H' beginning-of-line
-bindkey '^[[F' end-of-line
-bindkey '^[[3~' delete-char
+bindkey '^[[H' beginning-of-line  # fix Home key
+bindkey '^[[F' end-of-line  # fix End key
+bindkey '^[[3~' delete-char  # fix Del key
 
 # autocompletion setup
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # smartcase

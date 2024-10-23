@@ -47,8 +47,8 @@ export PATH="$HOME/.local/bin:$PATH"
 # keybindings (more info in https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Zle-Widgets)
 bindkey '^f' autosuggest-accept
 bindkey '^f' forward-char
-bindkey '^k' history-search-backward
-bindkey '^j' history-search-forward
+# bindkey '^k' history-search-backward
+# bindkey '^j' history-search-forward
 bindkey '^[[H' beginning-of-line  # fix Home key
 bindkey '^[[F' end-of-line  # fix End key
 bindkey '^[[3~' delete-char  # fix Del key
@@ -59,7 +59,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"  # colors on file comple
 zstyle ':completion:*' menu no  # no default menu (we'll use fzf)
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --icons=auto --color=always $realpath'  # fzf for cd w/ eza
 # zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'  # fzf for cd
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'  # fzf for zoxide
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --icons=auto -color $realpath'  # fzf for zoxide
 zstyle ':fzf-tab:*' fzf-bindings 'ctrl-f:accept'
 
 # history

@@ -117,3 +117,10 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   foreground = 'yellow'
   template = '❯ '
 
+
+
+[secondary_prompt]
+  background = 'transparent'
+  foreground = 'yellow'
+  template = '❯❯ '
+

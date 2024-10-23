@@ -109,8 +109,23 @@ inoremap kj <Esc>
 " remap L/H to end/begin line
 nnoremap L $
 vnoremap L $
+onoremap L $
 nnoremap H 0
 vnoremap H 0
+onoremap H 0
+
+" movement in insert mode like terminal
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-h> <BS>
+inoremap <C-d> <Del>
+inoremap <C-w> <Esc>_dbi
+inoremap <C-k> <Esc>_d$i
+inoremap <C-u> <Esc>_d0i
 
 " unmap arrow keys bc i'm no pussy
 " noremap <Up> <Nop>
@@ -118,7 +133,7 @@ vnoremap H 0
 " noremap <Left> <Nop>
 " noremap <Right> <Nop>
 
-" autoinsert matching brackets 
+" autoinsert matching brackets
 inoremap { {}<Esc>ha
 inoremap ( ()<Esc>ha
 inoremap [ []<Esc>ha

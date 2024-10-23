@@ -13,20 +13,20 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 -- show numbers
--- vim.opt.number = true
+ vim.opt.number = true
+ vim.opt.relativenumber = true
 
 -- better matching (match lowercase w/ everything, unless uppercase)
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
--- highlight current line
--- vim.opt.cursorline = true
+-- always show signcolumn
+vim.opt.signcolumn = "yes"
 
 -- cursor blink
 vim.o.guicursor = table.concat({
-  "n-v-c:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
-  "i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
-  "r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100"
+    "i:ver1",
+    "a:blinkon1"
 }, ",")
 
 -- whitespace

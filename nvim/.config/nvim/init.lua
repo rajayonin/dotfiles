@@ -1,6 +1,5 @@
 -- general settings
 require('settings')
-require('colors')
 require('keybinds')
 
 -- plugins through lazy.nvim
@@ -22,3 +21,5 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")  -- load plugins
 
 
+-- colors
+require('colors')

@@ -61,6 +61,8 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --icons=auto --color=always 
 # zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'  # fzf for cd
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --icons=auto -color $realpath'  # fzf for zoxide
 zstyle ':fzf-tab:*' fzf-bindings 'ctrl-f:accept'
+zstyle ':fzf-tab:*' accept-line enter
+# zstyle ':fzf-tab:*' accept-line ctrl-j
 
 # history
 HISTSIZE=5000

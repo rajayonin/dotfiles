@@ -67,11 +67,11 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
       fetch_user = true
       fetch_upstream_icon = true
       branch_icon = ' '
-      status_formats.Unmerged = '<lightRed>x%d</> '
-      status_formats.Deleted = '<red>-%d</> '
-      status_formats.Added = '<green>+%d</> '
-      status_formats.Modified = '<lightBlue>~%d</> '
-      status_formats.Untracked = '<lightGreen>?%d</> '
+      status_formats.Unmerged = '<lightRed>x%d</>'
+      status_formats.Deleted = '<red>-%d</>'
+      status_formats.Added = '<green>+%d</>'
+      status_formats.Modified = '<lightBlue>~%d</>'
+      status_formats.Untracked = '<lightGreen>?%d</>'
 
 
   [[blocks.segments]]

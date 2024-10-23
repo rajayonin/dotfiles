@@ -7,7 +7,7 @@
 [profiles]
   [[default]]
     background_color = "#1f2428"
-    font = CaskaydiaCove Nerd Font 13
+    font = CaskaydiaMono Nerd Font 13
     foreground_color = "#eeeeee"
     show_titlebar = False
     scrollback_infinite = True

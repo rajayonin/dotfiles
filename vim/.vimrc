@@ -114,24 +114,19 @@ nnoremap H 0
 vnoremap H 0
 onoremap H 0
 
-" movement in insert mode like terminal
+" emacs movement in insert mode
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
-inoremap <C-k> <Up>
-inoremap <C-j> <Down>
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
 inoremap <C-h> <BS>
 inoremap <C-d> <Del>
-inoremap <C-w> <Esc>_dbi
-inoremap <C-k> <Esc>_d$i
-inoremap <C-u> <Esc>_d0i
+" <C-w> deletes word backwards
+inoremap <C-k> <Esc>"_d$i
+" <C-u> deletes to end of line
 
-" unmap arrow keys bc i'm no pussy
-" noremap <Up> <Nop>
-" noremap <Down> <Nop>
-" noremap <Left> <Nop>
-" noremap <Right> <Nop>
 
 " autoinsert matching brackets
 inoremap { {}<Esc>ha

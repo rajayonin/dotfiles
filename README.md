@@ -27,7 +27,8 @@ The current supported apps are:
 ### Minimal install (SSH servers)
 ```
 git clone https://github.com/rajayonin/dotfiles
-sh dotfiles/min.sh
+cd dotfiles
+sh min.sh
 ```
 
 

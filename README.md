@@ -23,6 +23,14 @@ The current supported apps are:
   - [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - `terminator`: [Terminator Terminal Emulator](https://gnome-terminator.org/) configuration
 
+
+### Minimal install (SSH servers)
+```
+git clone https://github.com/rajayonin/dotfiles
+sh dotfiles/min.sh
+```
+
+
 ## Fonts
 In order to make use of "the cool stuff" (icons, etc), we'll have to use a [Nerd Font](https://www.nerdfonts.com/).
 
@@ -35,3 +43,4 @@ You can install them through [Oh My Posh](https://ohmyposh.dev/):
 oh-my-posh font install CascadiaMono
 oh-my-posh font install CascadiaCode
 ```
+

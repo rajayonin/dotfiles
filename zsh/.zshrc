@@ -27,8 +27,8 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
 # snippets
-# zinit snippet OMZL::git.zsh
-# zinit snippet OMZP::git
+zinit snippet OMZL::git.zsh
+zinit snippet OMZP::git
 zinit snippet OMZP::command-not-found
 
 # load completions on startup
@@ -47,8 +47,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # keybindings (more info in https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Zle-Widgets)
 bindkey '^f' autosuggest-accept
 bindkey '^f' forward-char
-# bindkey '^k' history-search-backward
-# bindkey '^j' history-search-forward
 bindkey '^[[H' beginning-of-line  # fix Home key
 bindkey '^[[F' end-of-line  # fix End key
 bindkey '^[[3~' delete-char  # fix Del key
@@ -97,8 +95,13 @@ if [ -f ~/.sh_aliases ]; then
 fi
 
 
-# default prompt
+# ######
+# PROMPT
+# ######
+
 # PROMPT='%B%F{cyan}%n%f%F{red}@%f%F{green}%m%f:%F{blue}%~%f%F{red}$%f%b '
+
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 
 
 
@@ -106,6 +109,5 @@ fi
 # SHELL INTEGRATIONS
 # ##################
 
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"  # prompt
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"

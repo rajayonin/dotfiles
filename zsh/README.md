@@ -18,6 +18,7 @@ The plugin manager is [Zinit](https://github.com/zdharma-continuum/zinit), with 
 
 ### Oh-my-zsh plugins
 Although I don't use omz (too slow), Zinit allows us to take advantage of [its plugins](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins):
+- [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
 - [command-not-found](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found)
 
 

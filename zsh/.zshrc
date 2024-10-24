@@ -71,7 +71,7 @@ SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory
 setopt sharehistory
-# setopt hist_ignore_space
+setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
@@ -97,7 +97,7 @@ if [ -f ~/.sh_aliases ]; then
 fi
 
 
-# default, non-p10k prompt
+# default prompt
 # PROMPT='%B%F{cyan}%n%f%F{red}@%f%F{green}%m%f:%F{blue}%~%f%F{red}$%f%b '
 
 

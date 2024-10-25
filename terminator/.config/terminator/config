@@ -6,12 +6,14 @@
 [keybindings]
 [profiles]
   [[default]]
-    background_color = "#1f2428"
+    background_color = "#1e222a"
+    cursor_fg_color = "#191d24"
+    cursor_bg_color = "#c0c8d8"
     font = CaskaydiaMono Nerd Font 13
-    foreground_color = "#eeeeee"
+    foreground_color = "#c0c8d8"
     show_titlebar = False
     scrollback_infinite = True
-    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    palette = "#191d24:#b74e58:#97b67c:#c4a000:#5e81ac:#a97ea1:#80b3b2:#e5e9f0:#3b4252:#cb775d:#a3be8c:#fce94f:#81a1c1:#be9db8:#9fc6c5:#eceff4"
     use_system_font = False
 [layouts]
   [[default]]

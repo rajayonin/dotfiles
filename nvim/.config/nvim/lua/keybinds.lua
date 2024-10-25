@@ -34,11 +34,13 @@ vim.keymap.set("i", "<C-k>", '<Esc>"_d$i', {noremap = true, desc = "Delete to en
 vim.keymap.set("i", "<M-f>", '<Esc>ea', {noremap = true, desc = "Move word forward"})
 vim.keymap.set("i", "<M-b>", '<Esc>bi', {noremap = true, desc = "Move word backwards"})
 
--- prevent x/d from copying
+-- prevent x/d/c from copying
 vim.keymap.set("n", "x", '"_x', {noremap = true})
 vim.keymap.set("n", "X", '"_X', {noremap = true})
 vim.keymap.set({'n', 'v'}, 'd', '"_d', { noremap = true })
 vim.keymap.set({'n', 'v'}, 'D', '"_D', { noremap = true })
+vim.keymap.set({'n', 'v'}, 'c', '"_c', { noremap = true })
+vim.keymap.set({'n', 'v'}, 'C', '"_C', { noremap = true })
 
 -- prevent errors when exiting
 vim.api.nvim_create_user_command("X", "x", {})

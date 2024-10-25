@@ -3,7 +3,7 @@ return {
     {
         "AlexvZyl/nordic.nvim",
         opts = {
-            swap_backgrounds = true,  -- use darker background
+            -- swap_backgrounds = true,  -- use darker background
             cursorline = {
                 theme = 'light',  -- cursor selection style
             },

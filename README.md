@@ -8,6 +8,9 @@ This uses [GNU stow](https://www.gnu.org/software/stow/). In order to install ea
 The current supported apps are:
 - `vim`: [Vim](https://www.vim.org/) configuration
 - `nvim`: [Neovim](https://neovim.io/) configuration
+  Requires:
+  - [ripgrep](https://github.com/BurntSushi/ripgrep)
+  - [fd](https://github.com/sharkdp/fd)
 - `zsh`: [Z-shell](https://www.zsh.org/) configuration.  
   Requires:
   - [Oh My Posh](https://ohmyposh.dev/)

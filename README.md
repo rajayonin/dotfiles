@@ -17,6 +17,7 @@ The current supported apps are:
   - [fzf](https://github.com/junegunn/fzf)
   - [zoxide](https://github.com/ajeetdsouza/zoxide)
   - [eza](https://github.com/eza-community/eza)
+  - [yazi](https://github.com/sxyazi/yazi)
 - `bash`: [GNU Bash](https://www.gnu.org/software/bash/) configuration
 - `alias`: Extra shell aliases.  
   Requires:

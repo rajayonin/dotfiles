@@ -2,7 +2,7 @@
 vim.opt.timeoutlen = 400
 
 -- leader key
-vim.g.mapleader = ' '
+-- vim.g.mapleader = ' '  -- moved to init.lua
 
 -- easy escape from terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
@@ -45,3 +45,26 @@ vim.keymap.set({'n', 'v'}, 'C', '"_C', { noremap = true })
 -- prevent errors when exiting
 vim.api.nvim_create_user_command("X", "x", {})
 vim.api.nvim_create_user_command("Q", "q", {})
+
+
+
+-- -------
+-- PLUGINS
+-- -------
+
+-- telescope.nvim
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+
+-- move.nvim
+local opts = { noremap = true, silent = true }
+vim.keymap.set('n', '<A-j>', ':MoveLine(1)<CR>', opts)
+vim.keymap.set('n', '<A-k>', ':MoveLine(-1)<CR>', opts)
+vim.keymap.set('v', '<A-j>', ':MoveBlock(1)<CR>', opts)
+vim.keymap.set('v', '<A-k>', ':MoveBlock(-1)<CR>', opts)
+vim.keymap.set('v', '<A-h>', ':MoveHBlock(-1)<CR>', opts)
+vim.keymap.set('v', '<A-l>', ':MoveHBlock(1)<CR>', opts)
+

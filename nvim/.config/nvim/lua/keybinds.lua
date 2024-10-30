@@ -46,25 +46,7 @@ vim.keymap.set({'n', 'v'}, 'C', '"_C', { noremap = true })
 vim.api.nvim_create_user_command("X", "x", {})
 vim.api.nvim_create_user_command("Q", "q", {})
 
-
-
--- -------
--- PLUGINS
--- -------
-
--- telescope.nvim
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
-
--- move.nvim
-local opts = { noremap = true, silent = true }
-vim.keymap.set('n', '<A-j>', ':MoveLine(1)<CR>', opts)
-vim.keymap.set('n', '<A-k>', ':MoveLine(-1)<CR>', opts)
-vim.keymap.set('v', '<A-j>', ':MoveBlock(1)<CR>', opts)
-vim.keymap.set('v', '<A-k>', ':MoveBlock(-1)<CR>', opts)
-vim.keymap.set('v', '<A-h>', ':MoveHBlock(-1)<CR>', opts)
-vim.keymap.set('v', '<A-l>', ':MoveHBlock(1)<CR>', opts)
+-- center screen around match
+vim.keymap.set("n", "n", "nzzzv", { desc = "Fwd  search '/' or '?'" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Back search '/' or '?'" })
 

@@ -1,6 +1,9 @@
 -- set leader key (must be done before lazy.nvim)
 vim.g.mapleader = ' '
 
+-- general settings
+require('settings')
+
 
 -- plugins through lazy.nvim
 
@@ -21,7 +24,11 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")  -- load plugins
 
 
--- general settings
-require('settings')
+-- small plugins
+require('autocmd')
+
+-- keybinds
 require('keybinds')
+
+-- colors
 require('colors')

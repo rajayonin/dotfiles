@@ -33,7 +33,7 @@ The current supported apps are:
 ```
 git clone https://github.com/rajayonin/dotfiles
 cd dotfiles
-sh min.sh
+bash min.sh
 ```
 
 

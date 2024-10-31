@@ -101,8 +101,28 @@ let &t_SI = "\e[5 q"  " blinking bar (insert mode)
 let &t_EI = "\e[2 q"  " steady block (normal else)
 let &t_SR = "\<Esc>[1 q"  " blinking block (replace mode)
 
+
+
+" COMMANDS
+" --------
+
+" :TrimWhitespace  -- deletes all trailing whitespace
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+command! TrimWhitespace call TrimWhitespace()
+
+
+
 " KEYBINDINGS
 " ---
+
+" leader key
+nnoremap <SPACE> <Nop>
+let mapleader=" "
 
 " lower timeout for keybindings
 set timeoutlen=400
@@ -146,3 +166,6 @@ nnoremap d "_d
 vnoremap d "_d
 nnoremap D "_D
 vnoremap D "_D
+
+" use TrimWhitespace command
+noremap <Leader>w :TrimWhitespace<CR>

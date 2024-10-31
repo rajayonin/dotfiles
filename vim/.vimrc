@@ -96,12 +96,16 @@ set clipboard+=unnamedplus
 " Better backspace.
 set backspace=indent,eol,start
 
+" Cursor config.
+let &t_SI = "\e[5 q"  " blinking bar (insert mode)
+let &t_EI = "\e[2 q"  " steady block (normal else)
+let &t_SR = "\<Esc>[1 q"  " blinking block (replace mode)
 
 " KEYBINDINGS
 " ---
 
 " lower timeout for keybindings
-set timeoutlen=100
+set timeoutlen=400
 
 " kj to Esc in normal mode
 inoremap kj <Esc>

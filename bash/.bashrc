@@ -1,10 +1,3 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
-# people WILL kill me for this, but.. Vim mode baby! fuck emacs! -- i don't like it, for the moment
-# set -o vi
-
 # the following is basically the standard generated:
 
 # If not running interactively, don't do anything
@@ -124,8 +117,10 @@ fi
 # set default editor
 EDITOR=vim
 
-PS1='\[\033[1;35m\]┌─ \[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\n└\[\033[1;31m\]\$\[\033[0m\] '
+PS1='\n\[\033[1;35m\]┌─ \[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\n└\[\033[1;31m\]\$\[\033[0m\] '
 
+# language environment
+export LANG=en_US.UTF-8
 
 if [ -f ~/.cargo/env ]; then
     . ~/.cargo/env

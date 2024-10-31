@@ -26,7 +26,8 @@ vim.opt.signcolumn = "yes"
 -- cursor blink
 vim.o.guicursor = table.concat({
     "i:ver1",
-    "a:blinkon1"
+    "i-c-cr-sm:blinkon1",
+    "n:blickon0",
 }, ",")
 
 -- whitespace

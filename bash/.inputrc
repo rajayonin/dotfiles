@@ -1,3 +1,6 @@
 # more information: https://www.gnu.org/software/bash/manual/bash.html#Readline-Init-File-Syntax
 # see al keybinds: bind -p
 
+# set case-insensitive autocompletion
+set completion-ignore-case On
+

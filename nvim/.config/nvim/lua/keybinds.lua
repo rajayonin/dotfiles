@@ -5,7 +5,11 @@ vim.opt.timeoutlen = 400
 -- vim.g.mapleader = ' '  -- moved to init.lua
 
 -- easy escape from terminal mode
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+-- vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
+-- visually go up/down (works with wrap)
+vim.keymap.set("n", "j", "gj", {noremap = true})
+vim.keymap.set("n", "k", "gk", {noremap = true})
 
 -- kj to Esc
 vim.keymap.set("i", "kj", "<Esc>", {noremap = true})

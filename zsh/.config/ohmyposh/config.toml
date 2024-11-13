@@ -1,51 +1,42 @@
-#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
-
-version = 2
-final_space = true
 console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
+final_space = true
 
+[secondary_prompt]
+  template = '❯❯ '
+  foreground = 'yellow'
+  background = 'transparent'
+
+[transient_prompt]
+  template = '❯ '
+  foreground = 'yellow'
+  background = 'transparent'
 
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
   newline = true
 
-
   [[blocks.segments]]
+    template = '╭─ '
+    foreground = 'darkGray'
+    background = 'transparent'
     type = 'session'
     style = 'plain'
-    template = '╭─ '
-    background = 'transparent'
-    foreground = 'darkGray'
-
-
-  # [[blocks.segments]]
-  #   type = "os"
-  #   style = "plain"
-  #   background = 'transparent'
-  #   foreground = 'cyan'
-  #   template = " {{.Icon}}{{ if .WSL }} (WSL) {{ end }} "
-
-
-  # [[blocks.segments]]
-  #   type = 'session'
-  #   style = 'plain'
-  #   template = '{{ if .SSHSession }} {{ end }}{{ .UserName }}@{{ .HostName }}: '
-  #   background = 'transparent'
-  #   foreground = 'cyan'
-
-
-  [[blocks.segments]]
-    type = 'path'
-    style = 'plain'
-    background = 'transparent'
-    foreground = 'blue'
-    template = '<b>{{ .Path }}</b> '
 
     [blocks.segments.properties]
+      cache_duration = 'none'
+
+  [[blocks.segments]]
+    template = '<b>{{ .Path }}</b> '
+    foreground = 'blue'
+    background = 'transparent'
+    type = 'path'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
       style = 'full'
-
-
 
 [[blocks]]
   type = 'prompt'
@@ -53,74 +44,61 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   filler = '<darkGray>·</>'
   overflow = 'hide'
 
-
   [[blocks.segments]]
+    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}<lightYellow>{{if or (gt .Behind 0) (gt .Ahead 0)}} {{end}}{{ if gt .Behind 0 }}{{.Behind}}⇣{{ end }}{{ if gt .Ahead 0 }}{{.Ahead}}⇡{{ end }}</>{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}{{if not .UpstreamGone}} {{.UpstreamIcon}}{{.User.Name}}{{end}} <darkGray>|</>'
+    foreground = 'cyan'
+    background = 'transparent'
     type = 'git'
     style = 'plain'
-    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}<lightYellow>{{if or (gt .Behind 0) (gt .Ahead 0)}} {{end}}{{ if gt .Behind 0 }}{{.Behind}}⇣{{ end }}{{ if gt .Ahead 0 }}{{.Ahead}}⇡{{ end }}</>{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}{{if not .UpstreamGone}} {{.UpstreamIcon}}{{.User.Name}}{{end}} <darkGray>|</>'
-    background = 'transparent'
-    foreground = 'cyan'
 
     [blocks.segments.properties]
-      branch_max_length = 20
-      fetch_status = true
-      fetch_user = true
-      fetch_upstream_icon = true
       branch_icon = ' '
-      status_formats.Unmerged = '<lightRed>x%d</>'
-      status_formats.Deleted = '<red>-%d</>'
-      status_formats.Added = '<green>+%d</>'
-      status_formats.Modified = '<lightBlue>~%d</>'
-      status_formats.Untracked = '<lightGreen>?%d</>'
+      branch_max_length = 20
+      cache_duration = 'none'
+      fetch_status = true
+      fetch_upstream_icon = true
+      fetch_user = true
 
+      [blocks.segments.properties.status_formats]
+        Added = '<green>+%d</>'
+        Deleted = '<red>-%d</>'
+        Modified = '<lightBlue>~%d</>'
+        Unmerged = '<lightRed>x%d</>'
+        Untracked = '<lightGreen>?%d</>'
 
   [[blocks.segments]]
+    template = '{{ if gt .Code 0 }} {{ end }} {{ .FormattedMs }}'
+    foreground = 'magenta'
+    background = 'transparent'
     type = 'executiontime'
     style = 'plain'
-    background = 'transparent'
-    foreground = 'magenta'
-    foreground_templates = [
-      "{{if gt .Code 0}}red{{end}}",
-    ]
-    template = '{{ if gt .Code 0 }} {{ end }} {{ .FormattedMs }}'
+    foreground_templates = ['{{if gt .Code 0}}red{{end}}']
 
     [blocks.segments.properties]
+      cache_duration = 'none'
       threshold = 0
-
-
 
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
   newline = true
 
-
   [[blocks.segments]]
+    template = '╰─'
+    foreground = 'darkGray'
+    background = 'transparent'
     type = 'session'
     style = 'plain'
-    template = '╰─'
-    background = 'transparent'
-    foreground = 'darkGray'
 
+    [blocks.segments.properties]
+      cache_duration = 'none'
 
   [[blocks.segments]]
+    template = '❯'
+    foreground = 'yellow'
+    background = 'transparent'
     type = 'text'
     style = 'plain'
-    background = 'transparent'
-    foreground = 'yellow'
-    template = '❯'
 
-
-
-[transient_prompt]
-  background = 'transparent'
-  foreground = 'yellow'
-  template = '❯ '
-
-
-
-[secondary_prompt]
-  background = 'transparent'
-  foreground = 'yellow'
-  template = '❯❯ '
-
+    [blocks.segments.properties]
+      cache_duration = 'none'

@@ -83,8 +83,18 @@ set wildignore=*.odt,*.doc*,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.JPG,*.exe,*.bmp,*.fl
 " Enable Python syntax highlighting features (thank god).
 autocmd BufRead,BufNewFile *.py let python_highlight_all=1
 
-" Save undo history.
+" Save undo history to ~/.vim/undodir.
 set undofile
+if !isdirectory($HOME."/.vim/undodir")
+    silent! execute "!mkdir -p ~/.vim/undodir"
+endif
+set undodir=~/.vim/undodir
+" Save backups to ~/.vim/undodir.
+set backup
+if !isdirectory($HOME."/.vim/backupdir")
+    silent! execute "!mkdir -p ~/.vim/backupdir"
+endif
+set backupdir=~/.vim/backupdir
 
 " Show whitespace
 set list listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
@@ -151,6 +161,9 @@ inoremap <C-d> <Del>
 inoremap <C-k> <Esc>"_d$i
 " <C-u> deletes to end of line
 
+" visually go up/down (usefull for wrap)
+nnoremap j gj
+nnoremap k gk
 
 " autoinsert matching brackets
 inoremap { {}<Esc>ha

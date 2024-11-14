@@ -172,6 +172,10 @@ inoremap [ []<Esc>ha
 " inoremap " ""<Esc>ha
 " inoremap ' ''<Esc>ha
 
+" easier indentation in visual mode
+vnoremap < <gv
+vnoremap > >gv
+
 " prevent x/d from copying
 nnoremap x "_x
 nnoremap X "_X

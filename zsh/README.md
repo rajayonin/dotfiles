@@ -12,7 +12,7 @@ The plugin manager is [Zinit](https://github.com/zdharma-continuum/zinit), with 
 <!-- - [Powerlevel10k](https://github.com/romkatv/powerlevel10k): Theme (prompt, etc.). -->
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 - [zsh-completions](https://github.com/zsh-users/zsh-completions)
-- [zsh-autosugestions](https://github.com/zsh-users/zsh-autosugestions)
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [fzf-tab](https://github.com/Aloxaf/fzf-tab)
 
 

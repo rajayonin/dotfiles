@@ -31,6 +31,16 @@ zinit snippet OMZL::git.zsh
 zinit snippet OMZP::git
 zinit snippet OMZP::command-not-found
 
+# docker completions
+if [ -x "$(command -v docker)" ]; then
+  if [ ! -f "$HOME/.docker/completions" ]; then
+    # generate completions
+    mkdir -p ~/.docker/completions && docker completion zsh > ~/.docker/completions/_docker
+  fi
+
+  FPATH="$HOME/.docker/completions:$FPATH"
+fi
+
 # load completions on startup
 autoload -Uz compinit && compinit
 zinit cdreplay -q

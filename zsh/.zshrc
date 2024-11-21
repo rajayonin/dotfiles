@@ -112,6 +112,9 @@ alias la="ls -A"
 if [ -f ~/.sh_aliases ]; then
     . ~/.sh_aliases
 fi
+alias :q="exit"
+alias :Q="exit"
+alias :x="exit"
 
 
 # ######

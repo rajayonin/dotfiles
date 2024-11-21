@@ -83,18 +83,24 @@ set wildignore=*.odt,*.doc*,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.JPG,*.exe,*.bmp,*.fl
 " Enable Python syntax highlighting features (thank god).
 autocmd BufRead,BufNewFile *.py let python_highlight_all=1
 
-" Save undo history to ~/.vim/undodir.
+" Save undo history to ~/.local/share/vim/undo.
 set undofile
-if !isdirectory($HOME."/.vim/undodir")
-    silent! execute "!mkdir -p ~/.vim/undodir"
+if !isdirectory("~/.local/share/vim/undo")
+    silent! execute "!mkdir -p ~/.local/share/vim/undo"
 endif
-set undodir=~/.vim/undodir
-" Save backups to ~/.vim/undodir.
+set undodir=~/.local/share/vim/undo
+" Save backups to ~/.local/share/vim/backup.
 set backup
-if !isdirectory($HOME."/.vim/backupdir")
-    silent! execute "!mkdir -p ~/.vim/backupdir"
+if !isdirectory("~/.local/share/vim/backup")
+    silent! execute "!mkdir -p ~/.local/share/vim/backup"
 endif
-set backupdir=~/.vim/backupdir
+set backupdir=~/.local/share/vim/backup
+" Save swap to ~/.local/share/vim/swap.
+set swapfile
+if !isdirectory("~/.local/share/vim/swap")
+    silent! execute "!mkdir -p ~/.local/share/vim/swap"
+endif
+set directory=~/.local/share/vim/swap
 
 " Show whitespace
 set list listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
@@ -107,9 +113,9 @@ set clipboard+=unnamedplus
 set backspace=indent,eol,start
 
 " Cursor config.
-let &t_SI = "\e[5 q"  " blinking bar (insert mode)
-let &t_EI = "\e[2 q"  " steady block (normal else)
-let &t_SR = "\<Esc>[1 q"  " blinking block (replace mode)
+let &t_SI="\e[5 q"  " blinking bar (insert mode)
+let &t_EI="\e[2 q"  " steady block (normal else)
+let &t_SR="\<Esc>[1 q"  " blinking block (replace mode)
 
 
 

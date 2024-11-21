@@ -128,3 +128,9 @@ export LANG=en_US.UTF-8
 if [ -f ~/.cargo/env ]; then
     . ~/.cargo/env
 fi
+
+# Neovim for local instalation
+# ($ cd && wget https://github.com/neovim/neovim/releases/download/v0.10.2/nvim-linux64.tar.gz && tar xzvf nvim-linux64.tar.gz)
+if [ -d "$HOME/nvim-linux64" ]; then
+    export PATH="$HOME/nvim-linux64/bin:$PATH"
+fi

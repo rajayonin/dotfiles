@@ -20,6 +20,7 @@ return {
         opts = {
             options = {
                 -- theme = 'material'
+                globalstatus = true,
                 theme = 'nordic'
             },
             sections = {
@@ -29,18 +30,21 @@ return {
                     {'diagnostics'}
                 },
                 lualine_x = {
-                      {
-                          'fileformat',
-                          icons_enabled = true,
-                          symbols = {
-                             unix = 'LF',
-                             dos = 'CRLF',
-                             mac = 'CR',
-                          },
-                      },
-                      {'encoding'},
-                      {'filetype'},
+                    {
+                        'fileformat',
+                        icons_enabled = true,
+                        symbols = {
+                            unix = 'LF',
+                            dos = 'CRLF',
+                            mac = 'CR',
+                        },
                     },
+                    {'encoding'},
+                    {'filetype'},
+                },
+                lualine_c = {
+                    {'filename', path = 1}  -- relative path
+                }
             }
         }
     }

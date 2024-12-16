@@ -95,11 +95,11 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # editor
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='nvim'
+# fi
 
 
 # language environment
@@ -133,3 +133,4 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(thefuck --alias)" && export THEFUCK_EXCLUDE_RULES='fix_file'

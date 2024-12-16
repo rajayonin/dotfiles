@@ -4,8 +4,9 @@ return {
     version = "*",
     opts = {
       direction = "float",
-      open_mapping = [[<leader>t]],
-      insert_mappings = false
+      open_mapping = [[<leader>tt]],
+      insert_mappings = false,
+      terminal_mappings = false
     }
   }
 }

@@ -150,9 +150,9 @@ inoremap kj <Esc>
 nnoremap L $
 vnoremap L $
 onoremap L $
-nnoremap H 0
-vnoremap H 0
-onoremap H 0
+nnoremap H _
+vnoremap H _
+onoremap H _
 
 " emacs movement in insert mode
 inoremap <C-f> <Right>
@@ -170,6 +170,9 @@ inoremap <C-k> <Esc>"_d$i
 " visually go up/down (usefull for wrap)
 nnoremap j gj
 nnoremap k gk
+" same for normal visual mode
+xnoremap <expr> j mode() ==# 'V' ? 'j' : 'gj'
+xnoremap <expr> k mode() ==# 'V' ? 'k' : 'gk'
 
 " autoinsert matching brackets
 inoremap { {}<Esc>ha
@@ -182,13 +185,19 @@ inoremap [ []<Esc>ha
 vnoremap < <gv
 vnoremap > >gv
 
-" prevent x/d from copying
+" prevent x/d/c/s from copying
 nnoremap x "_x
 nnoremap X "_X
 nnoremap d "_d
 vnoremap d "_d
 nnoremap D "_D
 vnoremap D "_D
+nnoremap c "_c
+vnoremap c "_c
+nnoremap C "_C
+vnoremap C "_C
+nnoremap s "_s
+vnoremap s "_s
 
 " use TrimWhitespace command
 noremap <Leader>w :TrimWhitespace<CR>

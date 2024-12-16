@@ -26,3 +26,4 @@ Although I don't use omz (too slow), Zinit allows us to take advantage of [its p
 There are a couple of integrations with some packages, so please install them:
 - [fzf](https://github.com/junegunn/fzf)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
+- [thefuck](https://github.com/nvbn/thefuck)

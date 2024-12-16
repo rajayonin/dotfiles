@@ -13,8 +13,12 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 -- show numbers
- vim.opt.number = true
- vim.opt.relativenumber = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+-- highlight current number
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
 
 -- better matching (match lowercase w/ everything, unless uppercase)
 vim.opt.ignorecase = true
@@ -27,12 +31,13 @@ vim.opt.signcolumn = "yes"
 vim.o.guicursor = table.concat({
     "i:ver1",
     "i-c-cr-sm:blinkon1",
-    "n:blickon0",
+    "r-cr:hor50"
 }, ",")
 
 -- whitespace
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+-- vim.opt.listchars = { tab = '  ', trail = '·', nbsp = '␣' }
 
 -- preview substitutions live
 vim.opt.inccommand = 'split'

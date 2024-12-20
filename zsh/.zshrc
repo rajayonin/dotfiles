@@ -95,11 +95,11 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # editor
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 
 # language environment

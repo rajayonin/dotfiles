@@ -62,3 +62,9 @@ vim.api.nvim_create_user_command("Q", "q", {})
 vim.keymap.set("n", "n", "nzzzv", { desc = "Fwd  search '/' or '?'", silent = true })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Back search '/' or '?'", silent = true })
 
+-- tabs
+vim.keymap.set("n", "<A-o>", "<cmd>tabnew<CR>", { desc = "Open new tab" })
+vim.keymap.set("n", "<A-q>", "<cmd>BufferClose<CR>", { noremap = true, desc = "Close current tab" })
+vim.keymap.set("n", "<A-.>", "<cmd>BufferNext<CR>", { desc = "Go to next tab" })
+vim.keymap.set("n", "<A-,>", "<cmd>BufferPrevious<CR>", { desc = "Go to previous tab" })
+

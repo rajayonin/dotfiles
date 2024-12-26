@@ -28,6 +28,7 @@ The current supported apps are:
   - [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
   - [trash-cli](https://github.com/andreafrancia/trash-cli)
 - `terminator`: [Terminator Terminal Emulator](https://gnome-terminator.org/) configuration
+- `ghostty`: [Ghostty](https://ghostty.org/) configuration
 
 
 ### Minimal install (SSH servers)

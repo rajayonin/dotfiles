@@ -1,0 +1,16 @@
+# window (simulate maximized)
+window-height = 300
+window-width= 300
+window-decoration = false
+
+# cursor
+shell-integration-features = no-cursor
+cursor-style = block
+mouse-hide-while-typing
+
+# font
+font-family = "CaskaydiaMono Nerd Font"
+font-size = 13
+
+# theme
+theme = nordic

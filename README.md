@@ -11,6 +11,7 @@ The current supported apps are:
   Requires:
   - [ripgrep](https://github.com/BurntSushi/ripgrep)
   - [fd](https://github.com/sharkdp/fd)
+  - [Lazygit](https://github.com/jesseduffield/lazygit)
 - `zsh`: [Z-shell](https://www.zsh.org/) configuration.  
   Requires:
   - [Oh My Posh](https://ohmyposh.dev/)

@@ -10,7 +10,7 @@ mouse-hide-while-typing
 
 # font
 font-family = "CaskaydiaMono Nerd Font"
-font-size = 13
+font-size = 12
 
 # theme
 theme = nordic

@@ -18,7 +18,7 @@ vim.opt.relativenumber = true
 
 -- highlight current line
 vim.opt.cursorline = true
--- vim.opt.cursorlineopt = "number"
+vim.opt.cursorlineopt = "number"
 
 -- better matching (match lowercase w/ everything, unless uppercase)
 vim.opt.ignorecase = true

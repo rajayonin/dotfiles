@@ -37,6 +37,7 @@ The current supported apps are:
     - [fzf](https://github.com/junegunn/fzf)
     - [zoxide](https://github.com/ajeetdsouza/zoxide)
     - [eza](https://github.com/eza-community/eza)
+    - [Lazygit](https://github.com/jesseduffield/lazygit)
 
 
 ### Minimal install (SSH servers)

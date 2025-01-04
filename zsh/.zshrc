@@ -117,11 +117,10 @@ alias :Q="exit"
 alias :x="exit"
 
 
+
 # ######
 # PROMPT
 # ######
-
-# PROMPT='%B%F{cyan}%n%f%F{red}@%f%F{green}%m%f:%F{blue}%~%f%F{red}$%f%b '
 
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 
@@ -134,3 +133,10 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(thefuck --alias)" && export THEFUCK_EXCLUDE_RULES='fix_file'
+
+# nvm
+if [ -f /usr/share/nvm/init-nvm.sh ]; then
+  source /usr/share/nvm/init-nvm.sh
+fi
+
+

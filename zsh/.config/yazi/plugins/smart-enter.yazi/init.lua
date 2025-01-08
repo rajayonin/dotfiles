@@ -1,3 +1,4 @@
+--- @sync entry
 -- enter for directory, open for file
 return {
 	entry = function()

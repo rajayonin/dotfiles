@@ -69,6 +69,8 @@ bindkey '^f' forward-char
 bindkey '^[[H' beginning-of-line  # fix Home key
 bindkey '^[[F' end-of-line  # fix End key
 bindkey '^[[3~' delete-char  # fix Del key
+bindkey '^H' backward-kill-word  # fix Ctrl+Backspace
+bindkey '^[[3;5~' kill-word  # fix Ctrl+Del
 
 # autocompletion setup
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # smartcase

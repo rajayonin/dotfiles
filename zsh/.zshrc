@@ -5,15 +5,14 @@
 # PLUGINS
 # #######
 
+# zinit (plugin manager)
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-# download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
    mkdir -p "$(dirname $ZINIT_HOME)"
    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
-# load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
 # powerlevel10k
@@ -24,7 +23,9 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
+if [ -x "$(command -v fzf)" ]; then
+	zinit light Aloxaf/fzf-tab
+fi
 
 # snippets
 zinit snippet OMZL::git.zsh
@@ -45,15 +46,6 @@ fi
 autoload -Uz compinit && compinit
 zinit cdreplay -q
 
-# yazi
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
 
 
 # ######
@@ -63,14 +55,18 @@ function y() {
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
 
-# keybindings (more info in https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Zle-Widgets)
+# keybindings (more info in https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Standard-Widgets)
 bindkey '^f' autosuggest-accept
+bindkey '^f' accept-search
+bindkey '^M' accept-line
 bindkey '^f' forward-char
 bindkey '^[[H' beginning-of-line  # fix Home key
 bindkey '^[[F' end-of-line  # fix End key
 bindkey '^[[3~' delete-char  # fix Del key
 bindkey '^H' backward-kill-word  # fix Ctrl+Backspace
 bindkey '^[[3;5~' kill-word  # fix Ctrl+Del
+bindkey '^[[1;5C' forward-word # fix Ctrl+Right
+bindkey '^[[1;5D' backward-word # fix Ctrl+Left
 
 # autocompletion setup
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # smartcase
@@ -81,7 +77,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --icons=auto --color=always 
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --icons=auto -color $realpath'  # fzf for zoxide
 zstyle ':fzf-tab:*' fzf-bindings 'ctrl-f:accept'
 zstyle ':fzf-tab:*' accept-line enter
-# zstyle ':fzf-tab:*' accept-line ctrl-j
 
 # history
 HISTSIZE=5000
@@ -103,20 +98,27 @@ else
   export EDITOR='nvim'
 fi
 
-
 # language environment
 export LANG=en_US.UTF-8
 
-# aliases
+
+
+# ######
+# ALIASES
+# ######
+
+# basic
 alias ls="ls --color"
 alias ll="ls -alFh"
 alias la="ls -A"
-if [ -f ~/.sh_aliases ]; then
-    . ~/.sh_aliases
-fi
 alias :q="exit"
 alias :Q="exit"
 alias :x="exit"
+
+# extra
+if [ -f ~/.sh_aliases ]; then
+    . ~/.sh_aliases
+fi
 
 
 
@@ -124,6 +126,7 @@ alias :x="exit"
 # PROMPT
 # ######
 
+# oh-my-posh
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 
 
@@ -132,13 +135,35 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 # SHELL INTEGRATIONS
 # ##################
 
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
-eval "$(thefuck --alias)" && export THEFUCK_EXCLUDE_RULES='fix_file'
+# fzf
+if [ -x "$(command -v fzf)" ]; then
+	eval "$(fzf --zsh)"
+fi
+
+# zoxide
+if [ -x "$(command -v zoxide)" ]; then
+	eval "$(zoxide init --cmd cd zsh)"
+fi
+
+# thefuck
+if [ -x "$(command -v thefuck)" ]; then
+	eval "$(thefuck --alias)" && export THEFUCK_EXCLUDE_RULES='fix_file'
+fi
 
 # nvm
 if [ -f /usr/share/nvm/init-nvm.sh ]; then
   source /usr/share/nvm/init-nvm.sh
 fi
 
+# yazi
+if [ -x "$(command -v yazi)" ]; then
+	function y() {  # when exiting yazi, leave at the current directory
+		local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+		yazi "$@" --cwd-file="$tmp"
+		if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+			builtin cd -- "$cwd"
+		fi
+		rm -f -- "$tmp"
+	}
+fi
 

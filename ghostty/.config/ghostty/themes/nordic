@@ -1,21 +1,27 @@
-palette = 0=#191d24
-palette = 1=#b74e58
-palette = 2=#97b67c
-palette = 3=#c4a000
-palette = 4=#5e81ac
-palette = 5=#a97ea1
-palette = 6=#80b3b2
-palette = 7=#e5e9f0
-palette = 8=#3b4252
-palette = 9=#cb775d
-palette = 10=#a3be8c
-palette = 11=#fce94f
-palette = 12=#81a1c1
-palette = 13=#be9db8
-palette = 14=#9fc6c5
-palette = 15=#eceff4
-background = #1e222a
-foreground = #c0c8d8
-cursor-color = #c0c8d8
-selection-background = #c0c8d8
-selection-foreground = #191d24
+# Nordic Colorscheme for Ghostty.
+# Based on https://github.com/AlexvZyl/nordic.nvim
+# Author: @jorgebef
+
+palette = 0=#191D24
+palette = 1=#BF616A
+palette = 2=#A3BE8C
+palette = 3=#EBCB8B
+palette = 4=#81A1C1
+palette = 5=#B48EAD
+palette = 6=#8FBCBB
+palette = 7=#D8DEE9
+
+palette = 8=#3B4252
+palette = 9=#D06F79
+palette = 10=#B1D196
+palette = 11=#F0D399
+palette = 12=#88C0D0
+palette = 13=#C895BF
+palette = 14=#93CCDC
+palette = 15=#E5E9F0
+
+background = #242933
+foreground = #D8DEE9
+cursor-color = #D8DEE9
+selection-background = #2E3440
+selection-foreground = #D8DEE9

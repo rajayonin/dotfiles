@@ -1,3 +1,12 @@
 return {
-    {'nvim-treesitter/nvim-treesitter-context'}
+  {
+    'nvim-treesitter/nvim-treesitter-context',
+    enabled = true,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter"
+    },
+    opts = {
+      multiwindow = true
+    }
+  }
 }

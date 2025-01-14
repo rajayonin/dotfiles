@@ -12,7 +12,6 @@ The current supported apps are:
   - [ripgrep](https://github.com/BurntSushi/ripgrep)
   - [fd](https://github.com/sharkdp/fd)
   - [Lazygit](https://github.com/jesseduffield/lazygit)
-  - [luarocks](https://luarocks.org/)
   - `xclip`
 - `zsh`: [Z-shell](https://www.zsh.org/) configuration  
   Requires:

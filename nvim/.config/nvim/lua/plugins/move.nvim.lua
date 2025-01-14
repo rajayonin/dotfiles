@@ -8,10 +8,11 @@ vim.keymap.set('v', '<A-h>', ':MoveHBlock(-1)<CR>', opts)
 vim.keymap.set('v', '<A-l>', ':MoveHBlock(1)<CR>', opts)
 
 return {
-    { 
-        'fedepujol/move.nvim',
-        opts = {
-            word = { enable = true }  -- disable word movement
-        }
+  {
+    'fedepujol/move.nvim',
+    enabled = true,
+    opts = {
+        word = { enable = true }  -- disable word movement
     }
+  }
 }

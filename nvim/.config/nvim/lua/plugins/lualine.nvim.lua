@@ -14,38 +14,39 @@ end
 
 
 return {
-    {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
-        opts = {
-            options = {
-                -- theme = 'material'
-                globalstatus = true,
-                theme = 'nordic'
+  {
+    'nvim-lualine/lualine.nvim',
+    enabled = true,
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    opts = {
+      options = {
+        -- theme = 'material'
+        globalstatus = true,
+        theme = 'nordic'
+      },
+      sections = {
+        lualine_b = {
+          {'branch', icon = ''},
+          {'diff', source = diff_source},
+          {'diagnostics'}
+        },
+        lualine_x = {
+          {
+            'fileformat',
+            icons_enabled = true,
+            symbols = {
+              unix = 'LF',
+              dos = 'CRLF',
+              mac = 'CR',
             },
-            sections = {
-                lualine_b = {
-                    {'branch', icon = ''},
-                    {'diff', source = diff_source},
-                    {'diagnostics'}
-                },
-                lualine_x = {
-                    {
-                        'fileformat',
-                        icons_enabled = true,
-                        symbols = {
-                            unix = 'LF',
-                            dos = 'CRLF',
-                            mac = 'CR',
-                        },
-                    },
-                    {'encoding'},
-                    {'filetype'},
-                },
-                lualine_c = {
-                    {'filename', path = 1}  -- relative path
-                }
-            }
+          },
+          {'encoding'},
+          {'filetype'},
+        },
+        lualine_c = {
+          {'filename', path = 1}  -- relative path
         }
+      }
     }
+  }
 }

@@ -3,6 +3,7 @@ vim.keymap.set("n", "<leader>ee", "<CMD>Neotree toggle<CR>", {desc = "Toggle Neo
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
+    enabled = true,
     branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -15,7 +16,7 @@ return {
         {
           event = "file_open_requested",
           handler = function()
-            require("neo-tree.command").execute({ action = "close"})
+            require("neo-tree.command").execute({ action = "close" })
           end
         }
       },

@@ -1,3 +1,6 @@
 return {
-  { "mrcjkb/nvim-lastplace"}
+  {
+    "mrcjkb/nvim-lastplace",
+    enabled = true,
+  }
 }

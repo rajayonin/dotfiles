@@ -55,6 +55,13 @@ zinit cdreplay -q
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
 
+# ruby
+if [ -x "$(command -v gem)" ]; then
+	export GEM_HOME="$(gem env user_gemhome)"
+	export PATH="$PATH:$GEM_HOME/bin"
+fi
+
+
 # keybindings (more info in https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Standard-Widgets)
 bindkey '^f' autosuggest-accept
 bindkey '^f' accept-search

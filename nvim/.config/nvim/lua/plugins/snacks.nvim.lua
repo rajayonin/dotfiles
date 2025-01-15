@@ -6,8 +6,18 @@ return {
     lazy = false,
     opts = {
       bigfile = { enabled = true },
-      -- indent = { enabled = true },
+      indent = {
+        enabled = true,
+        animate = {
+          enabled = true,
+          duration = {
+            step = 5,
+            total = 150
+          }
+        }
+      },
       input = { enabled = true },
+      scope = { enabled = true },
       notifier = {
         enabled = true,
         timeout = 3000,
@@ -21,7 +31,21 @@ return {
           -- wo = { wrap = true } -- Wrap notifications
         }
       },
-      lazygit = { configure = false },
+      lazygit = {
+        configure = true,
+        theme = {
+          [241]                      = { fg = "Special" },
+          activeBorderColor          = { fg = "DiagnosticWarn", bold = true },
+          cherryPickedCommitBgColor  = { fg = "Identifier" },
+          cherryPickedCommitFgColor  = { fg = "Function" },
+          defaultFgColor             = { fg = "Normal" },
+          inactiveBorderColor        = { fg = "default" },
+          optionsTextColor           = { fg = "Function" },
+          searchingActiveBorderColor = { fg = "DiagnosticWarn", bold = true },
+          selectedLineBgColor        = { bg = "Visual" }, -- set to `default` to have no background colour
+          unstagedChangesColor       = { fg = "DiagnosticError" },
+        }
+      },
     },
     keys = {
       { "<leader>gb", function() Snacks.git.blame_line() end, desc = "Git Blame Line" },

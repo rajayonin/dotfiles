@@ -30,6 +30,9 @@ The current supported apps are:
   - [trash-cli](https://github.com/andreafrancia/trash-cli)
 - `terminator`: [Terminator Terminal Emulator](https://gnome-terminator.org/) configuration
 - `ghostty`: [Ghostty](https://ghostty.org/) configuration
+- `lazygit`: [Lazygit](https://github.com/jesseduffield/lazygit) configuration  
+  Requires:
+    - [difftastic](https://github.com/wilfred/difftastic)
 - `pwsh`: [Powershell](https://microsoft.com/powershell/) configuration  
   Requires:
     - [Oh My Posh](https://ohmyposh.dev/)

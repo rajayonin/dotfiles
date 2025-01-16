@@ -32,19 +32,7 @@ return {
         }
       },
       lazygit = {
-        configure = true,
-        theme = {
-          [241]                      = { fg = "Special" },
-          activeBorderColor          = { fg = "DiagnosticWarn", bold = true },
-          cherryPickedCommitBgColor  = { fg = "Identifier" },
-          cherryPickedCommitFgColor  = { fg = "Function" },
-          defaultFgColor             = { fg = "Normal" },
-          inactiveBorderColor        = { fg = "default" },
-          optionsTextColor           = { fg = "Function" },
-          searchingActiveBorderColor = { fg = "DiagnosticWarn", bold = true },
-          selectedLineBgColor        = { bg = "Visual" }, -- set to `default` to have no background colour
-          unstagedChangesColor       = { fg = "DiagnosticError" },
-        }
+        configure = false,  -- need to set os.editPreset to "nvim-remote" in Lazygit config
       },
     },
     keys = {

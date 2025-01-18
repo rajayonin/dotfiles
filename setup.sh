@@ -1,5 +1,7 @@
 #!/bin/bash
 
+exit  # don't use this, see https://github.com/rajayonin/dotfiles/issues/1
+
 install_zsh() {
     echo -e "Installing z-shell..."
 

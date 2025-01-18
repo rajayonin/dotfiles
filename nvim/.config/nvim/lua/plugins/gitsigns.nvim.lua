@@ -37,11 +37,11 @@ return {
         vim.keymap.set(mode, l, r, opts)
       end
 
-      map('n', '<leader>gr', gitsigns.reset_hunk)
-      map('v', '<leader>gr', function() gitsigns.reset_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
-      map('n', '<leader>gs', gitsigns.preview_hunk_inline)
-      map('n', '<leader>gn', function() gitsigns.nav_hunk('next') end)
-      map('n', '<leader>gp', function() gitsigns.nav_hunk('prev') end)
+      map('n', '<leader>hr', gitsigns.reset_hunk)
+      map('v', '<leader>hr', function() gitsigns.reset_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
+      map('n', '<leader>hd', gitsigns.preview_hunk_inline)
+      map('n', '<leader>hn', function() gitsigns.nav_hunk('next') end)
+      map('n', '<leader>hp', function() gitsigns.nav_hunk('prev') end)
 
     end
 

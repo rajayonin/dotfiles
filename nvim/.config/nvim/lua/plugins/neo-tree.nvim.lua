@@ -11,6 +11,23 @@ return {
       "MunifTanjim/nui.nvim",
     },
     opts = {
+      default_component_configs = {
+        git_status = {
+          symbols = {
+            -- Change type
+            added     = "A",
+            modified  = "M",
+            deleted   = "D", -- this can only be used in the git_status source
+            renamed   = "R", -- this can only be used in the git_status source
+            -- Status type
+            untracked = "U",
+            ignored   = "",
+            unstaged  = "",
+            staged    = "S",
+            conflict  = "!",
+          }
+        },
+      },
       -- close explorer on open file
       event_handlers = {
         {

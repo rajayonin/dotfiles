@@ -1,0 +1,15 @@
+gui:
+    scrollHeight: 10
+    expandFocusedSidePanel: true
+    showNumstatInFilesView: true
+    showRandomTip: false
+    showCommandLog: false
+    nerdFontsVersion: '3'
+
+git:
+  paging:
+    externalDiffCommand: difft --display=inline --color=always
+
+os:
+  editPreset: "vscode"
+

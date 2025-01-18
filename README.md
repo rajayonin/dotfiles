@@ -11,8 +11,11 @@ The current supported apps are:
   Requires:
   - [ripgrep](https://github.com/BurntSushi/ripgrep)
   - [fd](https://github.com/sharkdp/fd)
-  - [Lazygit](https://github.com/jesseduffield/lazygit)
-  - `xclip`
+  - [tree-sitter](https://github.com/tree-sitter/tree-sitter)
+  - `xclip` (for Linux)
+
+  Depends-on:
+  - `lazygit`
 - `zsh`: [Z-shell](https://www.zsh.org/) configuration  
   Requires:
   - [Oh My Posh](https://ohmyposh.dev/)
@@ -25,21 +28,27 @@ The current supported apps are:
   Requires:
   - [batcat](https://github.com/sharkdp/bat)
   - [eza](https://github.com/eza-community/eza)
-  - [Neovim](https://neovim.io/)
   - [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
   - [trash-cli](https://github.com/andreafrancia/trash-cli)
+
+  Depends-on:
+  - `nvim`
 - `terminator`: [Terminator Terminal Emulator](https://gnome-terminator.org/) configuration
 - `ghostty`: [Ghostty](https://ghostty.org/) configuration
 - `lazygit`: [Lazygit](https://github.com/jesseduffield/lazygit) configuration  
   Requires:
-    - [difftastic](https://github.com/wilfred/difftastic)
+    - [difftastic](https://github.com/wilfred/difftastic) (requires [Rust](https://rustup.rs/))
 - `pwsh`: [Powershell](https://microsoft.com/powershell/) configuration  
   Requires:
     - [Oh My Posh](https://ohmyposh.dev/)
     - [fzf](https://github.com/junegunn/fzf)
     - [zoxide](https://github.com/ajeetdsouza/zoxide)
     - [eza](https://github.com/eza-community/eza)
-    - [Lazygit](https://github.com/jesseduffield/lazygit)
+    - [ripgrep](https://github.com/BurntSushi/ripgrep)
+
+  Depends-on:
+    - `lazygit`
+    - `nvim`
 
 
 ### Minimal install (SSH servers)
@@ -58,6 +67,11 @@ bash min.sh
 git clone https://github.com/rajayonin/dotfiles
 cd dotfiles
 .\pwsh.ps1
+```
+
+To update config files after dependencies are already installed:
+```powershell
+.\pwsh.ps1 update
 ```
 
 

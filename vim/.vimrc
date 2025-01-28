@@ -200,4 +200,4 @@ nnoremap s "_s
 vnoremap s "_s
 
 " use TrimWhitespace command
-noremap <Leader>w :TrimWhitespace<CR>
+"noremap <Leader>w :TrimWhitespace<CR>

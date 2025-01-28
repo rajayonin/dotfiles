@@ -49,6 +49,9 @@ The current supported apps are:
   Depends-on:
     - `lazygit`
     - `nvim`
+- `code`: [VS Code](https://code.visualstudio.com/) configuration  
+  Depends-on:
+    - `vim`
 
 
 ### Minimal install (SSH servers)

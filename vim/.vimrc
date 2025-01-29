@@ -199,5 +199,9 @@ vnoremap C "_C
 nnoremap s "_s
 vnoremap s "_s
 
+" duplicate line
+nnoremap t <Cmd>t.<CR>
+vnoremap t <Cmd>t.<CR>
+
 " use TrimWhitespace command
 "noremap <Leader>w :TrimWhitespace<CR>

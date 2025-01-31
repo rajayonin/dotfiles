@@ -1,7 +1,7 @@
-# window (simulate maximized)
-window-height = 300
-window-width= 300
-window-decoration = false
+# window
+maximize = true
+window-decoration = none
+gtk-titlebar = false
 
 # cursor
 shell-integration-features = no-cursor
@@ -14,3 +14,4 @@ font-size = 12
 
 # theme
 theme = nordic
+

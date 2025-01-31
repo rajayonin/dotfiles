@@ -32,7 +32,10 @@ zinit snippet OMZL::git.zsh
 zinit snippet OMZP::git
 zinit snippet OMZP::command-not-found
 
-# docker completions
+
+# COMPLETIONS
+
+# docker
 if [ -x "$(command -v docker)" ]; then
   if [ ! -f "$HOME/.docker/completions" ]; then
     # generate completions
@@ -40,6 +43,16 @@ if [ -x "$(command -v docker)" ]; then
   fi
 
   FPATH="$HOME/.docker/completions:$FPATH"
+fi
+
+# github cli
+if [ -x "$(command -v gh)" ]; then
+  if [ ! -f "$HOME/.github-cli/completions" ]; then
+    # generate completions
+    mkdir -p ~/.github-cli/completions && gh completion -s zsh > ~/.github-cli/completions/_gh
+  fi
+
+  FPATH="$HOME/.github-cli/completions:$FPATH"
 fi
 
 # load completions on startup

@@ -33,6 +33,22 @@ zinit snippet OMZP::git
 zinit snippet OMZP::command-not-found
 
 
+# PATH
+export PATH="$HOME/.local/bin:$PATH"
+
+# bun
+if [ -d "$HOME/.bun" ]; then
+  export BUN_INSTALL="$HOME/.bun"
+  export PATH="$BUN_INSTALL/bin:$PATH"
+fi
+
+# ruby
+if [ -x "$(command -v gem)" ]; then
+	export GEM_HOME="$(gem env user_gemhome)"
+	export PATH="$PATH:$GEM_HOME/bin"
+fi
+
+
 # COMPLETIONS
 
 # docker
@@ -55,6 +71,12 @@ if [ -x "$(command -v gh)" ]; then
   FPATH="$HOME/.github-cli/completions:$FPATH"
 fi
 
+# bun
+if [ -x "$(command -v bun)" ]; then
+  [ -s "/home/ldcas/.bun/_bun" ] && source "/home/ldcas/.bun/_bun"
+fi
+
+
 # load completions on startup
 autoload -Uz compinit && compinit
 zinit cdreplay -q
@@ -64,15 +86,6 @@ zinit cdreplay -q
 # ######
 # CONFIG
 # ######
-
-# PATH
-export PATH="$HOME/.local/bin:$PATH"
-
-# ruby
-if [ -x "$(command -v gem)" ]; then
-	export GEM_HOME="$(gem env user_gemhome)"
-	export PATH="$PATH:$GEM_HOME/bin"
-fi
 
 
 # keybindings (more info in https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Standard-Widgets)

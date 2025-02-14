@@ -1,7 +1,6 @@
 # window
 maximize = true
 window-decoration = none
-gtk-titlebar = false
 
 # cursor
 shell-integration-features = no-cursor

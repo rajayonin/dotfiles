@@ -13,3 +13,12 @@ git:
 os:
   editPreset: "nvim-remote"
 
+customCommands:
+  - key: 'r'
+    context: 'files'
+    description: 'Rename file'
+    prompts:
+      - type: 'input'
+        title: 'New file name:'
+        key: 'FileName'
+    command: "git mv {{.SelectedFile.Name | quote}} {{.Form.FileName | quote}}"

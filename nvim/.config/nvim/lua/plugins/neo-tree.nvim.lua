@@ -1,5 +1,3 @@
-vim.keymap.set("n", "<leader>ee", "<CMD>Neotree toggle<CR>", {desc = "Toggle Neotree", noremap = true, silent = true})
-
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -10,6 +8,7 @@ return {
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
     },
+    keys = {{"<leader>ee", "<CMD>Neotree toggle<CR>", desc = "Toggle Neotree", noremap = true, silent = true}},
     opts = {
       default_component_configs = {
         git_status = {

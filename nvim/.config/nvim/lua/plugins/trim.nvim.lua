@@ -1,8 +1,7 @@
-vim.keymap.set("n", "<leader>w", "<cmd>Trim<CR>", {noremap = true})
-
 return {
   "cappyzawa/trim.nvim",
   enabled = true,
+  keys = {{"<leader>w", "<cmd>Trim<CR>", noremap = true}},
   opts = {
     ft_blocklist = {"markdown"},
     trim_last_line = false,

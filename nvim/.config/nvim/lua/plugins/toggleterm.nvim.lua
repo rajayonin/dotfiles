@@ -1,8 +1,9 @@
 return {
   {
     'akinsho/toggleterm.nvim',
-    enabled = true,
     version = "*",
+    enabled = true,
+    keys = { "<leader>tt" },  -- wait for keybind input to lazy load
     opts = {
       direction = "float",
       open_mapping = [[<leader>tt]],

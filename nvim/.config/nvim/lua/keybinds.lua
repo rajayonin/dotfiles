@@ -54,9 +54,6 @@ vim.keymap.set({'n', 'v'}, 's', '"_s', { noremap = true, silent = true })
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
--- duplicate lines
-vim.keymap.set({'n', 'v'}, 't', '<Cmd>t.<CR>', { noremap = true, silent = true })
-
 -- prevent errors when exiting
 vim.api.nvim_create_user_command("X", "x", {})
 vim.api.nvim_create_user_command("Q", "q", {})

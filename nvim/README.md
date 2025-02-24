@@ -10,6 +10,9 @@ My configuration files for [Neovim](https://neovim.io/).
 ## Plugins ([`lua/plugins/`](.config/nvim/lua/plugins/))
 My plugin manager is [lazy.nvim](https://github.com/folke/lazy.nvim).
 
+> [!NOTE]
+> Configuration for each plugin is stored in its respective file, following the filename structure of `<plugin>.lua`.
+
 The plugins I use are:
 - [AutoIndent.nvim](https://github.com/VidocqH/auto-indent.nvim): Better & automatic indentation
 <!-- - [Comment.nvim](https://github.com/numToStr/Comment.nvim): Enable quick commenting in/out lines (replaced by Neovim's comment implementation) -->
@@ -27,7 +30,7 @@ The plugins I use are:
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): Better syntax support
 - [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context): Visually show the current context in the code
 - [rainbow-delimeters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim): Color-code delimeters
-- [snacks.nvim](https://github.com/folke/snacks.nvim): Collection of small plugins
+- [snacks.nvim](https://github.com/folke/snacks.nvim): Collection of small QoL plugins
   - `bigfile`: Better support for big files
   - `indent`: Show indentation lines
   - `scope`: Scope detection
@@ -40,6 +43,7 @@ The plugins I use are:
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim): Better terminal
 - [trim.nvim](https://github.com/cappyzawa/trim.nvim): Trim trailing whitespace on-demand
 - [hlsearch.nvim](https://github.com/nvimdev/hlsearch.nvim): Automatic removal of search highlighting
+- [mini-operators](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-operators.md): Duplication of selected text
 
 <!-- TODO: categorize -->
 

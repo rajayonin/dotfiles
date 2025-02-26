@@ -14,3 +14,7 @@ font-size = 12
 # theme
 theme = nordic
 
+# keybinds
+# keybind = f11=toggle_maximize
+keybind = f11=toggle_window_decorations
+

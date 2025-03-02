@@ -27,3 +27,4 @@ There are a couple of integrations with some packages, so please install them:
 - [fzf](https://github.com/junegunn/fzf)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [thefuck](https://github.com/nvbn/thefuck)
+- [yazi](https://github.com/sxyazi/yazi)

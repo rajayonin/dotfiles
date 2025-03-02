@@ -55,8 +55,8 @@ final_space = true
      {{ if .Working.Changed }}  {{ .Working.String }}{{ end }}\
      {{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}\
      {{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}\
-     {{ if not .UpstreamGone }} {{ .UpstreamIcon }} {{ truncE 20 .User.Email }}{{end}} \
-     <darkGray>|</>\
+     {{ if not .UpstreamGone }} {{ .UpstreamIcon }} {{ truncE 20 .User.Email }}{{ end }}\
+     <darkGray> |</>\
      """
     foreground = 'cyan'
     background = 'transparent'

@@ -18,11 +18,13 @@ The current supported apps are:
   - `lazygit`
 - `zsh`: [Z-shell](https://www.zsh.org/) configuration  
   Requires:
-  - [Oh My Posh](https://ohmyposh.dev/)
   - [fzf](https://github.com/junegunn/fzf)
   - [zoxide](https://github.com/ajeetdsouza/zoxide)
   - [eza](https://github.com/eza-community/eza)
-  - [yazi](https://github.com/sxyazi/yazi)
+
+  Depends-on:
+  - `ohmyposh`
+  - `yazi`
 - `bash`: [GNU Bash](https://www.gnu.org/software/bash/) configuration
 - `alias`: Extra shell aliases  
   Requires:
@@ -35,6 +37,8 @@ The current supported apps are:
   - `nvim`
 - `terminator`: [Terminator Terminal Emulator](https://gnome-terminator.org/) configuration
 - `ghostty`: [Ghostty](https://ghostty.org/) configuration
+- `ohmyposh`: [Oh My Posh](https://ohmyposh.dev/) configuration
+- `yazi`: [yazi](https://github.com/sxyazi/yazi) configuration
 - `lazygit`: [Lazygit](https://github.com/jesseduffield/lazygit) configuration  
   Requires:
     - [difftastic](https://github.com/wilfred/difftastic) (requires [Rust](https://rustup.rs/))
@@ -49,6 +53,7 @@ The current supported apps are:
   Depends-on:
     - `lazygit`
     - `nvim`
+    - `ohmyposh`
 - `code`: [VS Code](https://code.visualstudio.com/) configuration  
   Depends-on:
     - `vim`

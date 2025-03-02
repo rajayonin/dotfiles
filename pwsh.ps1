@@ -23,6 +23,7 @@ if ( "update" -ne $args[0] ) {
 # copy config
 Copy-Item ".\nvim\.config\nvim\" -Destination $env:LOCALAPPDATA -Recurse -Force
 Copy-Item ".\lazygit\.config\lazygit\" -Destination $env:LOCALAPPDATA -Recurse -Force
+Copy-Item ".\ohmyposh\.config\ohmyposh\config.toml" -Destination "$HOME\.omp.toml" -Force
 
 Copy-Item ".\pwsh\Microsoft.PowerShell_profile.ps1" -Destination $PROFILE -Force
 

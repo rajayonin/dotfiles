@@ -8,6 +8,7 @@ if ( "update" -ne $args[0] ) {
     winget install -e --id Neovim.Neovim
     winget install -e --id Wilfred.difftastic
     winget install -e --id JesseDuffield.lazygit
+    winget install -e --id sharkdp.bat
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh  # install Rust
     cargo install --locked tree-sitter-cli
     winget install -e --id OpenJS.NodeJS

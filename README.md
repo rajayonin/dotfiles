@@ -49,6 +49,7 @@ The current supported apps are:
     - [zoxide](https://github.com/ajeetdsouza/zoxide)
     - [eza](https://github.com/eza-community/eza)
     - [ripgrep](https://github.com/BurntSushi/ripgrep)
+    - [batcat](https://github.com/sharkdp/bat)
 
   Depends-on:
     - `lazygit`

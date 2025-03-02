@@ -17,6 +17,7 @@ Import-Module git-aliases -DisableNameChecking
 
 # aliases
 Set-Alias lg lazygit
+Set-Alias cat bat
 
 function myLs {eza --group-directories-first --icons=auto}
 Set-Alias ls myLs

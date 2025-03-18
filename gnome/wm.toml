@@ -1,0 +1,10 @@
+[keybindings]
+switch-applications=@as []
+switch-applications-backward=@as []
+switch-windows=['<Alt>Tab']
+switch-windows-backward=['<Shift><Alt>Tab']
+
+[preferences]
+button-layout='appmenu:minimize,maximize,close'
+focus-new-windows='smart'
+mouse-button-modifier='disabled'

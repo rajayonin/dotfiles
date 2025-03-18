@@ -1,0 +1,21 @@
+[/]
+control-center=['<Super>i']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+email=['<Super>m']
+home=['<Super>e']
+www=['<Super>b']
+
+[custom-keybindings/custom0]
+binding='<Control><Alt>t'
+command='xdg-terminal-exec'
+name='Launch terminal'
+
+[custom-keybindings/custom1]
+binding='<Super>s'
+command='spotify-launcher'
+name='Launch Spotify'
+
+[custom-keybindings/custom2]
+binding='<Super>period'
+command='gnome-characters'
+name='Launch Characters'

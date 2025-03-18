@@ -1,0 +1,62 @@
+[/]
+command-history=['r']
+disabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['clipboard-history@alexsaveau.dev', 'steal-my-focus-window@steal-my-focus-window', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'status-icons@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'tactile@lundal.io', 'switcher@landau.fi', 'just-perfection-desktop@just-perfection', 'color-picker@tuberry']
+favorite-apps=['code.desktop']
+last-selected-power-profile='power-saver'
+welcome-dialog-last-shown-version='47.2'
+
+[app-switcher]
+current-workspace-only=true
+
+[extensions/clipboard-history]
+toggle-menu=['<Super>v']
+
+[extensions/color-picker]
+enable-format=false
+
+[extensions/just-perfection]
+dash=false
+dash-separator=true
+events-button=false
+panel-notification-icon=false
+power-icon=true
+quick-settings-airplane-mode=false
+quick-settings-dark-mode=false
+quick-settings-night-light=false
+search=false
+show-apps-button=false
+startup-status=0
+support-notifier-showed-version=34
+support-notifier-type=0
+weather=false
+window-picker-icon=true
+window-preview-caption=true
+workspace-popup=true
+
+[extensions/switcher]
+fade-enable=false
+font-size=uint32 20
+icon-size=uint32 24
+launcher-stats='{"org.gnome.Extensions.desktop":1,"ca.desrt.dconf-editor.desktop":2,"code.desktop":1}'
+matching=uint32 0
+max-width-percentage=uint32 50
+on-active-display=true
+show-executables=false
+show-switcher=['<Control>space']
+workspace-indicator=false
+
+[extensions/tactile]
+col-1=0
+col-2=1
+col-3=1
+row-2=0
+show-tiles=['<Super>Tab']
+
+[keybindings]
+show-screenshot-ui=['<Shift><Super>s']
+toggle-message-tray=@as []
+toggle-quick-settings=@as []
+
+[world-clocks]
+locations=@av []

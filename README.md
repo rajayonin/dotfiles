@@ -58,6 +58,7 @@ The current supported apps are:
 - `code`: [VS Code](https://code.visualstudio.com/) configuration  
   Depends-on:
     - `vim`
+- `gnome`: [GNOME WM](https://www.gnome.org/) configuration  
 
 
 ### Minimal install (SSH servers)

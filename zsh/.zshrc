@@ -15,9 +15,6 @@ fi
 
 source "${ZINIT_HOME}/zinit.zsh"
 
-# powerlevel10k
-# zinit ice depth=1; zinit light romkatv/powerlevel10k
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -33,7 +30,24 @@ zinit snippet OMZP::git
 zinit snippet OMZP::command-not-found
 
 
+# ######
+# PROMPT
+# ######
+
+
+# powerlevel10k
+# zinit ice depth=1; zinit light romkatv/powerlevel10k
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# oh-my-posh
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
+
+
+
+# ####
 # PATH
+# ####
+#
 export PATH="$HOME/.local/bin:$PATH"
 
 # bun
@@ -49,7 +63,10 @@ if [ -x "$(command -v gem)" ]; then
 fi
 
 
+
+# ###########
 # COMPLETIONS
+# ###########
 
 # docker
 if [ -x "$(command -v docker)" ]; then
@@ -73,7 +90,7 @@ fi
 
 # bun
 if [ -x "$(command -v bun)" ]; then
-  [ -s "/home/ldcas/.bun/_bun" ] && source "/home/ldcas/.bun/_bun"
+  [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 fi
 
 
@@ -155,15 +172,6 @@ fi
 
 
 
-# ######
-# PROMPT
-# ######
-
-# oh-my-posh
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
-
-
-
 # ##################
 # SHELL INTEGRATIONS
 # ##################
@@ -199,4 +207,5 @@ if [ -x "$(command -v yazi)" ]; then
 		rm -f -- "$tmp"
 	}
 fi
+
 

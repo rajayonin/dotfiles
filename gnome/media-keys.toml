@@ -1,6 +1,6 @@
 [/]
 control-center=['<Super>i']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
 email=['<Super>m']
 home=['<Super>e']
 www=['<Super>b']
@@ -19,3 +19,13 @@ name='Launch Spotify'
 binding='<Super>period'
 command='gnome-characters'
 name='Launch Characters'
+
+[custom-keybindings/custom3]
+binding='<Super>w'
+command='wasistlos'
+name='Launch WhatsApp'
+
+[custom-keybindings/custom4]
+binding='<Super>t'
+command='telegram-desktop'
+name='Launch Telegram'

@@ -1,6 +1,10 @@
 [keybindings]
+close=['<Super>q']
+show-desktop=['<Super>d']
 switch-applications=@as []
 switch-applications-backward=@as []
+switch-input-source=@as []
+switch-input-source-backward=@as []
 switch-windows=['<Alt>Tab']
 switch-windows-backward=['<Shift><Alt>Tab']
 

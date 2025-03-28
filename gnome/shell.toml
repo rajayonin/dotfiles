@@ -1,7 +1,6 @@
 [/]
-command-history=['r']
 disabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['clipboard-history@alexsaveau.dev', 'steal-my-focus-window@steal-my-focus-window', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'status-icons@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'tactile@lundal.io', 'switcher@landau.fi', 'just-perfection-desktop@just-perfection', 'color-picker@tuberry']
+enabled-extensions=['clipboard-history@alexsaveau.dev', 'steal-my-focus-window@steal-my-focus-window', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'tactile@lundal.io', 'switcher@landau.fi', 'just-perfection-desktop@just-perfection', 'color-picker@tuberry', 'status-icons@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=['code.desktop']
 last-selected-power-profile='power-saver'
 welcome-dialog-last-shown-version='47.2'
@@ -10,17 +9,33 @@ welcome-dialog-last-shown-version='47.2'
 current-workspace-only=true
 
 [extensions/clipboard-history]
+display-mode=3
 toggle-menu=['<Super>v']
+toggle-private-mode=@as []
 
 [extensions/color-picker]
+color-collection=@au []
+color-picker-shortcut=['<Shift><Super>c']
 enable-format=false
+enable-notify=false
+enable-preview=true
+enable-shortcut=true
+enable-sound=false
+enable-systray=false
+menu-type=false
+notify-sound=uint32 0
+preview-style=uint32 0
 
 [extensions/just-perfection]
+accent-color-icon=false
 dash=false
 dash-separator=true
+double-super-to-appgrid=false
 events-button=false
+invert-calendar-column-items=false
 panel-notification-icon=false
 power-icon=true
+quick-settings=true
 quick-settings-airplane-mode=false
 quick-settings-dark-mode=false
 quick-settings-night-light=false
@@ -33,17 +48,18 @@ weather=false
 window-picker-icon=true
 window-preview-caption=true
 workspace-popup=true
+workspace-switcher-should-show=true
+world-clock=false
 
 [extensions/switcher]
 fade-enable=false
 font-size=uint32 20
 icon-size=uint32 24
-launcher-stats='{"org.gnome.Extensions.desktop":1,"ca.desrt.dconf-editor.desktop":2,"code.desktop":1}'
 matching=uint32 0
 max-width-percentage=uint32 50
 on-active-display=true
 show-executables=false
-show-switcher=['<Control>space']
+show-switcher=['<Super>space']
 workspace-indicator=false
 
 [extensions/tactile]

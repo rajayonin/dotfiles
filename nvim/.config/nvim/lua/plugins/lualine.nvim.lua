@@ -28,7 +28,11 @@ return {
         lualine_b = {
           {'branch', icon = ''},
           {'diff', source = diff_source},
-          {'diagnostics'}
+          {
+            'diagnostics',
+            -- show only error and warn
+            sections = { 'error', 'warn'},
+          }
         },
         lualine_x = {
           {

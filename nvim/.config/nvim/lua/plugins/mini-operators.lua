@@ -1,7 +1,7 @@
 return {
   {
     'echasnovski/mini.operators', version = '*',
-    keys = { "t" },  -- wait for 't' (multiply) input to lazy load
+    -- keys = { 't', nil, mode = {'n', 'v', 'x'} },  -- wait for 't' (multiply) input to lazy load
     enabled = true,
     opts = {
       multiply = { prefix = 't' },

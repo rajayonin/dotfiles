@@ -9,6 +9,12 @@ return {
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
     },
+    init = function()
+      -- change dotfiles highlight color (set it to normal)
+      vim.cmd('highlight NeoTreeDotfile guifg=NeoTreeNormal');
+      vim.cmd('highlight NeoTreeGitIgnored guifg=#626262');  -- used to link to NeoTreeDotfile, undo that
+
+    end,
     keys = {{"<leader>ee", "<CMD>Neotree toggle<CR>", desc = "Toggle Neotree", noremap = true, silent = true}},
     opts = {
       default_component_configs = {

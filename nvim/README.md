@@ -3,12 +3,16 @@ My configuration files for [Neovim](https://neovim.io/).
 
 
 
-## General configuration ([`lua/settings.lua`](.config/nvim/lua/settings.lua))
+## General configuration
+General configuration can be found at [`lua/settings.lua`](.config/nvim/lua/settings.lua).
+
+<!-- TODO -->
 
 
-
-## Plugins ([`lua/plugins/`](.config/nvim/lua/plugins/))
+## Plugins
 My plugin manager is [lazy.nvim](https://github.com/folke/lazy.nvim).
+
+Plugins can be found at [`lua/plugins/`](.config/nvim/lua/plugins/).
 
 > [!NOTE]
 > Configuration for each plugin is stored in its respective file, following the filename structure of `<plugin>.lua`.
@@ -44,6 +48,7 @@ The plugins I use are:
 - [trim.nvim](https://github.com/cappyzawa/trim.nvim): Trim trailing whitespace on-demand
 - [hlsearch.nvim](https://github.com/nvimdev/hlsearch.nvim): Automatic removal of search highlighting
 - [mini-operators](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-operators.md): Duplication of selected text
+- [visual-whitespace.nvim](https://github.com/mcauley-penney/visual-whitespace.nvim): Show whitespace characters on visual selection
 
 <!-- TODO: categorize -->
 
@@ -51,8 +56,14 @@ The plugins I use are:
 ### Colorschemes
 - [nordic.nvim](https://github.com/AlexvZyl/nordic.nvim)
 
-<!-- ### TODO: LSP -->
 
+## Language Server Protocol
+LSP config can be found at [`lua/lsp/`](.config/nvim/lua/lsp/).
+
+The following plugins are used:
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig): Basic LSP configuration
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp): Completions
+- [mason.nvim](https://github.com/williamboman/mason-lspconfig.nvim): LSP servers manager
 
 
 
@@ -61,3 +72,4 @@ The plugins I use are:
 
 ## Keybindings
 
+<!-- TODO -->

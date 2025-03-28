@@ -13,10 +13,11 @@ return {
       -- change dotfiles highlight color (set it to normal)
       vim.cmd('highlight NeoTreeDotfile guifg=NeoTreeNormal');
       vim.cmd('highlight NeoTreeGitIgnored guifg=#626262');  -- used to link to NeoTreeDotfile, undo that
-
+      -- TODO: use vim.api.nvim_set_hl() instead
     end,
     keys = {{"<leader>ee", "<CMD>Neotree toggle<CR>", desc = "Toggle Neotree", noremap = true, silent = true}},
     opts = {
+      enable_diagnostics = false,
       default_component_configs = {
         git_status = {
           symbols = {

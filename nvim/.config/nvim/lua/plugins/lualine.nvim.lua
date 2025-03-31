@@ -1,33 +1,34 @@
-vim.opt.showmode = false  -- prevent duplication of mode in status bar
-
--- gitsigns information extractor
-local function diff_source()
-  local gitsigns = vim.b.gitsigns_status_dict
-  if gitsigns then
-    return {
-      added = gitsigns.added,
-      modified = gitsigns.changed,
-      removed = gitsigns.removed
-    }
-  end
-end
-
-
 return {
   {
     'nvim-lualine/lualine.nvim',
     enabled = true,
     dependencies = { 'nvim-tree/nvim-web-devicons' },
+    init = function()
+      vim.opt.showmode = false  -- prevent duplication of mode in status bar
+    end,
     opts = {
       options = {
         -- theme = 'material'
-        globalstatus = true,
+        globalstatus = true,  -- share between splits
         theme = 'nordic'
       },
       sections = {
         lualine_b = {
           {'branch', icon = ''},
-          {'diff', source = diff_source},
+          {
+            'diff',
+            -- get diff from gitsigns
+            source = function()
+              local gitsigns = vim.b.gitsigns_status_dict
+              if gitsigns then
+                return {
+                  added = gitsigns.added,
+                  modified = gitsigns.changed,
+                  removed = gitsigns.removed
+                }
+              end
+            end
+          },
           {
             'diagnostics',
             -- show only error and warn

@@ -54,6 +54,12 @@ vim.keymap.set({'n', 'v'}, 's', '"_s', { noremap = true, silent = true })
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
+-- move windows quicker
+vim.keymap.set("n", "<C-h>", "<C-w>h", {noremap = true, silent = true})
+vim.keymap.set("n", "<C-j>", "<C-w>j", {noremap = true, silent = true})
+vim.keymap.set("n", "<C-k>", "<C-w>k", {noremap = true, silent = true})
+vim.keymap.set("n", "<C-l>", "<C-w>l", {noremap = true, silent = true})
+
 -- prevent errors when exiting
 vim.api.nvim_create_user_command("X", "x", {})
 vim.api.nvim_create_user_command("Q", "q", {})

@@ -199,6 +199,12 @@ vnoremap C "_C
 nnoremap s "_s
 vnoremap s "_s
 
+" move splits easier
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " duplicate line
 nnoremap t <Cmd>t.<CR>
 vnoremap t <Cmd>t.<CR>

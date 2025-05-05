@@ -12,6 +12,7 @@ The current supported apps are:
   - [ripgrep](https://github.com/BurntSushi/ripgrep)
   - [fd](https://github.com/sharkdp/fd)
   - [tree-sitter](https://github.com/tree-sitter/tree-sitter)
+  - [Deno](https://deno.com/)
   - `xclip` (for Linux)
 
   Depends-on:

@@ -36,7 +36,8 @@ return {
         "ltex",  -- Markdown, LaTeX, etc.
         "clangd",  -- C/C++
         "rust_analyzer",  -- 🦀
-        "ruff"  -- Python
+        "ruff",  -- Python
+        "tinymist",  -- Typst
       },
       automatic_installation = true
     })

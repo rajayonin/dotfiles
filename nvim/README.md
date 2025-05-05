@@ -46,6 +46,7 @@ The plugins I use are:
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim): Fuzzy finder (files, words, refferences, etc.)
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim): Better terminal
 - [trim.nvim](https://github.com/cappyzawa/trim.nvim): Trim trailing whitespace on-demand
+- [conform.nvim](https://github.com/stevearc/conform.nvim): Formatter
 - [hlsearch.nvim](https://github.com/nvimdev/hlsearch.nvim): Automatic removal of search highlighting
 - [mini-operators](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-operators.md): Duplication of selected text
 - [visual-whitespace.nvim](https://github.com/mcauley-penney/visual-whitespace.nvim): Show whitespace characters on visual selection

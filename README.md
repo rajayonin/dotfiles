@@ -33,6 +33,9 @@ The current supported apps are:
   - [eza](https://github.com/eza-community/eza)
   - [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
   - [trash-cli](https://github.com/andreafrancia/trash-cli)
+  - [dust](https://github.com/bootandy/dust)
+  - [dysk](https://github.com/Canop/dysk)
+  - [advcpmv](https://github.com/jarun/advcpmv)
 
   Depends-on:
   - `nvim`
@@ -63,7 +66,7 @@ The current supported apps are:
 
 
 ### Minimal install (SSH servers)
-This includes the bash and vim configs
+This includes the `bash` and `vim` configs
 ```
 git clone https://github.com/rajayonin/dotfiles
 cd dotfiles

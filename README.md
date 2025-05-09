@@ -33,6 +33,8 @@ The current supported apps are:
   - [eza](https://github.com/eza-community/eza)
   - [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
   - [trash-cli](https://github.com/andreafrancia/trash-cli)
+  - [dust](https://github.com/bootandy/dust)
+  - [dysk](https://github.com/Canop/dysk)
 
   Depends-on:
   - `nvim`

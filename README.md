@@ -63,6 +63,13 @@ The current supported apps are:
   Depends-on:
     - `vim`
 - `gnome`: [GNOME WM](https://www.gnome.org/) configuration  
+- `btop`: [BTOP++](https://github.com/aristocratos/btop) configuration
+
+> [!TIP]
+> To enable GPU monitoring w/out needing to run as `root`, add the required permisions (in Unix systems) with:
+> ```bash
+> sudo setcap cap_perfmon=+ep $(which btop)
+> ```
 
 
 ### Minimal install (SSH servers)

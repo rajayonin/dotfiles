@@ -19,17 +19,21 @@ Import-Module git-aliases -DisableNameChecking
 Set-Alias lg lazygit
 Set-Alias cat bat
 
-function myLs {eza --group-directories-first --icons=auto}
-Set-Alias ls myLs
+# if we want to use parameters in aliases, we have to use a function
+function _du {dust -r}
+Set-Alias du _du
 
-function myLl {eza -lahHg --git --group-directories-first --icons=auto}
-New-Alias ll myLl
+function _ls {eza --group-directories-first --icons=auto}
+Set-Alias ls _ls
 
-function myLa {eza --group-directories-first --icons=auto -a}
-New-Alias la myLa
+function _ll {eza -lahHg --git --group-directories-first --icons=auto}
+Set-Alias ll _ll
 
-function myTree {eza -T -L 4}
-New-Alias tree myTree
+function _la {eza --group-directories-first --icons=auto -a}
+Set-Alias la _la
+
+function _tree {eza -T -L 4}
+Set-Alias tree _tree
 
 
 # integrations

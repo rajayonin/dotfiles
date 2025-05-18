@@ -54,6 +54,7 @@ The current supported apps are:
     - [eza](https://github.com/eza-community/eza)
     - [ripgrep](https://github.com/BurntSushi/ripgrep)
     - [batcat](https://github.com/sharkdp/bat)
+    - [dust](https://github.com/bootandy/dust)
 
   Depends-on:
     - `lazygit`

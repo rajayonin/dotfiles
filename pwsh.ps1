@@ -2,6 +2,7 @@
 
 if ( "update" -ne $args[0] ) {
     # install dependencies
+    winget install -e --id Microsoft.WindowsTerminal
     winget install -e --id JanDeDobbeleer.OhMyPosh -s winget
     winget install -e --id junegunn.fzf ajeetdsouza.zoxide
     winget install -e --id eza-community.eza
@@ -26,9 +27,10 @@ if ( "update" -ne $args[0] ) {
 Copy-Item ".\nvim\.config\nvim\" -Destination $env:LOCALAPPDATA -Recurse -Force
 Copy-Item ".\lazygit\.config\lazygit\" -Destination $env:LOCALAPPDATA -Recurse -Force
 Copy-Item ".\ohmyposh\.config\ohmyposh\config.toml" -Destination "$HOME\.omp.toml" -Force
+Copy-Item ".\windowsterminal\settings.json" -Destination "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState" -Force
 
 Copy-Item ".\pwsh\Microsoft.PowerShell_profile.ps1" -Destination $PROFILE -Force
 
 
 # reset
-.$PROFILE
+.$PROFILE  # FIXME: this doesn't reset shit

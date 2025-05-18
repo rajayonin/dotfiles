@@ -65,6 +65,7 @@ The current supported apps are:
     - `vim`
 - `gnome`: [GNOME WM](https://www.gnome.org/) configuration  
 - `btop`: [BTOP++](https://github.com/aristocratos/btop) configuration
+- `windowsterminal`: [WindowsTerminal](https://github.com/microsoft/terminal) configuration
 
 > [!TIP]
 > To enable GPU monitoring w/out needing to run as `root`, add the required permisions (in Unix systems) with:
@@ -74,8 +75,8 @@ The current supported apps are:
 
 
 ### Minimal install (SSH servers)
-This includes the `bash` and `vim` configs
-```
+This includes the `bash` and `vim` configs.
+```bash
 git clone https://github.com/rajayonin/dotfiles
 cd dotfiles
 bash min.sh
@@ -83,8 +84,11 @@ bash min.sh
 
 
 ### Windows install (Powershell)
+Installs Windows setup: `windowsterminal`, `neovim`, `lazygit`, `ohmyposh`, and `pwsh`.
+
 > [!IMPORTANT]
 > Execute as administrator, in Powershell
+
 ```powershell
 git clone https://github.com/rajayonin/dotfiles
 cd dotfiles

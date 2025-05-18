@@ -18,3 +18,11 @@ theme = nordic
 # keybind = f11=toggle_maximize
 keybind = f11=toggle_window_decorations
 
+# splits
+keybind = ctrl+shift+o=new_split:right
+keybind = ctrl+shift+e=new_split:down
+keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+k=goto_split:up
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+l=goto_split:right
+

@@ -19,11 +19,9 @@ Plugins can be found at [`lua/plugins/`](.config/nvim/lua/plugins/).
 
 The plugins I use are:
 - [AutoIndent.nvim](https://github.com/VidocqH/auto-indent.nvim): Better & automatic indentation
-<!-- - [Comment.nvim](https://github.com/numToStr/Comment.nvim): Enable quick commenting in/out lines (replaced by Neovim's comment implementation) -->
 - [barbar.nvim](https://github.com/romgrk/barbar.nvim): Pretty tabs
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim): In-editor Git integration
 - [guess-indent.nvim](https://github.com/NMAC427/guess-indent.nvim): Automatic indentation detection
-<!-- - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim): Indentation guides (replaced by snacks.nvim) -->
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim): Pretty statusline
 - [move.nvim](https://github.com/fedepujol/move.nvim): Easily move lines and blocks
 - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim): File explorer
@@ -41,7 +39,7 @@ The plugins I use are:
   - `notifier`: Prettier notifications
   - `quickfile`: Quicker startup
   - `scroll`: Better scrolling
-  <!-- - `words`: LSP references navigation -->
+  - `words`: LSP references navigation
   - `lazygit`: [Lazygit](https://github.com/jesseduffield/lazygit) integration
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim): Fuzzy finder (files, words, refferences, etc.)
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim): Better terminal
@@ -55,6 +53,8 @@ The plugins I use are:
   - [hat0uma/csvview.nvim](https://github.com/hat0uma/csvview.nvim): CSV files
   - [peek.nvim](https://github.com/https://github.com/toppair/peek.nvim): Markdown preview  
     Requires [Deno](https://deno.com/) to be built.
+<!-- - [Comment.nvim](https://github.com/numToStr/Comment.nvim): Enable quick commenting in/out lines (replaced by Neovim's comment implementation) -->
+<!-- - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim): Indentation guides (replaced by snacks.nvim) -->
 
 <!-- TODO: categorize -->
 
@@ -71,6 +71,7 @@ The following plugins are used:
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig): Basic LSP configuration
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp): Completions
 - [mason.nvim](https://github.com/williamboman/mason-lspconfig.nvim): LSP servers manager
+- [garbage-day.nvim](https://github.com/zeioth/garbage-day.nvim): "Garbage collector" for LSPs
 
 
 

@@ -1,600 +1,577 @@
 {
-    "explorer.confirmDelete": false,
-    "cmake.configureOnOpen": false,
-    "python.languageServer": "Pylance",
-    "workbench.colorTheme": "GitHub Dark",
-    "git.enableSmartCommit": true,
-    "git.autofetch": true,
-    "explorer.confirmDragAndDrop": false,
-    "git.confirmSync": false,
-    "files.associations": {
-        "*.rmd": "markdown",
-        "*.tcc": "cpp",
-        "optional": "cpp",
-        "iosfwd": "cpp",
-        "stdexcept": "cpp",
-        "array": "cpp",
-        "fstream": "cpp",
-        "iostream": "cpp",
-        "ostream": "cpp",
-        "chrono": "cpp",
-        "cmath": "cpp",
-        ".vimrc": "viml",
-        "*.dat": "gmpl"
+  "explorer.confirmDelete": false,
+  "cmake.configureOnOpen": false,
+  "python.languageServer": "Pylance",
+  "workbench.colorTheme": "GitHub Dark",
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "explorer.confirmDragAndDrop": false,
+  "git.confirmSync": false,
+  "files.associations": {
+    "*.rmd": "markdown",
+    "*.tcc": "cpp",
+    "optional": "cpp",
+    "iosfwd": "cpp",
+    "stdexcept": "cpp",
+    "array": "cpp",
+    "fstream": "cpp",
+    "iostream": "cpp",
+    "ostream": "cpp",
+    "chrono": "cpp",
+    "cmath": "cpp",
+    ".vimrc": "viml",
+    "*.dat": "gmpl"
+  },
+  "window.newWindowDimensions": "inherit",
+  "window.openFoldersInNewWindow": "on",
+  "workbench.startupEditor": "none",
+  "security.workspace.trust.untrustedFiles": "open",
+  "liveshare.presence": true,
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "json.maxItemsComputed": 10000,
+  "svgPreview.autoOpen": false,
+  "liveshare.connectionMode": "relay",
+  "plsql-language.hover.enable": true,
+  "plsql-language.pldoc.enable": false,
+  "plsql-language.snippets.enable": false,
+  "extensions.ignoreRecommendations": true,
+  "settingsSync.ignoredExtensions": [
+    "grapecity.gc-excelviewer",
+    "vscjava.vscode-java-pack",
+    "vscjava.vscode-java-debug",
+    "vscjava.vscode-java-dependency",
+    "vscjava.vscode-maven",
+    "redhat.java",
+    "vscjava.vscode-java-test",
+    "visualstudiotoolsforunity.vstuc",
+    "vscodevim.vim",
+    "gruntfuggly.banish-pointer"
+  ],
+  "todo-tree.highlights.enabled": false,
+  "python.venvPath": "./venv",
+  "python.analysis.autoImportCompletions": false,
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]",
+    "UNCOMMENT",
+    "COMMENT"
+  ],
+  "workbench.layoutControl.enabled": false,
+  "settingsSync.ignoredSettings": [
+    "editor.fontSize",
+    "terminal.integrated.fontSize",
+    "editor.fontFamily",
+    "terminal.integrated.fontFamily",
+    "lazygit-vscode.configPath",
+    "editor.cursorBlinking"
+  ],
+  "editor.minimap.enabled": false,
+  "githubPullRequests.pullBranch": "never",
+  "notebook.lineNumbers": "on",
+  "git.openRepositoryInParentFolders": "always",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "editor.wordWrap": "on",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
     },
-    "window.newWindowDimensions": "inherit",
-    "window.openFoldersInNewWindow": "on",
-    "workbench.startupEditor": "none",
-    "security.workspace.trust.untrustedFiles": "open",
-    "liveshare.presence": true,
-    "extensions.autoUpdate": "onlyEnabledExtensions",
-    "json.maxItemsComputed": 10000,
-    "svgPreview.autoOpen": false,
-    "liveshare.connectionMode": "relay",
-    "plsql-language.hover.enable": true,
-    "plsql-language.pldoc.enable": false,
-    "plsql-language.snippets.enable": false,
-    "extensions.ignoreRecommendations": true,
-    "settingsSync.ignoredExtensions": [
-        "grapecity.gc-excelviewer",
-        "vscjava.vscode-java-pack",
-        "vscjava.vscode-java-debug",
-        "vscjava.vscode-java-dependency",
-        "vscjava.vscode-maven",
-        "redhat.java",
-        "vscjava.vscode-java-test"
-    ],
-    "todo-tree.highlights.enabled": false,
-    "python.venvPath": "./venv",
-    "python.analysis.autoImportCompletions": false,
-    "todo-tree.general.tags": [
-        "BUG",
-        "HACK",
-        "FIXME",
-        "TODO",
-        "XXX",
-        "[ ]",
-        "[x]",
-        "UNCOMMENT",
-        "COMMENT"
-    ],
-    "workbench.layoutControl.enabled": false,
-    "settingsSync.ignoredSettings": [
-        "editor.fontSize",
-        "terminal.integrated.fontSize",
-        "editor.fontFamily",
-        "terminal.integrated.fontFamily",
-        "lazygit-vscode.configPath"
-    ],
-    "editor.minimap.enabled": false,
-    "githubPullRequests.pullBranch": "never",
-    "notebook.lineNumbers": "on",
-    "breadcrumbs.enabled": false,
-    "git.openRepositoryInParentFolders": "always",
-    "[python]": {
-        "editor.formatOnType": true
+    {
+      "name": "lualatexmk",
+      "command": "latexmk",
+      "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-lualatex",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
     },
-    "editor.wordWrap": "on",
-    "latex-workshop.latex.tools": [
-
-        {
-            "name": "latexmk",
-            "command": "latexmk",
-            "args": [
-                "-shell-escape",
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-pdf",
-                "-outdir=%OUTDIR%",
-                "%DOC%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "lualatexmk",
-            "command": "latexmk",
-            "args": [
-                "-shell-escape",
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-lualatex",
-                "-outdir=%OUTDIR%",
-                "%DOC%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "xelatexmk",
-            "command": "latexmk",
-            "args": [
-                "-shell-escape",
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-xelatex",
-                "-outdir=%OUTDIR%",
-                "%DOC%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "latexmk_rconly",
-            "command": "latexmk",
-            "args": [
-                "%DOC%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "pdflatex",
-            "command": "pdflatex",
-            "args": [
-                "-shell-escape",
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOC%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "bibtex",
-            "command": "bibtex",
-            "args": [
-                "%DOCFILE%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "rnw2tex",
-            "command": "Rscript",
-            "args": [
-                "-e",
-                "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
-            ],
-            "env": {}
-        },
-        {
-            "name": "jnw2tex",
-            "command": "julia",
-            "args": [
-                "-e",
-                "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
-            ],
-            "env": {}
-        },
-        {
-            "name": "jnw2texminted",
-            "command": "julia",
-            "args": [
-                "-e",
-                "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
-            ],
-            "env": {}
-        },
-        {
-            "name": "pnw2tex",
-            "command": "pweave",
-            "args": [
-                "-f",
-                "tex",
-                "%DOC_EXT%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "pnw2texminted",
-            "command": "pweave",
-            "args": [
-                "-f",
-                "texminted",
-                "%DOC_EXT%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "tectonic",
-            "command": "tectonic",
-            "args": [
-                "--synctex",
-                "--keep-logs",
-                "%DOC%.tex"
-            ],
-            "env": {}
-        }
-    ],
-    "latex-workshop.latex.recipes": [
-
-        {
-            "name": "latexmk",
-            "tools": [
-                "latexmk"
-            ]
-        },
-        {
-            "name": "latexmk (latexmkrc)",
-            "tools": [
-                "latexmk_rconly"
-            ]
-        },
-        {
-            "name": "latexmk (lualatex)",
-            "tools": [
-                "lualatexmk"
-            ]
-        },
-        {
-            "name": "latexmk (xelatex)",
-            "tools": [
-                "xelatexmk"
-            ]
-        },
-        {
-            "name": "pdflatex -> bibtex -> pdflatex * 2",
-            "tools": [
-                "pdflatex",
-                "bibtex",
-                "pdflatex",
-                "pdflatex"
-            ]
-        },
-        {
-            "name": "Compile Rnw files",
-            "tools": [
-                "rnw2tex",
-                "latexmk"
-            ]
-        },
-        {
-            "name": "Compile Jnw files",
-            "tools": [
-                "jnw2tex",
-                "latexmk"
-            ]
-        },
-        {
-            "name": "Compile Pnw files",
-            "tools": [
-                "pnw2tex",
-                "latexmk"
-            ]
-        },
-        {
-            "name": "tectonic",
-            "tools": [
-                "tectonic"
-            ]
-        }
-    ],
-    "latex-workshop.latex.recipe.default": "lastUsed",
-    "resmon.show.battery": false,
-    "resmon.show.cpufreq": false,
-    "markdown.extension.italic.indicator": "_",
-    "markdown.extension.list.indentationSize": "inherit",
-    "markdown.extension.print.absoluteImgPath": false,
-    "markdown.extension.theming.decoration.renderHardLineBreak": true,
-    "editor.renderWhitespace": "trailing",
-    "window.commandCenter": false,
-    "haskell.manageHLS": "GHCup",
-    "redhat.telemetry.enabled": false,
-    "rsp-ui.enableStartServerOnActivation": [
-        {
-            "id": "redhat.vscode-community-server-connector",
-            "name": "Community Server Connector",
-            "startOnActivation": true
-        }
-    ],
-    "workbench.editor.empty.hint": "hidden",
-    "C_Cpp.default.cppStandard": "gnu++20",
-    "C_Cpp.suggestSnippets": false,
-    "java.jdt.ls.java.home": "C:\\Program Files\\Java\\jdk-17",
-    "[cpp]": {
-        "editor.suggest.insertMode": "insert"
+    {
+      "name": "xelatexmk",
+      "command": "latexmk",
+      "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-xelatex",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
     },
-    "C_Cpp.inlayHints.parameterNames.enabled": true,
-    "[c]": {
-        "editor.suggest.insertMode": "insert"
+    {
+      "name": "latexmk_rconly",
+      "command": "latexmk",
+      "args": ["%DOC%"],
+      "env": {}
     },
-    "cmake.showOptionsMovedNotification": false,
-    "cmake.options.advanced": {
-        "build": {
-            "statusBarVisibility": "visible"
-        },
-        "launch": {
-            "statusBarVisibility": "visible"
-        },
-        "debug": {
-            "statusBarVisibility": "visible"
-        },
-        "cpack": {
-            "statusBarVisibility": "hidden"
-        },
-        "workflow": {
-            "statusBarVisibility": "hidden"
-        }
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {}
     },
-    "cmake.options.statusBarVisibility": "compact",
-    "terminal.integrated.enableMultiLinePasteWarning": false,
-    "notebook.output.textLineLimit": 50,
-    "editor.fontLigatures": true,
-    "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font Mono",
-    "editor.fontFamily": "CaskaydiaCove Nerd Font",
-    "editor.linkedEditing": true,
-    "[latex]": {
-        "editor.tabSize": 2
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": ["%DOCFILE%"],
+      "env": {}
     },
-    "[tex]": {
-        "editor.tabSize": 2
+    {
+      "name": "rnw2tex",
+      "command": "Rscript",
+      "args": [
+        "-e",
+        "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+      ],
+      "env": {}
     },
-    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
-    "ltex.additionalRules.motherTongue": "es",
-    "ltex.latex.commands": {
-        "\\import{}{}": "ignore",
-        "\\includefrom{}{}": "ignore",
-        "\\makecover[]": "ignore"
+    {
+      "name": "jnw2tex",
+      "command": "julia",
+      "args": ["-e", "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"],
+      "env": {}
     },
-    "explorer.confirmPasteNative": false,
-    "editor.rulers": [
-        80
-    ],
-    "gitlens.currentLine.enabled": false,
-    "gitlens.hovers.currentLine.over": "line",
-    "gitlens.codeLens.enabled": false,
-    "gitlens.statusBar.enabled": false,
-    "gitlens.menus": {
-        "editor": {
-            "blame": true,
-            "clipboard": true,
-            "compare": true,
-            "history": true,
-            "remote": true
-        },
-        "editorGroup": {
-            "blame": true,
-            "compare": true
-        },
-        "editorGutter": {
-            "compare": true,
-            "remote": true,
-            "share": true
-        },
-        "editorTab": {
-            "clipboard": true,
-            "compare": true,
-            "history": true,
-            "remote": true
-        },
-        "explorer": {
-            "clipboard": true,
-            "compare": true,
-            "history": true,
-            "remote": true
-        },
-        "ghpr": {
-            "worktree": true
-        },
-        "scm": {
-            "graph": true
-        },
-        "scmRepositoryInline": {
-            "graph": true,
-            "stash": false
-        },
-        "scmRepository": {
-            "authors": true,
-            "generateCommitMessage": true,
-            "graph": false
-        },
-        "scmGroupInline": {
-            "stash": true
-        },
-        "scmGroup": {
-            "compare": true,
-            "openClose": true,
-            "stash": true
-        },
-        "scmItemInline": {
-            "stash": false
-        },
-        "scmItem": {
-            "clipboard": true,
-            "compare": true,
-            "history": true,
-            "remote": true,
-            "share": true,
-            "stash": true
-        }
+    {
+      "name": "jnw2texminted",
+      "command": "julia",
+      "args": [
+        "-e",
+        "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+      ],
+      "env": {}
     },
-    "gitlens.mode.statusBar.enabled": false,
-    "gitlens.hovers.enabled": false,
-    "cmake.pinnedCommands": [
-        "workbench.action.tasks.configureTaskRunner",
-        "workbench.action.tasks.runTask"
-    ],
-    "markdown.preview.scrollEditorWithPreview": false,
-    "markdown.preview.scrollPreviewWithEditor": false,
-    "markdown.marp.html": "default",
-    "markdown.styles": [
-        "https://use.fontawesome.com/releases/v6.5.2/css/all.css"
-    ],
-    "latex-workshop.texcount.autorun": "onSave",
-    "jupyter.askForKernelRestart": false,
-    "terminal.integrated.shellIntegration.decorationsEnabled": "overviewRuler",
-    "terminal.integrated.sendKeybindingsToShell": false,
-    "terminal.integrated.commandsToSkipShell": [
-        "lazygit-vscode.toggle",
-        "workbench.action.closeWindow",
-        "-workbench.action.quickOpen",
-        "-workbench.action.files.newUntitledFile",
-        "-workbench.action.terminal.focusFind",
-        "-extension.vim_ctrl+p"
-    ],
-    "terminal.integrated.fontWeight": "normal",
-    "lazygit-vscode.configPath": "~/.config/lazygit/config.yml",
-    "lazygit-vscode.autoHideSideBar": true,
-    "lazygit-vscode.autoHidePanel": true,
-    "editor.fontSize": 13,
-    "editor.cursorBlinking": "solid",
-    "vim.vimrc.enable": true,
-    "vim.leader": " ",
-    "vim.normalModeKeyBindingsNonRecursive": [
-        // vscode
-        {
-            "before": ["<leader>", "p"],
-            "commands": [
-                "workbench.action.showCommands",
-            ],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "b"],
-            "commands": ["workbench.action.toggleSidebarVisibility"],
-            "silent": true
-        },
-        // neo-tree
-        {
-            "before": ["<leader>", "e", "e"],
-            "commands": ["workbench.view.explorer"],
-            "silent": true
-        },
-        // terminal
-        {
-            "before": ["<leader>", "t", "t"],
-            "commands": ["workbench.action.terminal.toggleTerminal"],
-            "silent": true
-        },
-        // lazygit
-        {
-            "before": ["<leader>", "g", "g"],
-            "commands": ["lazygit-vscode.toggle"],
-            "silent": true
-        },
-        // telescope
-        {
-            "before": ["<leader>", "f", "f"],
-            "commands": ["workbench.action.quickOpen"],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "f", "g"],
-            "commands": ["workbench.action.findInFiles"],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "f", "s"],
-            "commands": ["workbench.action.gotoSymbol"],
-            "silent": true
-        },
-        // gitsings
-        {
-
-            "before": ["<leader>", "h", "r"],
-            "commands": ["git.revertSelectedRanges"],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "h", "d"],
-            "commands": ["workbench.action.quickOpen"],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "h", "n"],
-            "commands": ["editor.action.dirtydiff.next"],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "h", "p"],
-            "commands": ["editor.action.dirtydiff.previous"],
-            "silent": true
-        },
-        // whitespace
-        {
-            "before": ["<leader>", "w"],
-            "commands": ["editor.action.trimTrailingWhitespace"],
-            "silent": true
-        },
-        // search
-        {
-            "before": ["/"],
-            "commands": ["actions.find"],
-            "silent": true
-        },
-        {
-            "before": ["n"],
-            "commands": [ "editor.action.nextMatchFindAction", "extension.vim_escape" ],
-            "silent": true
-        },
-        {
-            "before": ["N"],
-            "commands": [ "editor.action.previousMatchFindAction", "extension.vim_escape" ],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "n"],
-            "commands": [ "closeFindWidget" ],
-            "silent": true
-        },
-        // LSP
-        {
-            "before": ["g", "r"],
-            "commands": ["editor.action.goToReferences"],
-            "silent": true
-
-        },
-        // debug
-        {
-            "before": ["<leader>", "d", "p"],
-            "commands": [
-                "workbench.actions.view.problems",
-            ],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "d", "c"],
-            "commands": [
-                "workbench.debug.action.toggleRepl",
-            ],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "d", "b"],
-            "commands": [
-                "editor.debug.action.toggleBreakpoint",
-            ],
-            "silent": true
-        },
-    ],
-    "vim.normalModeKeyBindings": [
-        {
-            "before": ["t"],
-            "commands": [ "editor.action.duplicateSelection" ],
-            "silent": true
-        },
-    ],
-    "vim.visualModeKeyBindings": [
-        {
-            "before": ["t"],
-            "commands": [ "editor.action.duplicateSelection", "extension.vim_escape" ],
-            "silent": true
-        },
-    ],
-    "vim.useCtrlKeys": true,
-    "extensions.experimental.affinity": {
-        "vscodevim.vim": 1
+    {
+      "name": "pnw2tex",
+      "command": "pweave",
+      "args": ["-f", "tex", "%DOC_EXT%"],
+      "env": {}
     },
-    "vim.useSystemClipboard": true,
-    "editor.wordBasedSuggestions": "off",
-    "debug.console.historySuggestions": false,
-    "vim.handleKeys": {
-        "<C-d>": true,
-        "<C-s>": false,
-        "<C-z>": false,
-        "<C-f>": true,
-        "<C-p>": true
+    {
+      "name": "pnw2texminted",
+      "command": "pweave",
+      "args": ["-f", "texminted", "%DOC_EXT%"],
+      "env": {}
     },
-    "lazygit-vscode.autoMaximizeWindow": true,
-    "vim.incsearch": false,
-    "terminal.integrated.allowChords": false
+    {
+      "name": "tectonic",
+      "command": "tectonic",
+      "args": ["--synctex", "--keep-logs", "%DOC%.tex"],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk",
+      "tools": ["latexmk"]
+    },
+    {
+      "name": "latexmk (latexmkrc)",
+      "tools": ["latexmk_rconly"]
+    },
+    {
+      "name": "latexmk (lualatex)",
+      "tools": ["lualatexmk"]
+    },
+    {
+      "name": "latexmk (xelatex)",
+      "tools": ["xelatexmk"]
+    },
+    {
+      "name": "pdflatex -> bibtex -> pdflatex * 2",
+      "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+    },
+    {
+      "name": "Compile Rnw files",
+      "tools": ["rnw2tex", "latexmk"]
+    },
+    {
+      "name": "Compile Jnw files",
+      "tools": ["jnw2tex", "latexmk"]
+    },
+    {
+      "name": "Compile Pnw files",
+      "tools": ["pnw2tex", "latexmk"]
+    },
+    {
+      "name": "tectonic",
+      "tools": ["tectonic"]
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "lastUsed",
+  "resmon.show.battery": false,
+  "resmon.show.cpufreq": false,
+  "markdown.extension.italic.indicator": "_",
+  "markdown.extension.list.indentationSize": "inherit",
+  "markdown.extension.print.absoluteImgPath": false,
+  "markdown.extension.theming.decoration.renderHardLineBreak": true,
+  "editor.renderWhitespace": "trailing",
+  "window.commandCenter": false,
+  "haskell.manageHLS": "GHCup",
+  "redhat.telemetry.enabled": false,
+  "rsp-ui.enableStartServerOnActivation": [
+    {
+      "id": "redhat.vscode-community-server-connector",
+      "name": "Community Server Connector",
+      "startOnActivation": true
+    }
+  ],
+  "workbench.editor.empty.hint": "hidden",
+  "C_Cpp.default.cppStandard": "gnu++20",
+  "C_Cpp.suggestSnippets": false,
+  "java.jdt.ls.java.home": "C:\\Program Files\\Java\\jdk-17",
+  "[cpp]": {
+    "editor.suggest.insertMode": "insert"
+  },
+  "C_Cpp.inlayHints.parameterNames.enabled": true,
+  "[c]": {
+    "editor.suggest.insertMode": "insert"
+  },
+  "cmake.showOptionsMovedNotification": false,
+  "cmake.options.advanced": {
+    "build": {
+      "statusBarVisibility": "visible"
+    },
+    "launch": {
+      "statusBarVisibility": "visible"
+    },
+    "debug": {
+      "statusBarVisibility": "visible"
+    },
+    "cpack": {
+      "statusBarVisibility": "hidden"
+    },
+    "workflow": {
+      "statusBarVisibility": "hidden"
+    }
+  },
+  "cmake.options.statusBarVisibility": "compact",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "notebook.output.textLineLimit": 50,
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "editor.fontFamily": "CaskaydiaCove Nerd Font",
+  "editor.linkedEditing": true,
+  "[latex]": {
+    "editor.tabSize": 2
+  },
+  "[tex]": {
+    "editor.tabSize": 2
+  },
+  "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+  "ltex.additionalRules.motherTongue": "es",
+  "ltex.latex.commands": {
+    "\\import{}{}": "ignore",
+    "\\includefrom{}{}": "ignore",
+    "\\makecover[]": "ignore"
+  },
+  "explorer.confirmPasteNative": false,
+  "editor.rulers": [80],
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "gitlens.menus": {
+    "editor": {
+      "blame": true,
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
+    },
+    "editorGroup": {
+      "blame": true,
+      "compare": true
+    },
+    "editorGutter": {
+      "compare": true,
+      "remote": true,
+      "share": true
+    },
+    "editorTab": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
+    },
+    "explorer": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
+    },
+    "ghpr": {
+      "worktree": true
+    },
+    "scm": {
+      "graph": true
+    },
+    "scmRepositoryInline": {
+      "graph": true,
+      "stash": false
+    },
+    "scmRepository": {
+      "authors": true,
+      "generateCommitMessage": true,
+      "graph": false
+    },
+    "scmGroupInline": {
+      "stash": true
+    },
+    "scmGroup": {
+      "compare": true,
+      "openClose": true,
+      "stash": true
+    },
+    "scmItemInline": {
+      "stash": false
+    },
+    "scmItem": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true,
+      "share": true,
+      "stash": true
+    }
+  },
+  "gitlens.mode.statusBar.enabled": false,
+  "gitlens.hovers.enabled": false,
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "markdown.preview.scrollEditorWithPreview": false,
+  "markdown.preview.scrollPreviewWithEditor": false,
+  "markdown.marp.html": "default",
+  "markdown.styles": [
+    "https://use.fontawesome.com/releases/v6.5.2/css/all.css"
+  ],
+  "latex-workshop.texcount.autorun": "onSave",
+  "jupyter.askForKernelRestart": false,
+  "terminal.integrated.shellIntegration.decorationsEnabled": "overviewRuler",
+  "terminal.integrated.sendKeybindingsToShell": false,
+  "terminal.integrated.commandsToSkipShell": [
+    "lazygit-vscode.toggle",
+    "workbench.action.closeWindow",
+    "-workbench.action.quickOpen",
+    "-workbench.action.files.newUntitledFile",
+    "-workbench.action.terminal.focusFind",
+    "-extension.vim_ctrl+p"
+  ],
+  "terminal.integrated.fontWeight": "normal",
+  "lazygit-vscode.configPath": "~/.config/lazygit/config.yml",
+  "lazygit-vscode.autoMaximizeWindow": true,
+  "lazygit-vscode.panels": {
+    "sidebar": "hide",
+    "secondarySidebar": "hide",
+    "panel": "hide"
+  },
+  "vim.vimrc.enable": true,
+  "vim.leader": " ",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.showCommands"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": ["editor.action.rename"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["workbench.action.toggleSidebarVisibility"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "e", "e"],
+      "commands": ["workbench.view.explorer"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "t", "t"],
+      "commands": ["workbench.action.terminal.toggleTerminal"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "g", "g"],
+      "commands": ["lazygit-vscode.toggle"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "f", "g"],
+      "commands": ["workbench.action.findInFiles"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "f", "s"],
+      "commands": ["workbench.action.gotoSymbol"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "h", "r"],
+      "commands": ["git.revertSelectedRanges"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "h", "d"],
+      "commands": ["workbench.action.quickOpen"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "h", "n"],
+      "commands": ["editor.action.dirtydiff.next"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "h", "p"],
+      "commands": ["editor.action.dirtydiff.previous"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["editor.action.trimTrailingWhitespace"],
+      "silent": true
+    },
+    {
+      "before": ["/"],
+      "commands": ["actions.find"],
+      "silent": true
+    },
+    {
+      "before": ["n"],
+      "commands": ["editor.action.nextMatchFindAction", "extension.vim_escape"],
+      "silent": true
+    },
+    {
+      "before": ["N"],
+      "commands": [
+        "editor.action.previousMatchFindAction",
+        "extension.vim_escape"
+      ],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "n"],
+      "commands": ["closeFindWidget"],
+      "silent": true
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "d"],
+      "commands": ["editor.action.marker.next"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "m"],
+      "commands": ["editor.action.formatDocument"],
+      "silent": true
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["t"],
+      "commands": ["editor.action.duplicateSelection"],
+      "silent": true
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["t"],
+      "commands": ["editor.action.duplicateSelection", "extension.vim_escape"],
+      "silent": true
+    }
+  ],
+  "vim.useCtrlKeys": true,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vim.useSystemClipboard": true,
+  "editor.wordBasedSuggestions": "off",
+  "debug.console.historySuggestions": false,
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-s>": false,
+    "<C-z>": false,
+    "<C-f>": true,
+    "<C-p>": true
+  },
+  "vim.incsearch": false,
+  "omnisharp.useModernNet": false,
+  "terminal.integrated.allowChords": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.cursorBlinking": "solid",
+  "git.blame.editorDecoration.enabled": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "rainbow_csv.enable_context_menu_head": true,
+  "editor.acceptSuggestionOnEnter": "off",
+  "latex-workshop.latex.outDir": "%DIR%/build",
+  "dotnet.formatting.organizeImportsOnFormat": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontSize": 13,
+  "chat.commandCenter.enabled": false,
+  "latex-workshop.formatting.latex": "latexindent",
+  "latex-workshop.formatting.latexindent.args": [
+    "-c",
+    "%DIR%/",
+    "%TMPFILE%",
+    "-y=defaultIndent: '%INDENT%',modifyLineBreaks:textWrapOptions:columns: 79",
+    "-m",
+    "-l"
+  ],
+  "git.blame.statusBarItem.enabled": false,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "debug.onTaskErrors": "abort",
+  "Prettier-SQL.keywordCase": "upper",
+  "Prettier-SQL.SQLFlavourOverride": "mariadb",
+  "Prettier-SQL.linesBetweenQueries": 2,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "docker.extension.dockerEngineAvailabilityPrompt": false
 }

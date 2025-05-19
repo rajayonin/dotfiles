@@ -1,5 +1,6 @@
 return {
-  { 'projekt0n/github-nvim-theme' },
+  -- { 'projekt0n/github-nvim-theme' },
+  { 'rmehri01/onenord.nvim' },
   {
     "AlexvZyl/nordic.nvim",
     priority=1000,

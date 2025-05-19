@@ -61,6 +61,7 @@ The plugins I use are:
 
 ### Colorschemes
 - [nordic.nvim](https://github.com/AlexvZyl/nordic.nvim)
+<!-- - [onenord.nvim](https://github.com/rmehri01/onenord.nvim) -->
 
 
 ## Language Server Protocol

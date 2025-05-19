@@ -84,7 +84,7 @@ bash min.sh
 
 
 ### Windows install (Powershell)
-Installs Windows setup: `windowsterminal`, `neovim`, `lazygit`, `ohmyposh`, and `pwsh`.
+Installs Windows setup: `windowsterminal`, `vim`, neovim`, `lazygit`, `ohmyposh`, and `pwsh`.
 
 > [!IMPORTANT]
 > Execute as administrator, in Powershell

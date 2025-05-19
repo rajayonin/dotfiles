@@ -24,6 +24,7 @@ if ( "update" -ne $args[0] ) {
 # TODO: symlinks
 
 # copy config
+Copy-Item ".\vim\.vimrc" -Destination $HOME -Recurse -Force
 Copy-Item ".\nvim\.config\nvim\" -Destination $env:LOCALAPPDATA -Recurse -Force
 Copy-Item ".\lazygit\.config\lazygit\" -Destination $env:LOCALAPPDATA -Recurse -Force
 Copy-Item ".\ohmyposh\.config\ohmyposh\config.toml" -Destination "$HOME\.omp.toml" -Force

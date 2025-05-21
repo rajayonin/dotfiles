@@ -505,6 +505,31 @@
       "before": ["<leader>", "m"],
       "commands": ["editor.action.formatDocument"],
       "silent": true
+    },
+    {
+      "before": ["<C-w>", "L"],
+      "commands": ["workbench.action.moveActiveEditorGroupRight"],
+      "silent": true
+    },
+    {
+      "before": ["<C-w>", "H"],
+      "commands": ["workbench.action.moveActiveEditorGroupLeft"],
+      "silent": true
+    },
+    {
+      "before": ["<C-w>", "J"],
+      "commands": ["workbench.action.moveActiveEditorGroupDown"],
+      "silent": true
+    },
+    {
+      "before": ["<C-w>", "K"],
+      "commands": ["workbench.action.moveActiveEditorGroupUp"],
+      "silent": true
+    },
+    {
+      "before": ["<C-w>", "r"],
+      "commands": ["workbench.action.moveEditorToPreviousGroup"],
+      "silent": true
     }
   ],
   "vim.normalModeKeyBindings": [

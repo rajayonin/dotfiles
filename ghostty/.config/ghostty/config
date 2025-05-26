@@ -32,4 +32,5 @@ keybind = alt+shift+l=resize_split:right,10
 # keybind = alt+shift+==equalize_splits
 keybind = cmd+shift+w=close_surface
 
+# tabs
 

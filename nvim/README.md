@@ -71,7 +71,7 @@ The following plugins are used:
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig): Basic LSP configuration
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp): Completions
 - [mason.nvim](https://github.com/williamboman/mason-lspconfig.nvim): LSP servers manager
-- [garbage-day.nvim](https://github.com/zeioth/garbage-day.nvim): "Garbage collector" for LSPs
+<!-- - [garbage-day.nvim](https://github.com/zeioth/garbage-day.nvim): "Garbage collector" for LSPs -->
 
 
 

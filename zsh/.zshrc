@@ -215,7 +215,3 @@ if [ -x "$(command -v yazi)" ]; then
 	}
 fi
 
-
-
-# bun completions
-[ -s "/home/ldcas/.bun/_bun" ] && source "/home/ldcas/.bun/_bun"

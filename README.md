@@ -28,14 +28,19 @@ The current supported apps are:
   - `yazi`
 - `bash`: [GNU Bash](https://www.gnu.org/software/bash/) configuration
 - `alias`: Extra shell aliases  
-  Requires:
+  Requires (coreutils replacements):
   - [batcat](https://github.com/sharkdp/bat)
   - [eza](https://github.com/eza-community/eza)
-  - [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
-  - [trash-cli](https://github.com/andreafrancia/trash-cli)
+  - [advcpmv](https://github.com/jarun/advcpmv)
   - [dust](https://github.com/bootandy/dust)
   - [dysk](https://github.com/Canop/dysk)
-  - [advcpmv](https://github.com/jarun/advcpmv)
+
+  Optional:
+  - [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
+  - [trash-cli](https://github.com/andreafrancia/trash-cli)
+  - [yay](https://github.com/Jguer/yay)
+  - [circumflex](https://github.com/bensadeh/circumflex)
+  - [GNU GRUB](https://www.gnu.org/software/grub/)
 
   Depends-on:
   - `nvim`

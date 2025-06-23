@@ -20,9 +20,6 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-if [ -x "$(command -v fzf)" ]; then
-	zinit light Aloxaf/fzf-tab
-fi
 
 # snippets
 zinit snippet OMZL::git.zsh
@@ -98,6 +95,12 @@ fi
 autoload -Uz compinit && compinit
 zinit cdreplay -q
 
+# fzf completions, must be loaded after compinit
+if [ -x "$(command -v fzf)" ]; then
+	zinit light Aloxaf/fzf-tab
+fi
+
+
 
 
 # ######
@@ -108,7 +111,7 @@ zinit cdreplay -q
 # keybindings (more info in https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Standard-Widgets)
 bindkey '^f' autosuggest-accept
 bindkey '^f' accept-search
-bindkey '^M' accept-line
+bindkey '^M' accept-line  # enter
 bindkey '^f' forward-char
 bindkey '^[[H' beginning-of-line  # fix Home key
 bindkey '^[[F' end-of-line  # fix End key
@@ -164,6 +167,10 @@ alias la="ls -A"
 alias :q="exit"
 alias :Q="exit"
 alias :x="exit"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
 # extra
 if [ -f ~/.sh_aliases ]; then
@@ -209,3 +216,6 @@ if [ -x "$(command -v yazi)" ]; then
 fi
 
 
+
+# bun completions
+[ -s "/home/ldcas/.bun/_bun" ] && source "/home/ldcas/.bun/_bun"

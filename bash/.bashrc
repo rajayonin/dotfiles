@@ -92,6 +92,10 @@ alias l='ls -CF'
 alias :q="exit"
 alias :Q="exit"
 alias :x="exit"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

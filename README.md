@@ -17,6 +17,9 @@ The current supported apps are:
 
   Depends-on:
   - `lazygit`
+- `helix`: [Helix](https://helix-editor.com/) configuration  
+  Requires:
+  - `xclip` (for Linux)
 - `zsh`: [Z-shell](https://www.zsh.org/) configuration  
   Requires:
   - [fzf](https://github.com/junegunn/fzf)
@@ -70,13 +73,14 @@ The current supported apps are:
     - `vim`
 - `gnome`: [GNOME WM](https://www.gnome.org/) configuration  
 - `btop`: [BTOP++](https://github.com/aristocratos/btop) configuration
-- `windowsterminal`: [WindowsTerminal](https://github.com/microsoft/terminal) configuration
 
 > [!TIP]
 > To enable GPU monitoring w/out needing to run as `root`, add the required permisions (in Unix systems) with:
 > ```bash
 > sudo setcap cap_perfmon=+ep $(which btop)
 > ```
+
+- `windowsterminal`: [WindowsTerminal](https://github.com/microsoft/terminal) configuration
 
 
 ### Minimal install (SSH servers)

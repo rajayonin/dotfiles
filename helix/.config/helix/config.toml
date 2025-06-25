@@ -1,0 +1,15 @@
+theme = "nordic"
+
+[editor]
+line-number = "relative"
+mouse = true
+auto-format = false
+clipboard-provider = "x-clip"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.insert]
+k = { j = "normal_mode" } # Maps `kj` to exit insert mode 

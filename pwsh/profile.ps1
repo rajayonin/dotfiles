@@ -1,7 +1,3 @@
-# prompt
-oh-my-posh init pwsh --config "$HOME/.omp.toml" | Invoke-Expression
-
-
 # config
 $ENV:EDITOR = "nvim"
 $ENV:VISUAL = "code"
@@ -50,4 +46,7 @@ Set-Alias -Name .... -Value _up3 -Option AllScope
 
 # integrations
 Invoke-Expression (& { (zoxide init --cmd cd powershell | Out-String) })  # zoxide
+
+# prompt
+oh-my-posh init pwsh --config "$HOME/.omp.toml" | Invoke-Expression
 

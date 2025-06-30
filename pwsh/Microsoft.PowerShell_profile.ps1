@@ -16,24 +16,24 @@ Import-Module git-aliases -DisableNameChecking
 
 
 # aliases
-Set-Alias lg lazygit
-Set-Alias cat bat
+Set-Alias -Name lg -Value lazygit -Option AllScope
+Set-Alias -Name cat -Value bat -Option AllScope
 
 # if we want to use parameters in aliases, we have to use a function
 function _du {dust -r}
-Set-Alias du _du
+Set-Alias -Name du -Value _du -Option AllScope
 
 function _ls {eza --group-directories-first --icons=auto}
-Set-Alias ls _ls
+Set-Alias -Name ls -Value _ls -Option AllScope
 
 function _ll {eza -lahHg --git --group-directories-first --icons=auto}
-Set-Alias ll _ll
+Set-Alias -Name ll -Value _ll -Option AllScope
 
 function _la {eza --group-directories-first --icons=auto -a}
-Set-Alias la _la
+Set-Alias -Name la -Value _la -Option AllScope
 
 function _tree {eza -T -L 4}
-Set-Alias tree _tree
+Set-Alias -Name tree -Value _tree -Option AllScope
 
 
 # integrations

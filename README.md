@@ -30,7 +30,10 @@ The current supported apps are:
   - `ohmyposh`
   - `yazi`
 - `bash`: [GNU Bash](https://www.gnu.org/software/bash/) configuration
-- `alias`: Extra shell aliases  
+- `alias`: Extra shell aliases (valid for Bash and ZSH)  
+  Requires:
+  - `awk`
+
   Requires (coreutils replacements):
   - [batcat](https://github.com/sharkdp/bat)
   - [eza](https://github.com/eza-community/eza)
@@ -44,6 +47,7 @@ The current supported apps are:
   - [yay](https://github.com/Jguer/yay)
   - [circumflex](https://github.com/bensadeh/circumflex)
   - [GNU GRUB](https://www.gnu.org/software/grub/)
+  - [Git](https://git-scm.com/)
 
   Depends-on:
   - `nvim`

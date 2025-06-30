@@ -15,3 +15,11 @@ alias cp="cpg --progress-bar"
 alias mv="mvg --progress-bar"
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 alias clx="clx -n"
+
+# gcl
+if alias gcl > /dev/null 2>&1; then
+    unalias gcl
+fi
+gcl () {
+    git clone $1 --recurse-submodules && cd $(echo $1 | awk -F/ '/.git$/{print substr($NF, 0, length($NF) - 4)} !/.git$/{print $NF}')
+}

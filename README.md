@@ -105,12 +105,12 @@ Installs Windows setup: `windowsterminal`, `vim`, neovim`, `lazygit`, `ohmyposh`
 ```powershell
 git clone https://github.com/rajayonin/dotfiles
 cd dotfiles
-.\pwsh.ps1
+.\win.ps1
 ```
 
 To update config files w/out installing dependencies:
 ```powershell
-.\pwsh.ps1 update
+.\win.ps1 update
 ```
 
 > [!NOTE]

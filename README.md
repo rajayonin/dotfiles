@@ -97,10 +97,10 @@ bash min.sh
 
 
 ### Windows install (Powershell)
-Installs Windows setup: `windowsterminal`, `vim`, neovim`, `lazygit`, `ohmyposh`, and `pwsh`.
+Installs Windows setup: `windowsterminal`, `vim`, neovim`, `lazygit`, `ohmyposh`, and `pwsh`, including dependencies.
 
 > [!IMPORTANT]
-> Execute as administrator, in Powershell
+> Execute as administrator, in Powershell.
 
 ```powershell
 git clone https://github.com/rajayonin/dotfiles
@@ -108,11 +108,14 @@ cd dotfiles
 .\pwsh.ps1
 ```
 
-To update config files after dependencies are already installed:
+To update config files w/out installing dependencies:
 ```powershell
 .\pwsh.ps1 update
 ```
 
+> [!NOTE]
+> This script creates symbolic links, so it should only be run again on a
+> machine if a new application is added.
 
 
 ## Fonts

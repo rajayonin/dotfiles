@@ -1,7 +1,44 @@
-# please execute as admin
+#Requires -RunAsAdministrator
 
+
+# TODO: use this to copy config w/out administrator privileges
+function copy-config {
+    param(
+        [Parameter(Mandatory, HelpMessage="Target item to copy")]
+        [string] $source,
+
+        [Parameter(Mandatory, HelpMessage="Destination path")]
+        [string] $destination,
+    )
+
+    Copy-Item $source $destination -Recurse -Force
+    }
+}
+
+
+function make-link {
+    param(
+        [Parameter(Mandatory, HelpMessage="Source item to link to")]
+        [string] $source,
+
+        [Parameter(Mandatory, HelpMessage="Link item")]
+        [string] $link,
+
+        [Parameter(HelpMessage="Forces the creation of the symlink, even if the target exists")]
+        [switch] $Force
+    )
+
+    if ( $Force ) {
+        New-Item -Path $link -ItemType SymbolicLink -Value $source -Force | Out-Null
+    }
+    else {
+        New-Item -Path $link -ItemType SymbolicLink -Value $source | Out-Null
+    }
+}
+
+
+# install dependencies
 if ( "update" -ne $args[0] ) {
-    # install dependencies
     winget install -e --id Microsoft.WindowsTerminal
     winget install -e --id JanDeDobbeleer.OhMyPosh -s winget
     winget install -e --id junegunn.fzf ajeetdsouza.zoxide
@@ -21,17 +58,14 @@ if ( "update" -ne $args[0] ) {
 }
 
 
-# TODO: symlinks
-
 # copy config
-Copy-Item ".\vim\.vimrc" -Destination $HOME -Recurse -Force
-Copy-Item ".\nvim\.config\nvim\" -Destination $env:LOCALAPPDATA -Recurse -Force
-Copy-Item ".\lazygit\.config\lazygit\" -Destination $env:LOCALAPPDATA -Recurse -Force
-Copy-Item ".\ohmyposh\.config\ohmyposh\config.toml" -Destination "$HOME\.omp.toml" -Force
-Copy-Item ".\windowsterminal\settings.json" -Destination "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState" -Force
-
-Copy-Item ".\pwsh\Microsoft.PowerShell_profile.ps1" -Destination $PROFILE -Force
+make-link "$PWD\vim\.vimrc" "$HOME\.vimrc"
+make-link "$PWD\nvim\.config\nvim\" "$env:LOCALAPPDATA\nvim\"
+make-link "$PWD\lazygit\.config\lazygit\" "$env:LOCALAPPDATA\lazygit\"
+make-link "$PWD\ohmyposh\.config\ohmyposh\config.toml" "$HOME\.omp.toml"
+make-link "$PWD\windowsterminal\settings.json" "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" -Force
+make-link "$PWD\pwsh\Microsoft.PowerShell_profile.ps1" $PROFILE
 
 
 # reset
-.$PROFILE  # FIXME: this doesn't reset shit
+. $PROFILE

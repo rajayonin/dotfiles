@@ -67,6 +67,7 @@ The current supported apps are:
     - [ripgrep](https://github.com/BurntSushi/ripgrep)
     - [batcat](https://github.com/sharkdp/bat)
     - [dust](https://github.com/bootandy/dust)
+    - [Python 3](https://www.python.org/)
 
   Depends-on:
     - `lazygit`

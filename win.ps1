@@ -52,6 +52,7 @@ if ( "update" -ne $args[0] ) {
     cargo install --locked tree-sitter-cli
     winget install -e --id OpenJS.NodeJS
     winget install -e --id DenoLand.Deno
+    winget install python3  # we'll just get the latest version
 
     # install modules
     Install-Module git-aliases -Scope CurrentUser -AllowClobber

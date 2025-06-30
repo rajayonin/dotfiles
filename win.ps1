@@ -65,7 +65,7 @@ make-link "$PWD\nvim\.config\nvim\" "$env:LOCALAPPDATA\nvim\"
 make-link "$PWD\lazygit\.config\lazygit\" "$env:LOCALAPPDATA\lazygit\"
 make-link "$PWD\ohmyposh\.config\ohmyposh\config.toml" "$HOME\.omp.toml"
 make-link "$PWD\windowsterminal\settings.json" "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" -Force
-make-link "$PWD\pwsh\Microsoft.PowerShell_profile.ps1" $PROFILE
+make-link "$PWD\pwsh\profile.ps1" $PROFILE
 
 
 # reset

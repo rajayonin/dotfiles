@@ -41,6 +41,7 @@ The plugins I use are:
   - `scroll`: Better scrolling
   - `words`: LSP references navigation
   - `lazygit`: [Lazygit](https://github.com/jesseduffield/lazygit) integration
+  - `scratch`: Scratch buffer
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim): Fuzzy finder (files, words, refferences, etc.)
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim): Better terminal
 - [trim.nvim](https://github.com/cappyzawa/trim.nvim): Trim trailing whitespace on-demand

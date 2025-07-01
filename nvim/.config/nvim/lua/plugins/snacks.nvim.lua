@@ -34,6 +34,7 @@ return {
       lazygit = {
         configure = false,  -- need to set os.editPreset to "nvim-remote" in Lazygit config
       },
+      scratch = { enabled = true },
     },
     keys = {
       { "<leader>gb", function() Snacks.git.blame_line() end, desc = "Git Blame Line" },
@@ -43,6 +44,8 @@ return {
       { "<leader>n",  function() Snacks.notifier.show_history() end, desc = "Notification History" },
       { "<leader>cR", function() Snacks.rename.rename_file() end, desc = "Rename File" },
       { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
+      { "<leader>.",  function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
+      { "<leader>S",  function() Snacks.scratch.select() end, desc = "Select Scratch Buffer" },
     }
   }
 }

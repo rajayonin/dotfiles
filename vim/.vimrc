@@ -15,6 +15,7 @@
 
 " Special thanks to Brandon Wallace (https://github.com/brandon-wallace/vimrc)
 
+
 " COLORS
 " ---
 colo default
@@ -83,25 +84,6 @@ set wildignore=*.odt,*.doc*,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.JPG,*.exe,*.bmp,*.fl
 " Enable Python syntax highlighting features (thank god).
 autocmd BufRead,BufNewFile *.py let python_highlight_all=1
 
-" Save undo history to ~/.local/share/vim/undo.
-set undofile
-if !isdirectory("~/.local/share/vim/undo")
-    silent! execute "!mkdir -p ~/.local/share/vim/undo"
-endif
-set undodir=~/.local/share/vim/undo
-" Save backups to ~/.local/share/vim/backup.
-set backup
-if !isdirectory("~/.local/share/vim/backup")
-    silent! execute "!mkdir -p ~/.local/share/vim/backup"
-endif
-set backupdir=~/.local/share/vim/backup
-" Save swap to ~/.local/share/vim/swap.
-set swapfile
-if !isdirectory("~/.local/share/vim/swap")
-    silent! execute "!mkdir -p ~/.local/share/vim/swap"
-endif
-set directory=~/.local/share/vim/swap
-
 " Show whitespace
 set list listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 
@@ -116,6 +98,49 @@ set backspace=indent,eol,start
 let &t_SI="\e[5 q"  " blinking bar (insert mode)
 let &t_EI="\e[2 q"  " steady block (normal else)
 let &t_SR="\<Esc>[1 q"  " blinking block (replace mode)
+
+
+
+" HISTORY, SWAP, AND BACKUPS
+" --------
+
+" detect OS and save it to `g:env`
+" posible values are: DARWIN, LINUX, WINDOWS, CYGWIN, MINGW, etc.
+" stolen from https://vi.stackexchange.com/a/2577
+if !exists('g:env')
+    if has('win64') || has('win32') || has('win16')
+        let g:env = 'WINDOWS'
+    else
+        let g:env = toupper(substitute(system('uname'), '\n', '', ''))
+    endif
+endif
+
+if g:env !~ 'WINDOWS'
+
+    " Save undo history to ~/.local/share/vim/undo.
+    set undofile
+    if !isdirectory("~/.local/share/vim/undo")
+        silent! execute "!mkdir -p ~/.local/share/vim/undo"
+    endif
+    set undodir=~/.local/share/vim/undo
+
+    " Save backups to ~/.local/share/vim/backup.
+    set backup
+    if !isdirectory("~/.local/share/vim/backup")
+        silent! execute "!mkdir -p ~/.local/share/vim/backup"
+    endif
+    set backupdir=~/.local/share/vim/backup
+
+    " Save swap to ~/.local/share/vim/swap.
+    set swapfile
+    if !isdirectory("~/.local/share/vim/swap")
+        silent! execute "!mkdir -p ~/.local/share/vim/swap"
+    endif
+    set directory=~/.local/share/vim/swap
+
+endif
+
+" TODO: set for windows
 
 
 

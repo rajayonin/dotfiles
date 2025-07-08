@@ -1,11 +1,19 @@
+# generic
+clipboard-paste-protection = false
+shell-integration-features = ssh-env,ssh-terminfo
+# 100MiB scrollback buffer
+scrollback-limit = 104857600
+
 # window
 maximize = true
 window-decoration = none
 
 # cursor
-shell-integration-features = no-cursor
 cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
 mouse-hide-while-typing
+cursor-click-to-move
 
 # font
 font-family = "CaskaydiaMono Nerd Font"
@@ -34,6 +42,6 @@ keybind = cmd+shift+w=close_surface
 
 # tabs
 keybind = ctrl+shift+t=new_tab
-keybind = alt+shift+physical:comma=previous_tab
+keybind = alt+shift+comma=previous_tab
 keybind = alt+shift+period=next_tab
 keybind = alt+shift+q=close_tab

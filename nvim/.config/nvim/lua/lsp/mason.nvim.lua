@@ -32,6 +32,7 @@ return {
       ensure_installed = {
         "lua_ls",
         "jsonls",
+        "yamlls",
         "bashls",
         "dockerls",
         "ltex",  -- Markdown, LaTeX, etc.

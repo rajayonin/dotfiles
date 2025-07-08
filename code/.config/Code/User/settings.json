@@ -67,8 +67,8 @@
     "terminal.integrated.fontSize",
     "editor.fontFamily",
     "terminal.integrated.fontFamily",
-    "lazygit-vscode.configPath",
-    "editor.cursorBlinking"
+    "editor.cursorBlinking",
+    "lazygit-vscode.configPath"
   ],
   "editor.minimap.enabled": false,
   "githubPullRequests.pullBranch": "never",
@@ -388,7 +388,7 @@
     "-extension.vim_ctrl+p"
   ],
   "terminal.integrated.fontWeight": "normal",
-  "lazygit-vscode.configPath": "~/.config/lazygit/config.yml",
+  "lazygit-vscode.configPath": "~/.config/lazygit/config-vscode.yml",
   "lazygit-vscode.autoMaximizeWindow": true,
   "lazygit-vscode.panels": {
     "sidebar": "hide",
@@ -534,10 +534,27 @@
   ],
   "vim.normalModeKeyBindings": [
     {
-      "before": ["t"],
+      "before": ["t", "t"],
       "commands": ["editor.action.duplicateSelection"],
       "silent": true
     }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.showCommands"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "m"],
+      "commands": ["editor.action.formatSelection"],
+      "silent": true
+    },
+    {
+      "before": ["/"],
+      "commands": ["actions.find"],
+      "silent": true
+    },
   ],
   "vim.visualModeKeyBindings": [
     {
@@ -589,7 +606,7 @@
     "-m",
     "-l"
   ],
-  "git.blame.statusBarItem.enabled": false,
+  "git.blame.statusBarItem.enabled": true,
   "terminal.integrated.defaultProfile.linux": "zsh",
   "debug.onTaskErrors": "abort",
   "Prettier-SQL.keywordCase": "upper",
@@ -598,5 +615,11 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "docker.extension.dockerEngineAvailabilityPrompt": false
+  "docker.extension.dockerEngineAvailabilityPrompt": false,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "×": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

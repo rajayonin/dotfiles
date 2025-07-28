@@ -18,8 +18,6 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
 
 # snippets
 zinit snippet OMZL::git.zsh
@@ -65,10 +63,11 @@ fi
 # COMPLETIONS
 # ###########
 
+# generate completions
+
 # docker
 if [ -x "$(command -v docker)" ]; then
   if [ ! -f "$HOME/.docker/completions" ]; then
-    # generate completions
     mkdir -p ~/.docker/completions && docker completion zsh > ~/.docker/completions/_docker
   fi
 
@@ -78,7 +77,6 @@ fi
 # github cli
 if [ -x "$(command -v gh)" ]; then
   if [ ! -f "$HOME/.github-cli/completions" ]; then
-    # generate completions
     mkdir -p ~/.github-cli/completions && gh completion -s zsh > ~/.github-cli/completions/_gh
   fi
 
@@ -91,6 +89,11 @@ if [ -x "$(command -v bun)" ]; then
 fi
 
 
+# setup
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+
+
 # load completions on startup
 autoload -Uz compinit && compinit
 zinit cdreplay -q
@@ -101,11 +104,25 @@ if [ -x "$(command -v fzf)" ]; then
 fi
 
 
+# autocompletion setup
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # smartcase
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"  # colors on file completion
+zstyle ':completion:*' menu no  # no default menu (we'll use fzf)
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --icons=auto --color=always $realpath'  # fzf for cd w/ eza
+# zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'  # fzf for cd
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --icons=auto -color $realpath'  # fzf for zoxide
+zstyle ':fzf-tab:*' fzf-bindings 'ctrl-f:accept'
+zstyle ':fzf-tab:*' accept-line enter
+
 
 
 # ######
 # CONFIG
 # ######
+
+# generic
+setopt auto_param_slash  # when a dir is completed, add a / instead of a trailing space
+setopt interactive_comments # allow comments in shell
 
 
 # keybindings (more info in https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Standard-Widgets)
@@ -121,15 +138,6 @@ bindkey '^[[3;5~' kill-word  # fix Ctrl+Del
 bindkey '^[[1;5C' forward-word # fix Ctrl+Right
 bindkey '^[[1;5D' backward-word # fix Ctrl+Left
 
-# autocompletion setup
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # smartcase
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"  # colors on file completion
-zstyle ':completion:*' menu no  # no default menu (we'll use fzf)
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --icons=auto --color=always $realpath'  # fzf for cd w/ eza
-# zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'  # fzf for cd
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --icons=auto -color $realpath'  # fzf for zoxide
-zstyle ':fzf-tab:*' fzf-bindings 'ctrl-f:accept'
-zstyle ':fzf-tab:*' accept-line enter
 
 # history
 HISTSIZE=5000
@@ -138,11 +146,13 @@ SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory
 setopt sharehistory
+setopt inc_append_history
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+
 
 # editor
 if [[ -n $SSH_CONNECTION ]]; then
@@ -150,6 +160,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nvim'
 fi
+
 
 # language environment
 export LANG=en_US.UTF-8

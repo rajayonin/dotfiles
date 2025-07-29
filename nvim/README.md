@@ -49,7 +49,7 @@ The plugins I use are:
 - [hlsearch.nvim](https://github.com/nvimdev/hlsearch.nvim): Automatic removal of search highlighting
 - [mini-operators](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-operators.md): Duplication of selected text
 - [visual-whitespace.nvim](https://github.com/mcauley-penney/visual-whitespace.nvim): Show whitespace characters on visual selection
-- [SylvanFranklin/omni-preview.nvim](https://github.com/SylvanFranklin/omni-preview.nvim): Previews for different files
+- [omni-preview.nvim](https://github.com/SylvanFranklin/omni-preview.nvim): Previews for different files
   - [chomosuke/typst-preview.nvim](https://github.com/chomosuke/typst-preview.nvim): [Typst](https://typst.app) preview  
   - [hat0uma/csvview.nvim](https://github.com/hat0uma/csvview.nvim): CSV files
   - [peek.nvim](https://github.com/https://github.com/toppair/peek.nvim): Markdown preview  

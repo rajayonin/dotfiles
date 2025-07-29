@@ -1,26 +1,21 @@
--- stolen from https://github.com/josean-dev/dev-environment-files
-
 return {
   "neovim/nvim-lspconfig",
+
   event = { "BufReadPre", "BufNewFile" },
+
+  enabled = true,
+
   dependencies = {
-    "hrsh7th/cmp-nvim-lsp",
-    -- { "antosha417/nvim-lsp-file-operations", config = true },
-    { "igorlfs/nvim-lsp-file-operations", config = true },  -- fork w/out deprecated stuff. see https://github.com/antosha417/nvim-lsp-file-operations/issues/31
-    { "folke/neodev.nvim", opts = {} },
+    "saghen/blink.cmp",
+    "antosha417/nvim-lsp-file-operations",
+    "folke/neodev.nvim",
   },
+
   config = function()
-    -- import lspconfig plugin
-    local lspconfig = require("lspconfig")
-
-    -- import mason_lspconfig plugin
-    local mason_lspconfig = require("mason-lspconfig")
-
-    -- import cmp-nvim-lsp plugin
-    local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
+    -- keymaps
     local keymap = vim.keymap -- for conciseness
 
+    -- only setup keymaps if there's an LSP
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
       callback = function(ev)
@@ -70,13 +65,10 @@ return {
       end,
     })
 
-    -- used to enable autocompletion (assign to every lsp server config)
-    local capabilities = cmp_nvim_lsp.default_capabilities()
-
     -- diagnostics config
     vim.diagnostic.config({
       signs = {
-        severity = {},  -- don't show it
+        severity = {}, -- don't show it
         -- diagnostic symbols sign column
         -- text = {
         --   [vim.diagnostic.severity.ERROR] = " ",
@@ -87,37 +79,9 @@ return {
       },
       underline = {
         -- only show when errors
-        severity = {min = vim.diagnostic.severity.WARN},
-      }
+        severity = { min = vim.diagnostic.severity.WARN },
+      },
     })
 
-    -- disable diagnostics
-    -- vim.diagnostic.enable(false)
-
-    mason_lspconfig.setup_handlers({
-      -- default handler for installed servers
-      function(server_name)
-        lspconfig[server_name].setup({
-          capabilities = capabilities,
-        })
-      end,
-      -- configure lua server (with special settings)
-      ["lua_ls"] = function()
-        lspconfig["lua_ls"].setup({
-          capabilities = capabilities,
-          settings = {
-            Lua = {
-              -- make the language server recognize "vim" global
-              diagnostics = {
-                globals = { "vim" },
-              },
-              completion = {
-                callSnippet = "Replace",
-              },
-            },
-          },
-        })
-      end,
-    })
   end,
 }

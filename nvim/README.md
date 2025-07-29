@@ -69,14 +69,14 @@ The plugins I use are:
 LSP config can be found at [`lua/lsp/`](.config/nvim/lua/lsp/).
 
 The following plugins are used:
-- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig): Basic LSP configuration
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp): Completions
-- [mason.nvim](https://github.com/williamboman/mason-lspconfig.nvim): LSP servers manager
+- [blink.cmp](https://github.com/saghen/blink.cmp): Completions
+- [mason-lspconfig.nvim](https://github.com/mason-org/mason-lspconfig.nvim): LSP servers manager
+- [mason-tool-installer.nvim](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim): Linter/formatters manager
+- [lazydev.nvim](https://github.com/folke/lazydev.nvim): Better support for Neovim config
 <!-- - [garbage-day.nvim](https://github.com/zeioth/garbage-day.nvim): "Garbage collector" for LSPs -->
 
 
-
-<!--## Autocommands ([`lua/autocmd.lua`](.config/nvim/lua/autocmd.lua))-->
+<!-- ## Autocommands ([`lua/autocmd.lua`](.config/nvim/lua/autocmd.lua)) -->
 
 
 ## Keybindings

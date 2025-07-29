@@ -57,6 +57,11 @@ if [ -x "$(command -v gem)" ]; then
 	export PATH="$PATH:$GEM_HOME/bin"
 fi
 
+# deno
+if [ -x "$HOME/.deno" ]; then
+  . "/home/ldcas/.deno/env"
+fi
+
 
 
 # ###########

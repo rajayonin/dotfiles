@@ -13,8 +13,41 @@ alias df="dysk --units=binary"
 alias open="xdg-open"
 alias cp="cpg --progress-bar"
 alias mv="mvg --progress-bar"
-alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 alias clx="clx -n"
+
+# yays and yayr, for easily installing and removing YAY packages
+# mainly stolen and adapted from omarchy and ChrisTitusTech
+
+yays() {
+    yay -Slq | \
+    fzf \
+      --multi \
+      --preview 'yay -Sii {1}' \
+      --preview-label='ctrl-p/n: select; ctrl-u/d: scroll' \
+      --preview-label-pos='bottom' \
+      --preview-window 'down:65%:wrap' \
+      --bind 'ctrl-d:preview-half-page-down,ctrl-u:preview-half-page-up' \
+    | \
+    xargs -ro yay -Sy
+}
+
+yayr() {
+    fzf_args=(
+    )
+
+    yay -Qqe | \
+    fzf \
+      --multi \
+      --preview 'yay -Qi {1}' \
+      --preview-label='ctrl-p/n: select; ctrl-u/d: scroll' \
+      --preview-window 'down:65%:wrap' \
+      --preview-label-pos='bottom' \
+      --bind 'ctrl-d:preview-half-page-down,ctrl-u:preview-half-page-up' \
+    | \
+    xargs -ro yay -Rns
+}
+
+
 
 # gcl
 if alias gcl > /dev/null 2>&1; then

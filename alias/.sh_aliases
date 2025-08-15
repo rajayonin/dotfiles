@@ -1,25 +1,106 @@
-alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
-alias cat="bat --style="changes,numbers,snip" --set-terminal-title --theme=base16"
-alias ls="eza --grid --across --group-directories-first --icons=auto --hyperlink"
+# ---------
+# COREUTILS
+# ---------
+
+alias cat="bat \
+    --style='changes,numbers,snip' \
+    --set-terminal-title \
+    --theme=base16"
+
+# ls
+alias ls="eza \
+    --grid \
+    --across \
+    --group-directories-first \
+    --icons=auto \
+    --hyperlink"
+
 alias la="ls --all"
-alias ll="eza --group-directories-first --icons=auto --hyperlink --all --long --header --created --modified --smart-group --git --mounts"
-alias tree="eza --tree --level 2 --icons=auto --hyperlink"
+
+alias ll="eza \
+    --group-directories-first \
+    --icons=auto \
+    --hyperlink \
+    --all \
+    --long \
+    --header \
+    --created \
+    --modified \
+    --smart-group \
+    --git \
+    --mounts"
+
+alias tree="eza \
+    --tree \
+    --level 2 \
+    --icons=auto \
+    --hyperlink"
+
+alias du="dust --reverse"
+alias df="dysk --units=binary"
+alias cp="cpg --progress-bar"
+alias mv="mvg --progress-bar"
+
+
+
+# ---------
+# SYSTEM
+# ---------
+
+# grub
+alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
+
+# clipboard
 alias clip="xclip -selection clipboard"
+
+
+# yays and yayr, for easily installing and removing YAY packages
+# mainly stolen and adapted from omarchy and ChrisTitusTech
+alias yays="yay -Slq | \
+    fzf \
+      --multi \
+      --preview 'yay -Sii {1}' \
+      --preview-label='ctrl-p/n: select; ctrl-u/d: scroll' \
+      --preview-label-pos='bottom' \
+      --preview-window 'down:65%:wrap' \
+      --bind 'ctrl-d:preview-half-page-down,ctrl-u:preview-half-page-up' \
+    | \
+    xargs -ro yay -Sy"
+
+alias yayr="yay -Qqe | \
+    fzf \
+      --multi \
+      --preview 'yay -Qi {1}' \
+      --preview-label='ctrl-p/n: select; ctrl-u/d: scroll' \
+      --preview-window 'down:65%:wrap' \
+      --preview-label-pos='bottom' \
+      --bind 'ctrl-d:preview-half-page-down,ctrl-u:preview-half-page-up' \
+    | \
+    xargs -ro yay -Rns"
+
+alias open="xdg-open"
+
+
+
+# -----------
+# THIRD-PARTY
+# -----------
+
 alias fetch="fastfetch"
 alias trash="trash-put"
 alias lg="lazygit"
-alias du="dust --reverse"
-alias df="dysk --units=binary"
-alias open="xdg-open"
-alias cp="cpg --progress-bar"
-alias mv="mvg --progress-bar"
-alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 alias clx="clx -n"
+
 
 # gcl
 if alias gcl > /dev/null 2>&1; then
     unalias gcl
 fi
-gcl () {
-    git clone $1 --recurse-submodules && cd $(echo $1 | awk -F/ '/.git$/{print substr($NF, 0, length($NF) - 4)} !/.git$/{print $NF}')
+
+gcl() {
+    git clone $1 --recurse-submodules && \
+    cd $( \
+        echo $1 | \
+        awk -F/ '/.git$/{print substr($NF, 0, length($NF) - 4)} !/.git$/{print $NF}' \
+    )
 }

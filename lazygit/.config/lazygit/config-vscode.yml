@@ -14,7 +14,6 @@ git:
 
 os:
   editPreset: "vscode"
-  shellFunctionsFile: "~/.sh_aliases"
 
 customCommands:
   - key: "r"

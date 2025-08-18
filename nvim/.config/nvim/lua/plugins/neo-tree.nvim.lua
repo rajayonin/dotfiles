@@ -54,14 +54,15 @@ return {
         }
       },
       filesystem = {
-        -- show hidden items by default
         filtered_items = {
+          -- show hidden items by default
           hide_dotfiles = false,
           hide_gitignored = false,
           hide_hidden = false,
+
+          -- exclude .git/
+          never_show = { ".git" }
         },
-        -- exclude .git/
-        never_show = { ".git" }
       }
     }
   }

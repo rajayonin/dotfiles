@@ -1,12 +1,12 @@
 [/]
 control-center=['<Super>i']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/']
 email=['<Super>m']
 home=['<Super>e']
 www=['<Super>b']
 
 [custom-keybindings/custom0]
-binding='<Control><Alt>t'
+binding='<Super>BackSpace'
 command='xdg-terminal-exec'
 name='Launch terminal'
 
@@ -29,3 +29,8 @@ name='Launch WhatsApp'
 binding='<Super>t'
 command='telegram-desktop'
 name='Launch Telegram'
+
+[custom-keybindings/custom5]
+binding='<Super>c'
+command='code'
+name='Launch VS Code'

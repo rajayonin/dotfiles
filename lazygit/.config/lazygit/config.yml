@@ -33,7 +33,7 @@ customCommands:
         key: "Confirm"
         title: "Set commiter date to author date"
         body: "Are you sure you want to update the commiter date?"
-    command: "git rebase --autostash --keep-empty --no-autosquash --rebase-merges --committer-date-is-author-date {{.SelectedCommit.Hash}}"
+    command: "git rebase --autostash --keep-empty --no-autosquash --rebase-merges --committer-date-is-author-date {{.SelectedCommit.Hash}}^"
 
   # retrieved from: https://github.com/jesseduffield/lazygit/wiki/Custom-Commands-Compendium#conventional-commit
   - key: "<c-c>"

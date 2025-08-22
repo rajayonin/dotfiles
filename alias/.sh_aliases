@@ -60,10 +60,10 @@ alias yays="yay -Slq | \
     fzf \
       --multi \
       --preview 'yay -Sii {1}' \
-      --preview-label='ctrl-p/n: select; ctrl-u/d: scroll' \
+      --preview-label='ctrl-p/n: select; ctrl-u/d: scroll; ctrl-g: PKGBUILD' \
       --preview-label-pos='bottom' \
       --preview-window 'down:65%:wrap' \
-      --bind 'ctrl-d:preview-half-page-down,ctrl-u:preview-half-page-up' \
+      --bind 'ctrl-d:preview-down,ctrl-u:preview-up,ctrl-g:preview:yay -Gp {1} | tail -n +3' \
     | \
     xargs -ro yay -Sy"
 
@@ -74,7 +74,7 @@ alias yayr="yay -Qqe | \
       --preview-label='ctrl-p/n: select; ctrl-u/d: scroll' \
       --preview-window 'down:65%:wrap' \
       --preview-label-pos='bottom' \
-      --bind 'ctrl-d:preview-half-page-down,ctrl-u:preview-half-page-up' \
+      --bind 'ctrl-d:preview-down,ctrl-u:preview-up' \
     | \
     xargs -ro yay -Rns"
 

@@ -56,14 +56,16 @@ alias clip="xclip -selection clipboard"
 
 # yays and yayr, for easily installing and removing YAY packages
 # mainly stolen and adapted from omarchy and ChrisTitusTech
+# TODO: PKGBUILD only if AUR package
 alias yays="yay -Slq | \
     fzf \
       --multi \
       --preview 'yay -Sii {1}' \
-      --preview-label='ctrl-p/n: select; ctrl-u/d: scroll; ctrl-g: PKGBUILD' \
+      --preview-label='alt-j/k: scroll; ctrl-g: PKGBUILD' \
       --preview-label-pos='bottom' \
       --preview-window 'down:65%:wrap' \
-      --bind 'ctrl-d:preview-down,ctrl-u:preview-up,ctrl-g:preview:yay -Gp {1} | tail -n +3' \
+      --bind 'alt-j:preview-down,alt-k:preview-up,ctrl-g:preview:yay -Gp {1} | tail -n +3' \
+      --color 'pointer:green,marker:green' \
     | \
     xargs -ro yay -Sy"
 
@@ -71,10 +73,11 @@ alias yayr="yay -Qqe | \
     fzf \
       --multi \
       --preview 'yay -Qi {1}' \
-      --preview-label='ctrl-p/n: select; ctrl-u/d: scroll' \
+      --preview-label='alt-j/k: scroll' \
       --preview-window 'down:65%:wrap' \
       --preview-label-pos='bottom' \
-      --bind 'ctrl-d:preview-down,ctrl-u:preview-up' \
+      --bind 'alt-j:preview-down,alt-k:preview-up' \
+      --color 'pointer:red,marker:red' \
     | \
     xargs -ro yay -Rns"
 

@@ -6,7 +6,7 @@ home=['<Super>e']
 www=['<Super>b']
 
 [custom-keybindings/custom0]
-binding='<Super>BackSpace'
+binding='<Super>Return'
 command='xdg-terminal-exec'
 name='Launch terminal'
 

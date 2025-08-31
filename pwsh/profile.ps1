@@ -43,10 +43,9 @@ Set-Alias -Name ... -Value _up2 -Option AllScope
 function _up3 { cd ..\..\.. }
 Set-Alias -Name .... -Value _up3 -Option AllScope
 
+# prompt
+oh-my-posh init pwsh --config "$HOME/.omp.toml" | Invoke-Expression
 
 # integrations
 Invoke-Expression (& { (zoxide init --cmd cd powershell | Out-String) })  # zoxide
-
-# prompt
-oh-my-posh init pwsh --config "$HOME/.omp.toml" | Invoke-Expression
 

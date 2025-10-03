@@ -43,6 +43,7 @@ The current supported apps are:
 
   Optional:
   - [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
+  - [Onefetch](https://github.com/o2sh/onefetch)
   - [trash-cli](https://github.com/andreafrancia/trash-cli)
   - [yay](https://github.com/Jguer/yay)
   - [circumflex](https://github.com/bensadeh/circumflex)

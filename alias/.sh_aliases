@@ -61,10 +61,12 @@ alias yays="yay -Slq | \
     fzf \
       --multi \
       --preview 'yay -Sii {1}' \
-      --preview-label='alt-j/k: scroll; ctrl-g: PKGBUILD' \
+      --preview-label='alt-j/k: scroll; alt-b/B: toggle PKGBUILD' \
       --preview-label-pos='bottom' \
       --preview-window 'down:65%:wrap' \
-      --bind 'alt-j:preview-down,alt-k:preview-up,ctrl-g:preview:yay -Gp {1} | tail -n +3' \
+      --bind 'alt-j:preview-down,alt-k:preview-up,alt-p:toggle-preview' \
+      --bind 'alt-b:change-preview:yay -Gpa {1} | tail -n +5' \
+      --bind 'alt-B:change-preview:yay -Sii {1}' \
       --color 'pointer:green,marker:green' \
     | \
     xargs -ro yay -Sy"
@@ -90,6 +92,7 @@ alias open="xdg-open"
 # -----------
 
 alias fetch="fastfetch"
+alias onefetch="onefetch --no-title --email --no-color-palette --nerd-fonts"
 alias trash="trash-put"
 alias lg="lazygit"
 alias clx="clx -n"

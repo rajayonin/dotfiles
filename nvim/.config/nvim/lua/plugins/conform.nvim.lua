@@ -22,7 +22,7 @@ return {
       python = { "ruff_format" },
       rust = { "rustfmt", lsp_format = "fallback" },
       javascript = { "prettier", stop_after_first = true },
-      typst = { "prettypst" },
+      typst = { "typstyle" },
     },
     default_format_opts = {
       lsp_format = "fallback",

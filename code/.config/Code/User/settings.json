@@ -245,7 +245,7 @@
     }
   ],
   "workbench.editor.empty.hint": "hidden",
-  "C_Cpp.default.cppStandard": "gnu++20",
+  "C_Cpp.default.cppStandard": "c++23",
   "C_Cpp.suggestSnippets": false,
   "java.jdt.ls.java.home": "C:\\Program Files\\Java\\jdk-17",
   "[cpp]": {
@@ -507,6 +507,11 @@
       "silent": true
     },
     {
+      "before": ["<leader>", "p", "p"],
+      "commands": ["markdown.showPreview"],
+      "silent": true
+    },
+    {
       "before": ["<C-w>", "L"],
       "commands": ["workbench.action.moveActiveEditorGroupRight"],
       "silent": true
@@ -554,7 +559,7 @@
       "before": ["/"],
       "commands": ["actions.find"],
       "silent": true
-    },
+    }
   ],
   "vim.visualModeKeyBindings": [
     {
@@ -621,5 +626,33 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "deno.codeLens.test": true,
+  "vim.commandLineModeKeyBindings": [],
+  "tinymist.formatterPrintWidth": 80,
+  "tinymist.formatterProseWrap": true,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "[typst]": {
+    "editor.inlayHints.enabled": "on"
+  },
+  "[typst-code]": {
+    "editor.inlayHints.enabled": "on"
+  },
+  "discord.swapBigAndSmallImage": true,
+  "terminal.integrated.stickyScroll.enabled": false,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "editor.occurrencesHighlight": "off"
 }

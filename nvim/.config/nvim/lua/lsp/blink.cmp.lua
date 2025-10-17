@@ -19,10 +19,8 @@ return {
       ["<C-p>"] = { "select_prev", "fallback_to_mappings" },
       ["<C-n>"] = { "select_next", "fallback_to_mappings" },
 
-      ["<Up>"] = { "scroll_documentation_up", "fallback" },
-      ["<Down>"] = { "scroll_documentation_down", "fallback" },
-
-      ["<C-k>"] = { "show_signature", "hide_signature", "fallback" },
+      ["<C-u>"] = { "scroll_documentation_up", "fallback" },
+      ["<C-d>"] = { "scroll_documentation_down", "fallback" },
     },
 
     appearance = { nerd_font_variant = "mono" },

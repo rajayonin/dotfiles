@@ -71,6 +71,17 @@ alias yays="yay -Slq | \
     | \
     xargs -ro yay -Sy"
 
+alias yayq="yay -Qq | \
+    fzf \
+      --multi \
+      --preview 'yay -Qq --info {1}' \
+      --preview-label='alt-j/k: scroll' \
+      --preview-label-pos='bottom' \
+      --preview-window 'down:65%:wrap' \
+      --bind 'alt-j:preview-down,alt-k:preview-up' \
+      --color 'pointer:blue,marker:blue' \
+    "
+
 alias yayr="yay -Qqe | \
     fzf \
       --multi \
@@ -96,6 +107,7 @@ alias onefetch="onefetch --no-title --email --no-color-palette --nerd-fonts"
 alias trash="trash-put"
 alias lg="lazygit"
 alias clx="clx -n"
+alias fuckjs="rm -rf node_modules && bun i"
 
 
 # gcl

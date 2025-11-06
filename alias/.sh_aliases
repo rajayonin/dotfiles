@@ -54,8 +54,8 @@ alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
 alias clip="xclip -selection clipboard"
 
 
-# yays and yayr, for easily installing and removing YAY packages
-# mainly stolen and adapted from omarchy and ChrisTitusTech
+# yays, yayq, and yayr, for easily inStalling, Querying, and Removing Arch/AUR
+# packages; mainly stolen and adapted from Omarchy and ChrisTitusTech
 # TODO: PKGBUILD only if AUR package
 alias yays="yay -Slq | \
     fzf \
@@ -86,7 +86,7 @@ alias yayr="yay -Qqe | \
     fzf \
       --multi \
       --preview 'yay -Qi {1}' \
-      --preview-label='alt-j/k: scroll' \
+      --preview-label='alt-j/k: scroll; tab: multi-select' \
       --preview-window 'down:65%:wrap' \
       --preview-label-pos='bottom' \
       --bind 'alt-j:preview-down,alt-k:preview-up' \

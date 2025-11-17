@@ -7,14 +7,11 @@ gui:
   showRootItemInFileTree: false
   showCommandLog: false
   nerdFontsVersion: "3"
-
 git:
-  paging:
-    externalDiffCommand: difft --display=inline --color=always
-
+  pagers:
+    - externalDiffCommand: difft --display=inline --color=always
 os:
   editPreset: "nvim-remote"
-
 customCommands:
   - key: "r"
     context: "files"
@@ -24,7 +21,6 @@ customCommands:
         title: "New file name:"
         key: "FileName"
     command: "git mv {{.SelectedFile.Name | quote}} {{.Form.FileName | quote}}"
-
   - key: "<c-a>"
     context: "commits"
     description: "Set commiter date to author date"
@@ -34,7 +30,6 @@ customCommands:
         title: "Set commiter date to author date"
         body: "Are you sure you want to update the commiter date?"
     command: "git rebase --autostash --keep-empty --no-autosquash --rebase-merges --committer-date-is-author-date {{.SelectedCommit.Hash}}^"
-
   # retrieved from: https://github.com/jesseduffield/lazygit/wiki/Custom-Commands-Compendium#conventional-commit
   - key: "<c-c>"
     context: "files"
@@ -99,4 +94,3 @@ customCommands:
         body: "Are you sure you want to commit?"
     command: "git commit --message '{{.Form.Type}}{{ if .Form.Scope }}({{ .Form.Scope }}){{ end }}{{.Form.Breaking}}: {{.Form.Message}}'"
     loadingText: "Creating conventional commit..."
-

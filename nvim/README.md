@@ -54,6 +54,7 @@ The plugins I use are:
   - [hat0uma/csvview.nvim](https://github.com/hat0uma/csvview.nvim): CSV files
   - [peek.nvim](https://github.com/https://github.com/toppair/peek.nvim): Markdown preview  
     Requires [Deno](https://deno.com/) to be built.
+<!-- - [auto-dark-mode.nvim.nvim](https://github.com/f-person/auto-dark-mode.nvim.nvim): Automatic light/dark mode theme switch -->
 <!-- - [Comment.nvim](https://github.com/numToStr/Comment.nvim): Enable quick commenting in/out lines (replaced by Neovim's comment implementation) -->
 <!-- - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim): Indentation guides (replaced by snacks.nvim) -->
 
@@ -61,7 +62,8 @@ The plugins I use are:
 
 
 ### Colorschemes
-- [nordic.nvim](https://github.com/AlexvZyl/nordic.nvim)
+- [nordic](https://github.com/AlexvZyl/nordic.nvim) (dark mode)
+- [catppuccin-latte](https://github.com/catppuccin/nvim) (light mode)
 <!-- - [onenord.nvim](https://github.com/rmehri01/onenord.nvim) -->
 
 

@@ -10,7 +10,7 @@ return {
       options = {
         -- theme = 'material'
         globalstatus = true,  -- share between splits
-        theme = 'nordic'
+        theme = 'auto'
       },
       sections = {
         lualine_b = {

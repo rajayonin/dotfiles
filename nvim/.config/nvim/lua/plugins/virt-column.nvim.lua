@@ -1,3 +1,3 @@
 return {
-	{ "lukas-reineke/virt-column.nvim", opts = { virtcolumn = "84"} },
+	{ "lukas-reineke/virt-column.nvim", opts = { virtcolumn = "80"} },
 }

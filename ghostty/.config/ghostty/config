@@ -1,6 +1,6 @@
 # generic
 clipboard-paste-protection = false
-shell-integration-features = ssh-env,ssh-terminfo
+shell-integration-features = sudo,ssh-env,ssh-terminfo
 # 100MiB scrollback buffer
 scrollback-limit = 104857600
 
@@ -20,7 +20,7 @@ font-family = "CaskaydiaMono Nerd Font"
 font-size = 12
 
 # theme
-theme = nordic
+theme = light:Catppuccin Latte,dark:nordic
 
 # keybinds
 # keybind = f11=toggle_maximize

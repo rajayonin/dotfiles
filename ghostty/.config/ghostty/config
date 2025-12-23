@@ -22,9 +22,14 @@ font-size = 12
 # theme
 theme = light:Catppuccin Latte,dark:nordic
 
-# keybinds
-# keybind = f11=toggle_maximize
-keybind = f11=toggle_window_decorations
+
+# --------
+# KEYBINDS
+# --------
+
+# maximize
+keybind = f11=toggle_maximize
+keybind = chain=toggle_window_decorations
 
 # splits
 keybind = ctrl+shift+o=new_split:right

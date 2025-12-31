@@ -30,6 +30,19 @@ customCommands:
         title: "Set commiter date to author date"
         body: "Are you sure you want to update the commiter date?"
     command: "git rebase --autostash --keep-empty --no-autosquash --rebase-merges --committer-date-is-author-date {{.SelectedCommit.Hash}}^"
+  # - key: "<c-c>"
+  #   context: "commits"
+  #   description: "Set commiter to author"
+  #   prompts:
+  #     - type: "confirm"
+  #       key: "Confirm"
+  #       title: "Set commiter to author"
+  #       body: "Are you sure you want to update the commiter?"
+  #   command: git filter-branch --env-filter '
+  #     export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+  #     export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+  #     export GIT_COMMITTER_DATE="$GIT_AUTHOR_DATE"
+  #     ' --tag-name-filter cat -- --branches --tags {{.SelectedCommit.Hash}}^
   # retrieved from: https://github.com/jesseduffield/lazygit/wiki/Custom-Commands-Compendium#conventional-commit
   - key: "<c-c>"
     context: "files"

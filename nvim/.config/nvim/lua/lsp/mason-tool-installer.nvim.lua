@@ -9,6 +9,7 @@ return {
       "pylint",
       "eslint_d",
       "ast-grep",
+      "ruff", -- also formatter
       -- formatters
       "prettier",
       "stylua",

@@ -1,7 +1,7 @@
 {
   "explorer.confirmDelete": false,
   "cmake.configureOnOpen": false,
-  "python.languageServer": "Pylance",
+  "python.languageServer": "None",
   "workbench.colorTheme": "GitHub Dark",
   "git.enableSmartCommit": true,
   "git.autofetch": true,
@@ -274,7 +274,7 @@
     }
   },
   "cmake.options.statusBarVisibility": "compact",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "notebook.output.textLineLimit": 50,
   "editor.fontLigatures": true,
   "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font Mono",
@@ -492,6 +492,11 @@
       "silent": true
     },
     {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"],
+      "silent": true
+    },
+    {
       "before": ["g", "r"],
       "commands": ["editor.action.goToReferences"],
       "silent": true
@@ -654,5 +659,16 @@
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "editor.occurrencesHighlight": "off"
+  "editor.occurrencesHighlight": "off",
+  "svelte.enable-ts-plugin": true,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.suggest.enabled": false,
+  "window.confirmSaveUntitledWorkspace": false,
+  "docker.extension.enableComposeLanguageServer": false,
+  "ty.inlayHints.callArgumentNames": false,
+  "ty.inlayHints.variableTypes": false,
+  "lazygit-vscode.venvActivationDelay": 200,
+  "python.terminal.activateEnvironment": false
 }

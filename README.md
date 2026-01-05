@@ -79,6 +79,7 @@ The current supported apps are:
     - `vim`
 - `gnome`: [GNOME WM](https://www.gnome.org/) configuration  
 - `btop`: [BTOP++](https://github.com/aristocratos/btop) configuration
+- `solaar`: [Solaar](https://github.com/pwr-Solaar/Solaar) configuration
 
 > [!TIP]
 > To enable GPU monitoring w/out needing to run as `root`, add the required permisions (in Unix systems) with:

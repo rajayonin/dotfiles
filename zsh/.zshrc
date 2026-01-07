@@ -53,13 +53,13 @@ fi
 
 # ruby
 if [ -x "$(command -v gem)" ]; then
-	export GEM_HOME="$(gem env user_gemhome)"
+	export GEM_HOME="$(gem env gempath)"
 	export PATH="$PATH:$GEM_HOME/bin"
 fi
 
 # deno
 if [ -x "$HOME/.deno" ]; then
-  . "/home/ldcas/.deno/env"
+  . "$HOME/.deno/env"
 fi
 
 

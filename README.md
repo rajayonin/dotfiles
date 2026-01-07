@@ -77,10 +77,8 @@ The current supported apps are:
 - `code`: [VS Code](https://code.visualstudio.com/) configuration  
   Depends-on:
     - `vim`
-- `gnome`: [GNOME WM](https://www.gnome.org/) configuration  
+- `gnome`: [GNOME WM](https://www.gnome.org/) configuration
 - `btop`: [BTOP++](https://github.com/aristocratos/btop) configuration
-- `solaar`: [Solaar](https://github.com/pwr-Solaar/Solaar) configuration
-- `karabiner`: [Karabiner-Elements](https://karabiner-elements.pqrs.org/) configuration
 
 > [!TIP]
 > To enable GPU monitoring w/out needing to run as `root`, add the required permisions (in Unix systems) with:
@@ -89,6 +87,10 @@ The current supported apps are:
 > ```
 
 - `windowsterminal`: [WindowsTerminal](https://github.com/microsoft/terminal) configuration
+- `solaar`: [Solaar](https://github.com/pwr-Solaar/Solaar) configuration
+- `karabiner`: [Karabiner-Elements](https://karabiner-elements.pqrs.org/) configuration (MacOS)
+- `rectangle`: [Rectangle](https://rectangleapp.com/) configuration (MacOS)
+- `alt-tab`: [AltTab](https://alt-tab-macos.netlify.app/) configuration (MacOS)
 
 
 ### Minimal install (SSH servers)

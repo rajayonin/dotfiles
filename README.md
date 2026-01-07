@@ -80,6 +80,7 @@ The current supported apps are:
 - `gnome`: [GNOME WM](https://www.gnome.org/) configuration  
 - `btop`: [BTOP++](https://github.com/aristocratos/btop) configuration
 - `solaar`: [Solaar](https://github.com/pwr-Solaar/Solaar) configuration
+- `karabiner`: [Karabiner-Elements](https://karabiner-elements.pqrs.org/) configuration
 
 > [!TIP]
 > To enable GPU monitoring w/out needing to run as `root`, add the required permisions (in Unix systems) with:

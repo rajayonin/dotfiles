@@ -32,7 +32,7 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "parameters": {
-                                    "basic.to_if_alone_timeout_milliseconds": 250,
+                                    "basic.to_if_alone_timeout_milliseconds": 100,
                                     "basic.to_if_held_down_threshold_milliseconds": 0
                                 },
                                 "to_if_alone": [

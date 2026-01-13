@@ -4,6 +4,7 @@ Public repository to save my config files, so they can be easily accesible.
 
 ## Installing
 This uses [GNU stow](https://www.gnu.org/software/stow/). In order to install each application's config, use `stow <app>`.
+Some applications might have some different routes in MacOS, so stow won't work.
 
 The current supported apps are:
 - `vim`: [Vim](https://www.vim.org/) configuration
@@ -103,7 +104,7 @@ bash min.sh
 
 
 ### Windows install (Powershell)
-Installs Windows setup: `windowsterminal`, `vim`, neovim`, `lazygit`, `ohmyposh`, and `pwsh`, including dependencies.
+Installs Windows setup: `windowsterminal`, `vim`, `neovim`, `lazygit`, `ohmyposh`, and `pwsh`, including dependencies.
 
 > [!IMPORTANT]
 > Execute as administrator, in Powershell.

@@ -4,7 +4,9 @@ Public repository to save my config files, so they can be easily accesible.
 
 ## Installing
 This uses [GNU stow](https://www.gnu.org/software/stow/). In order to install each application's config, use `stow <app>`.
-Some applications might have some different routes in MacOS, so stow won't work.
+Some applications might have some different routes in MacOS, so `stow` won't work.
+
+Other applications (marked as `*`) need their configs in other path, check the documentation.
 
 The current supported apps are:
 - `vim`: [Vim](https://www.vim.org/) configuration
@@ -87,11 +89,12 @@ The current supported apps are:
 > sudo setcap cap_perfmon=+ep $(which btop)
 > ```
 
-- `windowsterminal`: [WindowsTerminal](https://github.com/microsoft/terminal) configuration
+- `windowsterminal`*: [WindowsTerminal](https://github.com/microsoft/terminal) configuration
 - `solaar`: [Solaar](https://github.com/pwr-Solaar/Solaar) configuration
-- `karabiner`: [Karabiner-Elements](https://karabiner-elements.pqrs.org/) configuration (MacOS)
-- `rectangle`: [Rectangle](https://rectangleapp.com/) configuration (MacOS)
-- `alt-tab`: [AltTab](https://alt-tab-macos.netlify.app/) configuration (MacOS)
+- `karabiner`*: [Karabiner-Elements](https://karabiner-elements.pqrs.org/) configuration (MacOS)
+- `rectangle`*: [Rectangle](https://rectangleapp.com/) configuration (MacOS)
+- `alt-tab`*: [AltTab](https://alt-tab-macos.netlify.app/) configuration (MacOS)
+- `dual-function-keys`*: [Dual Function Keys](https://gitlab.com/interception/linux/plugins/dual-function-keys) configuration
 
 
 ### Minimal install (SSH servers)

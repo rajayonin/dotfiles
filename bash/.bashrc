@@ -97,6 +97,19 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# gcl
+if alias gcl > /dev/null 2>&1; then
+    unalias gcl
+fi
+
+gcl() {
+    git clone $1 --recurse-submodules && \
+    cd $( \
+        echo $1 | \
+        awk -F/ '/.git$/{print substr($NF, 0, length($NF) - 4)} !/.git$/{print $NF}' \
+    )
+}
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'

@@ -4,9 +4,15 @@ shell-integration-features = sudo,ssh-env,ssh-terminfo
 # 100MiB scrollback buffer
 scrollback-limit = 104857600
 
+# macos
+macos-titlebar-style = tabs
+macos-option-as-alt = left
+macos-secure-input-indication = false
+
 # window
 maximize = true
 window-decoration = none
+quick-terminal-size = 60%
 
 # cursor
 cursor-style = block
@@ -50,3 +56,6 @@ keybind = ctrl+shift+t=new_tab
 keybind = alt+shift+comma=previous_tab
 keybind = alt+shift+period=next_tab
 keybind = alt+shift+q=close_tab
+
+# quick terminal
+keybind = global:super+control+t=toggle_quick_terminal

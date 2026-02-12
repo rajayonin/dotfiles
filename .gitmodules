@@ -1,0 +1,6 @@
+[submodule "vim-lsp"]
+	path = vim/.vim/pack/plugins/start/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp.git
+[submodule "vim-surround"]
+	path = vim/.vim/pack/plugins/start/vim-surround
+	url = https://tpope.io/vim/surround.git

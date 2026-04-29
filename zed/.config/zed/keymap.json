@@ -1,0 +1,140 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  // general Vim keybindings
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "space m": "editor::Format",
+      "L": "vim::EndOfLine",
+      "H": "vim::FirstNonWhitespace",
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+
+      // move visually w/ wrap
+      "j": ["workspace::SendKeystrokes", "g j"],
+      "k": ["workspace::SendKeystrokes", "g k"],
+      "left": "vim::WrappingLeft",
+      "right": "vim::WrappingRight",
+      "h": "vim::WrappingLeft",
+      "l": "vim::WrappingRight",
+    },
+  },
+
+  // project panel
+  {
+    "context": "Workspace && vim_mode == normal && right_dock == ProjectPanel",
+    "bindings": {
+      "space e e": "workspace::ActivatePaneRight",
+    },
+  },
+  {
+    "context": "vim_mode == normal && Workspace && !(right_dock == ProjectPanel)",
+    "bindings": {
+      "space e e": "workspace::ToggleRightDock",
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "space e e": "editor::ToggleFocus",
+    },
+  },
+
+  // prevent x/d/c/s from copying
+  {
+    "context": "VimControl && !menu && !VimWaiting",
+    "bindings": {
+      "s": "vim::HelixSubstituteNoYank",
+    },
+  },
+  {
+    "context": "vim_mode == normal && !VimWaiting",
+    "bindings": {
+      "x": ["workspace::SendKeystrokes", "\" _ x"],
+      "X": ["workspace::SendKeystrokes", "\" _ X"],
+      "c": ["workspace::SendKeystrokes", "\" _ c"],
+      "C": ["workspace::SendKeystrokes", "\" _ C"],
+      "d": ["workspace::SendKeystrokes", "\" _ d"],
+      "D": ["workspace::SendKeystrokes", "\" _ D"],
+    },
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "c": ["workspace::SendKeystrokes", "\" _ c"],
+      "d": ["workspace::SendKeystrokes", "\" _ d"],
+      "X": ["workspace::SendKeystrokes", "\" _ X"],
+      "C": ["workspace::SendKeystrokes", "\" _ C"],
+      "D": ["workspace::SendKeystrokes", "\" _ D"],
+    },
+  },
+
+  // normal mode
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "space m": "editor::Format",
+      "t t": "editor::DuplicateLineDown",
+      "space f f": "file_finder::Toggle",
+      "space f g": "pane::DeploySearch",
+    },
+  },
+  // insert mode
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "k j": "vim::NormalBefore", // In insert mode, make kj escape to normal mode.
+    },
+  },
+  // visual mode
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "t": "editor::DuplicateSelection",
+    },
+  },
+
+  // surround in visual mode
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-s": "vim::PushAddSurrounds",
+    },
+  },
+
+  // File panel (netrw)
+  {
+    "context": "VimControl && ProjectPanel && not_editing",
+    "bindings": {
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      // Close project panel as project file panel on the right
+      "q": "workspace::ToggleRightDock",
+      "space e": "workspace::ToggleRightDock",
+      // Navigate between panel
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
+  },
+
+  // completions in ctrl-f
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "ctrl-f": "editor::ConfirmCompletionReplace",
+    },
+  },
+]

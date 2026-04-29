@@ -1,0 +1,69 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "vim": {
+    "use_smartcase_find": true,
+  },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "terminal": {
+    "font_family": "CaskaydiaCove Nerd Font Mono",
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+  "base_keymap": "VSCode",
+  "minimap": {
+    "show": "never",
+  },
+  "cursor_blink": false,
+  "buffer_font_family": "CaskaydiaCove Nerd Font",
+  "file_types": {
+    "markdown": ["*.rmd"],
+    "gmpl": ["*.dat"],
+    "cpp": [
+      "*.tcc",
+      "optional",
+      "iosfwd",
+      "stdexcept",
+      "array",
+      "fstream",
+      "iostream",
+      "ostream",
+      "chrono",
+      "cmath",
+    ],
+    "viml": [".vimrc"],
+  },
+  "linked_edits": true,
+  "show_whitespaces": "trailing",
+  "wrap_guides": [80],
+  "soft_wrap": "editor_width",
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 13.0,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Nordic Syntax",
+  },
+  "languages": {
+    "Python": {
+      "language_servers": [
+        // Enable ty, disable basedpyright, and enable all
+        // other registered language servers (ruff, pylsp, pyright).
+        "ty",
+        "!basedpyright",
+      ],
+    },
+  },
+}

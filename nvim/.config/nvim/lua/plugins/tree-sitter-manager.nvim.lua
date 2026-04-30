@@ -1,0 +1,48 @@
+return {
+	"romus204/tree-sitter-manager.nvim",
+
+	opts = {
+		-- Default Options
+		ensure_installed = {
+			"ada",
+			"c",
+			"cpp",
+			"c_sharp",
+			"bibtex",
+			"css",
+			"go",
+			"java",
+			"json",
+			"latex",
+			"make",
+			"cmake",
+			"rust",
+			"nix",
+			"commonlisp",
+			"nix",
+			"ocaml",
+			"powershell",
+			"ruby",
+			"scala",
+			"zig",
+			"haskell",
+			"bash",
+			"html",
+			"javascript",
+			"json",
+			"lua",
+			"markdown",
+			"markdown_inline",
+			"python",
+			"query",
+			"regex",
+			"tsx",
+			"typescript",
+			"vim",
+			"yaml",
+			"typst",
+		},
+		auto_install = true, -- install missing parsers when editing a new file
+		-- highlight = true, -- treesitter highlighting is enabled by default
+	},
+}

@@ -1,11 +1,13 @@
 return {
   {
-    'nvim-telescope/telescope.nvim', branch = '0.1.x',
+    'nvim-telescope/telescope.nvim', version = '0.2.x',
     enabled = true,
     dependencies = {
       'nvim-lua/plenary.nvim',
-      'nvim-tree/nvim-web-devicons'
+      'nvim-tree/nvim-web-devicons',
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
     },
+
     config = function(PluginSpec, opts)
       local actions = require('telescope.actions')
 

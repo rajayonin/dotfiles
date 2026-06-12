@@ -241,6 +241,9 @@ noremap <Leader>w :TrimWhitespace<CR>
 " PLUGINS
 " ---
 
+" comments
+packadd comment
+
 " vim-lsp
 
 let g:lsp_diagnostics_enabled = 0

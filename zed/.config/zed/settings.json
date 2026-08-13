@@ -7,7 +7,25 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "remove_trailing_whitespace_on_save": false,
+  "toolbar": {
+    "agent_review": false
+  },
+  "gutter": {
+    "bookmarks": true
+  },
+  "which_key": {
+    "enabled": true
+  },
+  "use_smartcase_search": true,
+  "project_panel": {
+    "git_status_indicator": false,
+    "bold_folder_labels": false
+  },
+  "proxy": "",
+  "show_edit_predictions": true,
   "vim": {
+    "toggle_relative_line_numbers": true,
     "use_smartcase_find": true,
   },
   "session": {
@@ -26,6 +44,7 @@
     "show": "never",
   },
   "cursor_blink": false,
+  "hide_mouse": "on_typing_and_movement",
   "buffer_font_family": "CaskaydiaCove Nerd Font",
   "file_types": {
     "markdown": ["*.rmd"],
@@ -46,6 +65,8 @@
   },
   "linked_edits": true,
   "show_whitespaces": "trailing",
+  "relative_line_numbers": "enabled",
+  "format_on_save": "off",
   "wrap_guides": [80],
   "soft_wrap": "editor_width",
   "vim_mode": true,

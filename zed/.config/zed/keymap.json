@@ -8,6 +8,21 @@
 [
   // general Vim keybindings
   {
+    "context": "VimControl",
+    "bindings": {
+      // move panes
+      "alt-,": "pane::ActivatePreviousItem",
+      "alt-.": "pane::ActivateNextItem",
+      "alt-q": "pane::CloseActiveItem",
+
+      // easy move panes
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
+  },
+  {
     "context": "VimControl && !menu",
     "bindings": {
       "space m": "editor::Format",
@@ -28,44 +43,46 @@
 
   // project panel
   {
-    "context": "Workspace && vim_mode == normal && right_dock == ProjectPanel",
-    "bindings": {
-      "space e e": "workspace::ActivatePaneRight",
-    },
-  },
-  {
-    "context": "vim_mode == normal && Workspace && !(right_dock == ProjectPanel)",
+    "context": "Workspace && vim_mode == normal && (right_dock == ProjectPanel)",
     "bindings": {
       "space e e": "workspace::ToggleRightDock",
     },
   },
   {
-    "context": "ProjectPanel",
+    "context": "VimControl && ProjectPanel && not_editing",
     "bindings": {
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
       "space e e": "editor::ToggleFocus",
+      "ctrl-h": "editor::ToggleFocus",
+      "esc": "editor::ToggleFocus",
     },
   },
 
   // prevent x/d/c/s from copying
   {
-    "context": "VimControl && !menu && !VimWaiting",
+    "context": "VimControl && !menu && !VimWaiting && vim_operator == none",
     "bindings": {
       "s": "vim::HelixSubstituteNoYank",
     },
   },
   {
-    "context": "vim_mode == normal && !VimWaiting",
+    "context": "vim_mode == normal && !VimWaiting && vim_operator == none",
     "bindings": {
       "x": ["workspace::SendKeystrokes", "\" _ x"],
       "X": ["workspace::SendKeystrokes", "\" _ X"],
-      "c": ["workspace::SendKeystrokes", "\" _ c"],
       "C": ["workspace::SendKeystrokes", "\" _ C"],
       "d": ["workspace::SendKeystrokes", "\" _ d"],
       "D": ["workspace::SendKeystrokes", "\" _ D"],
     },
   },
   {
-    "context": "vim_mode == visual",
+    "context": "vim_mode == visual && vim_operator == none",
     "bindings": {
       "c": ["workspace::SendKeystrokes", "\" _ c"],
       "d": ["workspace::SendKeystrokes", "\" _ d"],
@@ -83,6 +100,7 @@
       "t t": "editor::DuplicateLineDown",
       "space f f": "file_finder::Toggle",
       "space f g": "pane::DeploySearch",
+      "space f s": "project_symbols::Toggle",
     },
   },
   // insert mode
@@ -108,28 +126,6 @@
     },
   },
 
-  // File panel (netrw)
-  {
-    "context": "VimControl && ProjectPanel && not_editing",
-    "bindings": {
-      "a": "project_panel::NewFile",
-      "A": "project_panel::NewDirectory",
-      "r": "project_panel::Rename",
-      "d": "project_panel::Delete",
-      "x": "project_panel::Cut",
-      "c": "project_panel::Copy",
-      "p": "project_panel::Paste",
-      // Close project panel as project file panel on the right
-      "q": "workspace::ToggleRightDock",
-      "space e": "workspace::ToggleRightDock",
-      // Navigate between panel
-      "ctrl-h": "workspace::ActivatePaneLeft",
-      "ctrl-l": "workspace::ActivatePaneRight",
-      "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown",
-    },
-  },
-
   // completions in ctrl-f
   {
     "context": "Editor && showing_completions",
@@ -137,4 +133,28 @@
       "ctrl-f": "editor::ConfirmCompletionReplace",
     },
   },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-;": "editor::ToggleLineNumbers"
+    }
+  },
+  {
+    "context": "AcpThread > Editor",
+    "unbind": {
+      "ctrl-;": "agent::OpenAddContextMenu"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-;": "terminal_panel::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-`": "terminal_panel::Toggle"
+    }
+  }
 ]

@@ -1,5 +1,20 @@
 # rajayonin's zsh config file
 
+# time function for debugging
+delta() {
+    local now diff
+    now=$(date +%s%N)
+
+    if [[ -n ${_delta_last:-} ]]; then
+        diff=$((now - _delta_last))
+        printf '%d.%03d ms\n' $((diff / 1000000)) $((diff % 1000000 / 1000))
+    fi
+
+    _delta_last=$now
+}
+
+# delta
+
 
 # #######
 # PLUGINS
@@ -71,26 +86,31 @@ fi
 # generate completions
 
 # docker
-if [ -x "$(command -v docker)" ]; then
-  if [ ! -f "$HOME/.docker/completions" ]; then
-    mkdir -p ~/.docker/completions && docker completion zsh > ~/.docker/completions/_docker
+if (( $+commands[docker] )); then
+  if [[ ! -f "$HOME/.docker/completions/_docker" ]]; then
+    mkdir -p "$HOME/.docker/completions"
+    docker completion zsh > "$HOME/.docker/completions/_docker"
   fi
-
   FPATH="$HOME/.docker/completions:$FPATH"
 fi
 
 # github cli
-if [ -x "$(command -v gh)" ]; then
-  if [ ! -f "$HOME/.github-cli/completions" ]; then
-    mkdir -p ~/.github-cli/completions && gh completion -s zsh > ~/.github-cli/completions/_gh
+if (( $+commands[gh] )); then
+  if [[ ! -f "$HOME/.github-cli/completions/_gh" ]]; then
+    mkdir -p "$HOME/.github-cli/completions"
+    gh completion -s zsh > "$HOME/.github-cli/completions/_gh"
   fi
-
   FPATH="$HOME/.github-cli/completions:$FPATH"
 fi
 
 # bun
-if [ -x "$(command -v bun)" ]; then
-  [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+if (( $+commands[bun] )); then
+    if [[ ! -s "$HOME/.bun/_bun" ]]; then
+        mkdir -p "$HOME/.bun"
+        bun completions > "$HOME/.bun/_bun"
+    fi
+
+    FPATH="$HOME/.bun:$FPATH"
 fi
 
 
@@ -98,10 +118,8 @@ fi
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 
-
 # load completions on startup
-autoload -Uz compinit && compinit
-zinit cdreplay -q
+autoload -Uz compinit && compinit -C
 
 # fzf completions, must be loaded after compinit
 if [ -x "$(command -v fzf)" ]; then
@@ -176,6 +194,7 @@ export LANG=en_US.UTF-8
 # ALIASES
 # ######
 
+
 # basic
 alias ls="ls --color"
 alias ll="ls -alFh"
@@ -200,24 +219,21 @@ fi
 # ##################
 
 # fzf
-if [ -x "$(command -v fzf)" ]; then
+if (( $+commands[fzf] )); then
 	eval "$(fzf --zsh)"
 fi
 
 # zoxide
-if [ -x "$(command -v zoxide)" ]; then
+if (( $+commands[zoxide] )); then
 	eval "$(zoxide init --cmd cd zsh)"
 fi
 
-# thefuck
-if [ -x "$(command -v thefuck)" ]; then
-	eval "$(thefuck --alias)" && export THEFUCK_EXCLUDE_RULES='fix_file'
-fi
+# # thefuck
+# # too expensive
+# if (( $+commands[thefuck] )); then
+# 	eval "$(thefuck --alias)" && export THEFUCK_EXCLUDE_RULES='fix_file'
+# fi
 
-# nvm
-if [ -f /usr/share/nvm/init-nvm.sh ]; then
-  source /usr/share/nvm/init-nvm.sh
-fi
 
 # yazi
 if [ -x "$(command -v yazi)" ]; then
@@ -231,3 +247,7 @@ if [ -x "$(command -v yazi)" ]; then
 	}
 fi
 
+
+# remove debugging function
+unset -f delta
+unset _delta_last

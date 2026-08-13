@@ -192,7 +192,8 @@ inoremap <C-d> <Del>
 inoremap <C-k> <Esc>"_d$i
 " <C-u> deletes to end of line
 
-" visually go up/down (usefull for wrap)
+" visually go up/down (useful for wrap)
+set whichwrap+=<,>,[,],h,l
 nnoremap j gj
 nnoremap k gk
 " same for normal visual mode

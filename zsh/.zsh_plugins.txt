@@ -1,0 +1,15 @@
+# oh-my-zsh plugins
+getantidote/use-omz
+ohmyzsh/ohmyzsh path:lib
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/command-not-found
+
+# completions
+mattmc3/ez-compinit
+zsh-users/zsh-completions kind:fpath path:src
+
+# deferred plugins
+zsh-users/zsh-autosuggestions kind:defer
+zdharma-continuum/fast-syntax-highlighting kind:defer
+Aloxaf/fzf-tab kind:defer

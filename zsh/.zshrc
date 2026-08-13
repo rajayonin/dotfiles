@@ -13,37 +13,15 @@ delta() {
     _delta_last=$now
 }
 
-# delta
+delta
 
-
-# #######
-# PLUGINS
-# #######
-
-# zinit (plugin manager)
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-
-if [ ! -d "$ZINIT_HOME" ]; then
-   mkdir -p "$(dirname $ZINIT_HOME)"
-   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-fi
-
-source "${ZINIT_HOME}/zinit.zsh"
-
-
-# zsh plugins
-zinit light zsh-users/zsh-syntax-highlighting
-
-# snippets
-zinit snippet OMZL::git.zsh
-zinit snippet OMZP::git
-zinit snippet OMZP::command-not-found
 
 
 # ######
 # PROMPT
 # ######
 
+# echo "Prompt"
 
 # powerlevel10k
 # zinit ice depth=1; zinit light romkatv/powerlevel10k
@@ -57,7 +35,10 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 # ####
 # PATH
 # ####
-#
+
+# delta
+# echo "Path"
+
 export PATH="$HOME/.local/bin:$PATH"
 
 # bun
@@ -66,11 +47,12 @@ if [ -d "$HOME/.bun" ]; then
   export PATH="$BUN_INSTALL/bin:$PATH"
 fi
 
-# ruby
-if [ -x "$(command -v gem)" ]; then
-	export GEM_HOME="$(gem env gempath)"
-	export PATH="$PATH:$GEM_HOME/bin"
-fi
+# # ruby
+# # too expensive (~100ms)!
+# if [ -x "$(command -v gem)" ]; then
+# 	export GEM_HOME="$(gem env gempath)"
+# 	export PATH="$PATH:$GEM_HOME/bin"
+# fi
 
 # deno
 if [ -x "$HOME/.deno" ]; then
@@ -78,10 +60,12 @@ if [ -x "$HOME/.deno" ]; then
 fi
 
 
-
 # ###########
 # COMPLETIONS
 # ###########
+
+# delta
+# echo "Completions"
 
 # generate completions
 
@@ -114,19 +98,6 @@ if (( $+commands[bun] )); then
 fi
 
 
-# setup
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-
-# load completions on startup
-autoload -Uz compinit && compinit -C
-
-# fzf completions, must be loaded after compinit
-if [ -x "$(command -v fzf)" ]; then
-	zinit light Aloxaf/fzf-tab
-fi
-
-
 # autocompletion setup
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # smartcase
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"  # colors on file completion
@@ -138,10 +109,36 @@ zstyle ':fzf-tab:*' fzf-bindings 'ctrl-f:accept'
 zstyle ':fzf-tab:*' accept-line enter
 
 
+# plugins handle compinit
+
+
+# #######
+# PLUGINS
+# #######
+
+# delta
+# echo "Plugins"
+
+# antidote (plugin manager)
+ANTIDOTE_HOME="${ZDOTDIR:-$HOME}/.antidote"
+
+if [ ! -d "$ANTIDOTE_HOME" ]; then
+   mkdir -p "$(dirname $ANTIDOTE_HOME)"
+   git clone --depth=1 https://github.com/mattmc3/antidote.git "$ANTIDOTE_HOME"
+fi
+
+source "${ANTIDOTE_HOME}/antidote.zsh"
+
+antidote load
+
+
 
 # ######
 # CONFIG
 # ######
+
+# delta
+# echo "Config"
 
 # generic
 setopt auto_param_slash  # when a dir is completed, add a / instead of a trailing space
@@ -194,6 +191,8 @@ export LANG=en_US.UTF-8
 # ALIASES
 # ######
 
+# delta
+# echo "Aliases"
 
 # basic
 alias ls="ls --color"
@@ -217,6 +216,9 @@ fi
 # ##################
 # SHELL INTEGRATIONS
 # ##################
+
+# delta
+# echo "Integrations"
 
 # fzf
 if (( $+commands[fzf] )); then
@@ -247,6 +249,7 @@ if [ -x "$(command -v yazi)" ]; then
 	}
 fi
 
+# delta
 
 # remove debugging function
 unset -f delta

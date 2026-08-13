@@ -8,8 +8,9 @@ gui:
   showCommandLog: false
   nerdFontsVersion: "3"
 git:
-  pagers:
-    - externalDiffCommand: difft --display=inline --color=always
+  diffRenderers:
+    - command: difft --display=inline --color=always
+      type: extDiff
 os:
   editPreset: "nvim-remote"
 customCommands:

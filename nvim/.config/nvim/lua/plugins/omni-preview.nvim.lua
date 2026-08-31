@@ -5,6 +5,13 @@ return {
       { "<leader>pc", "<cmd>OmniPreview stop<CR>", desc = "Preview Stop" },
     },
 
+  init = function()
+    local wk = require("which-key")
+    wk.add({
+      { "<leader>p", group = "preview" },
+    })
+  end,
+
 	-- previewers
   dependencies = {
     -- Typst

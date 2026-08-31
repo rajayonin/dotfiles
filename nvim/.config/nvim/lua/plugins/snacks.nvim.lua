@@ -5,6 +5,14 @@ return {
 	priority = 1000,
 	lazy = false,
 
+	init = function()
+      local wk = require("which-key")
+      wk.add({
+        { "<leader>g", group = "git" },
+      })
+
+	end,
+
 	---@module 'snacks'
 	---@type snacks.Config
 	opts = {

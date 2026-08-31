@@ -14,6 +14,11 @@ return {
       vim.cmd('highlight NeoTreeDotfile guifg=NeoTreeNormal');
       vim.cmd('highlight NeoTreeGitIgnored guifg=#626262');  -- used to link to NeoTreeDotfile, undo that
       -- TODO: use vim.api.nvim_set_hl() instead
+
+      local wk = require("which-key")
+      wk.add({
+        { "<leader>e", group = "tree" },
+      })
     end,
     keys = {{"<leader>ee", "<CMD>Neotree toggle<CR>", desc = "Toggle Neotree", noremap = true, silent = true}},
     opts = {

@@ -3,7 +3,13 @@ return {
     'akinsho/toggleterm.nvim',
     version = "*",
     enabled = true,
-    keys = { "<leader>tt" },  -- wait for keybind input to lazy load
+    keys = { "<leader>tt", desc = { "Toggle terminal" }},  -- wait for keybind input to lazy load
+    init = function()
+      local wk = require("which-key")
+      wk.add({
+        { "<leader>t", group = "toggle" },
+      })
+    end,
     opts = {
       direction = "float",
       open_mapping = [[<leader>tt]],

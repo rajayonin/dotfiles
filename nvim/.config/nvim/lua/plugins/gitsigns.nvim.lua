@@ -37,11 +37,17 @@ return {
         vim.keymap.set(mode, l, r, opts)
       end
 
-      map('n', '<leader>hr', gitsigns.reset_hunk)
-      map('v', '<leader>hr', function() gitsigns.reset_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
-      map('n', '<leader>hd', gitsigns.preview_hunk_inline)
-      map('n', '<leader>hn', function() gitsigns.nav_hunk('next') end)
-      map('n', '<leader>hp', function() gitsigns.nav_hunk('prev') end)
+      map('n', '<leader>hr', gitsigns.reset_hunk, { desc = "Reset Hunk" })
+      map('v', '<leader>hr', function() gitsigns.reset_hunk {vim.fn.line('.'), vim.fn.line('v')} end, { desc = "Reset Hunk" })
+      map('n', '<leader>hd', gitsigns.preview_hunk_inline, { desc = "Preview Hunk" })
+      map('n', '<leader>hn', function() gitsigns.nav_hunk('next') end, { desc = "Next Hunk" })
+      map('n', '<leader>hp', function() gitsigns.nav_hunk('prev') end, { desc = "Previous Hunk" })
+
+
+      local wk = require("which-key")
+      wk.add({
+        { "<leader>h", group = "hunk" },
+      })
 
     end
 

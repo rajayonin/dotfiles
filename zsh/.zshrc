@@ -60,6 +60,12 @@ if [ -x "$HOME/.deno" ]; then
 fi
 
 
+# opencode
+if [ -x "$HOME/.opencode/bin" ]; then
+  export PATH="$HOME/.opencode/bin":$PATH
+fi
+
+
 # ###########
 # COMPLETIONS
 # ###########
@@ -157,6 +163,9 @@ bindkey '^H' backward-kill-word  # fix Ctrl+Backspace
 bindkey '^[[3;5~' kill-word  # fix Ctrl+Del
 bindkey '^[[1;5C' forward-word # fix Ctrl+Right
 bindkey '^[[1;5D' backward-word # fix Ctrl+Left
+
+# prevent forward-char from accepting suggestion
+ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=("${(@)ZSH_AUTOSUGGEST_ACCEPT_WIDGETS:#forward-char}")
 
 
 # history

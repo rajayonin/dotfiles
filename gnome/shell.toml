@@ -1,6 +1,6 @@
 [/]
 disabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['clipboard-history@alexsaveau.dev', 'steal-my-focus-window@steal-my-focus-window', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'tactile@lundal.io', 'switcher@landau.fi', 'just-perfection-desktop@just-perfection', 'color-picker@tuberry', 'status-icons@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['color-picker@tuberry', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'autoselectheadset@josephlbarnett.github.com', 'just-perfection-desktop@just-perfection', 'clipboard-history@alexsaveau.dev', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'steal-my-focus-window@steal-my-focus-window', 'status-icons@gnome-shell-extensions.gcampax.github.com', 'switcher@landau.fi', 'touchpad@gpawru']
 favorite-apps=['code.desktop']
 last-selected-power-profile='power-saver'
 welcome-dialog-last-shown-version='47.2'
@@ -28,6 +28,7 @@ preview-style=uint32 0
 
 [extensions/just-perfection]
 accent-color-icon=false
+accessibility-menu=false
 dash=false
 dash-separator=true
 double-super-to-appgrid=false
@@ -59,7 +60,7 @@ matching=uint32 0
 max-width-percentage=uint32 50
 on-active-display=true
 show-executables=false
-show-switcher=['<Super>space']
+show-switcher=['<Alt>space']
 workspace-indicator=false
 
 [extensions/tactile]

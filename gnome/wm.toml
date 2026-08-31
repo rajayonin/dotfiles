@@ -1,10 +1,13 @@
 [keybindings]
+activate-window-menu=@as []
 close=['<Super>q']
 show-desktop=['<Super>d']
 switch-applications=@as []
 switch-applications-backward=@as []
 switch-input-source=@as []
 switch-input-source-backward=@as []
+switch-to-workspace-down=['<Control><Alt>Down']
+switch-to-workspace-up=['<Control><Alt>Up']
 switch-windows=['<Alt>Tab']
 switch-windows-backward=['<Shift><Alt>Tab']
 

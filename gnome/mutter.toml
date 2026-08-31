@@ -1,3 +1,4 @@
 [/]
 experimental-features=['scale-monitor-framebuffer', 'xwayland-native-scaling']
 overlay-key='Super_L'
+workspaces-only-on-primary=false

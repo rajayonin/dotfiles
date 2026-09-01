@@ -152,8 +152,11 @@ setopt interactive_comments # allow comments in shell
 
 
 # keybindings (more info in https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Standard-Widgets)
-bindkey '^f' autosuggest-accept
-bindkey '^f' accept-search
+
+# cannot bind to multiple widgets
+# bindkey '^f' autosuggest-accept
+# bindkey '^f' accept-search
+
 bindkey '^M' accept-line  # enter
 bindkey '^f' forward-char
 bindkey '^[[H' beginning-of-line  # fix Home key
@@ -165,7 +168,10 @@ bindkey '^[[1;5C' forward-word # fix Ctrl+Right
 bindkey '^[[1;5D' backward-word # fix Ctrl+Left
 
 # prevent forward-char from accepting suggestion
-ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=("${(@)ZSH_AUTOSUGGEST_ACCEPT_WIDGETS:#forward-char}")
+# ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=("${(@)ZSH_AUTOSUGGEST_ACCEPT_WIDGETS:#forward-char}")
+
+# remove bug with autosuggestions when pasting stuff
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=('bracketed-paste')
 
 
 # history

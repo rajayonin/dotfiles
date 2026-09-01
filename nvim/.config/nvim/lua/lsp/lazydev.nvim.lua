@@ -1,6 +1,5 @@
 return {
-  -- "folke/lazydev.nvim",
-  "Jari27/lazydev.nvim",  -- fork w/ fix (see https://github.com/folke/lazydev.nvim/pull/106)
+  "folke/lazydev.nvim",
 
   enabled = true,
   ft = "lua", -- only load on lua files

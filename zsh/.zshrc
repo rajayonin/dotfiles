@@ -152,6 +152,7 @@ setopt interactive_comments # allow comments in shell
 
 
 # keybindings (more info in https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Standard-Widgets)
+# you can also run `bindkey`
 
 # cannot bind to multiple widgets
 # bindkey '^f' autosuggest-accept

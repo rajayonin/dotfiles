@@ -11,5 +11,5 @@ zsh-users/zsh-completions kind:fpath path:src
 
 # deferred plugins
 zsh-users/zsh-autosuggestions kind:defer
-zdharma-continuum/fast-syntax-highlighting kind:defer
+michel-kraemer/zsh-patina kind:defer
 Aloxaf/fzf-tab kind:defer

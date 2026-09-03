@@ -4,13 +4,19 @@ My preferred shell is [Zsh](https://www.zsh.org/).
 
 Special thanks to [dreamsofautonomy](https://github.com/dreamsofautonomy).
 
+
+## Requirements
+- Installing the [zsh-patina](https://github.com/michel-kraemer/zsh-patina) binary daemon.
+
+
 ## Prompt
 The prompt theme is [Oh My Posh](https://ohmyposh.dev/). Please make sure to install it beforehand.
 
 ## Plugins
-The plugin manager is [Zinit](https://github.com/zdharma-continuum/zinit), with the following plugins:
+The plugin manager is [Antidote](https://antidote.sh/), with the following plugins:
 <!-- - [Powerlevel10k](https://github.com/romkatv/powerlevel10k): Theme (prompt, etc.). -->
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [zsh-patina](https://github.com/michel-kraemer/zsh-patina)
+- [mattmc3/ez-compinit](https://github.com/mattmc3/ez-compinit)
 - [zsh-completions](https://github.com/zsh-users/zsh-completions)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [fzf-tab](https://github.com/Aloxaf/fzf-tab)
@@ -20,6 +26,7 @@ The plugin manager is [Zinit](https://github.com/zdharma-continuum/zinit), with 
 Although I don't use omz (too slow), Zinit allows us to take advantage of [its plugins](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins):
 - [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
 - [command-not-found](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found)
+- [colored-man-pages](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colored-man-pages)
 
 
 ## Integrations

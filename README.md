@@ -95,6 +95,7 @@ The current supported apps are:
 - `rectangle`*: [Rectangle](https://rectangleapp.com/) configuration (MacOS)
 - `alt-tab`*: [AltTab](https://alt-tab-macos.netlify.app/) configuration (MacOS)
 - `dual-function-keys`*: [Dual Function Keys](https://gitlab.com/interception/linux/plugins/dual-function-keys) configuration
+- `openlogi`: [openlogi](https://openlogi.org/) configuration
 
 
 ### Minimal install (SSH servers)

@@ -126,6 +126,9 @@ zstyle ':fzf-tab:*' accept-line enter
 # echo "Plugins"
 
 # antidote (plugin manager)
+# disable oh-my-zsh auto-update prompts (loaded via antidote)
+zstyle ':omz:update' mode disabled
+
 ANTIDOTE_HOME="${ZDOTDIR:-$HOME}/.antidote"
 
 if [ ! -d "$ANTIDOTE_HOME" ]; then
@@ -173,6 +176,8 @@ bindkey '^[[1;5D' backward-word # fix Ctrl+Left
 
 # remove bug with autosuggestions when pasting stuff
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=('bracketed-paste')
+# clear ghost text from terminal when pressing Enter (otherwise it lingers in scrollback)
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=('accept-line')
 
 
 # history

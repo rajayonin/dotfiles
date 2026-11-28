@@ -171,13 +171,21 @@ bindkey '^[[3;5~' kill-word  # fix Ctrl+Del
 bindkey '^[[1;5C' forward-word # fix Ctrl+Right
 bindkey '^[[1;5D' backward-word # fix Ctrl+Left
 
-# prevent forward-char from accepting suggestion
-# ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=("${(@)ZSH_AUTOSUGGEST_ACCEPT_WIDGETS:#forward-char}")
+# remove bug with autosuggestions when pasting stuff, and clear ghost text on Enter / Ctrl+C
+if (( $+functions[zsh-defer] )); then
+    # append after zsh-autosuggestions loads so they are preserved
+    zsh-defer -c "ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=('bracketed-paste' 'send-break')"
+else
+    ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=('bracketed-paste' 'accept-line' 'send-break')
+fi
 
-# remove bug with autosuggestions when pasting stuff
-ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=('bracketed-paste')
-# clear ghost text from terminal when pressing Enter (otherwise it lingers in scrollback)
-ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=('accept-line')
+# Ctrl+C sends SIGINT directly to ZLE without invoking send-break, so clear autosuggestions in TRAPINT
+TRAPINT() {
+    if zle && (( ${+widgets[autosuggest-clear]} )); then
+        zle autosuggest-clear
+    fi
+    return $(( 128 + $1 )) # Ctrl-C
+}
 
 
 # history
